@@ -36,5 +36,6 @@ jobs:
           source-directory: "dist/"
           destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
           destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
+          destination-folder: ""
           user-email: ${{ secrets.EMAIL }}
           target-branch: main
