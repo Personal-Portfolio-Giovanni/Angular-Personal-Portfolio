@@ -33,7 +33,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
         with:
-          source-directory: "dist"
+          source-directory: "dist/"
           destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
           destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
           user-email: ${{ secrets.EMAIL }}
