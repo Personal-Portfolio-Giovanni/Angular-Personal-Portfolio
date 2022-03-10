@@ -33,9 +33,8 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
         with:
-          source-directory: "dist/"
+          source-directory: "dist/angular-personal-portfolio"
           destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
           destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
-          destination-folder: ""
           user-email: ${{ secrets.EMAIL }}
           target-branch: main
