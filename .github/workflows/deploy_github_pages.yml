@@ -40,8 +40,7 @@ jobs:
           user-email: ${{ secrets.EMAIL }}
           target-branch: main
 
-jobs:
-  build:
+  build1:
     name: Test2
     runs-on: ubuntu-latest
     steps:
