@@ -6,8 +6,7 @@ on:
       - features/homepage
 
 jobs:
-  selecting-node:
-    name: NodeJS Setting
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,45 +17,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.13.2"
-
-  dependency:
-    name: Installing Dependency
-    runs-on: ubuntu-latest
-    needs: [selecting-node]
-    steps:
-      - name: Use Node.js 16.13.2
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.13.2"
       - name: Dependency Injection
         run: |
-          npm cache clean -f
-          rm -rf node_modules
           npm install -g @angular/cli
           npm install
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    needs: [dependency]
-    steps:
-      - name: Lint
-        run: |
-          npm run lint
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: [lint]
-    steps:
+
       - name: Build
         run: |
           npm install -g @angular/cli
           npm install
-          ng build --prod --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    needs: [build]
-    steps:
+          ng build --prod
+
       - name: Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
