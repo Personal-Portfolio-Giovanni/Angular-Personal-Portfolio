@@ -7,6 +7,42 @@ on:
 
 jobs:
   build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js 16.13.2
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.13.2"
+      - name: Dependency Injection
+        run: |
+          npm install -g @angular/cli
+          npm install
+
+      - name: Build
+        run: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod --base-href "https://Personal-Portfolio-Giovanni.github.io/giovannilamarmora.github.io/"
+
+      - name: Pushes to github pages
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
+        with:
+          source-directory: "dist/angular-personal-portfolio"
+          destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
+          destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
+          user-email: ${{ secrets.EMAIL }}
+          target-branch: main
+
+jobs:
+  build:
+    name: Test2
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
