@@ -23,27 +23,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.13.2"
-  angular-cli:
-    name: Installing Angular Cli
+
+  dependency:
+    name: Installing Dependency and Run
     runs-on: ubuntu-latest
-    needs: [checkout, selecting-node]
+    needs: [selecting-node]
     steps:
       - name: Dependency Injection
         run: |
           npm install -g @angular/cli
-  dependency:
-    name: Installing Dependency and Run
-    runs-on: ubuntu-latest
-    needs: [checkout, selecting-node, angular-cli]
-    steps:
-      - name: Dependency Injection
-        run: |
           npm install
           ng serve
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    needs: [checkout, selecting-node, angular-cli, dependency]
+    needs: [dependency]
     steps:
       - name: Lint
         run: |
@@ -51,7 +45,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: [checkout, selecting-node, angular-cli, dependency, lint]
+    needs: [lint]
     steps:
       - name: Build
         run: |
@@ -61,7 +55,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    needs: [checkout, selecting-node, angular-cli, dependency, lint, build]
+    needs: [build]
     steps:
       - name: Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
