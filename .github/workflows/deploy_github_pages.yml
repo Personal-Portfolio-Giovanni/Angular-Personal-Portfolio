@@ -23,19 +23,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.13.2"
-  angular:
-    name: Installing Angular Cli
-    runs-on: ubuntu-latest
-    needs: [selecting-node]
-      - name: Dependency Injection
-        run: |
-          npm install -g @angular/cli
+
   dependency:
     name: Installing Dependency and Run
     runs-on: ubuntu-latest
     needs: [angular]
       - name: Dependency Injection
         run: |
+          npm install -g @angular/cli
           npm install
           ng serve
   lint:
