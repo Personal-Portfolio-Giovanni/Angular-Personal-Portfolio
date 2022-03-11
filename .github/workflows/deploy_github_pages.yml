@@ -27,6 +27,7 @@ jobs:
     name: Installing Angular Cli
     runs-on: ubuntu-latest
     needs: [checkout, selecting-node]
+    steps:
       - name: Dependency Injection
         run: |
           npm install -g @angular/cli
@@ -34,6 +35,7 @@ jobs:
     name: Installing Dependency and Run
     runs-on: ubuntu-latest
     needs: [checkout, selecting-node, angular-cli]
+    steps:
       - name: Dependency Injection
         run: |
           npm install
