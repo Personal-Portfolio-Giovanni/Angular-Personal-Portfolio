@@ -55,6 +55,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+      - name: Build
+        run: |
+          ng build --prod --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
       - name: Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
