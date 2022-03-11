@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setting-up:
+    name: Setting Up
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js 16.13.2
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.13.2"
+
+  dependency:
+    name: Installing Dependency
+    runs-on: ubuntu-latest
+    needs: [setting-up]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Dependency Injection
+        run: |
+          npm install -g @angular/cli
+          npm install
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: [dependency]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Build
+        run: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Build
+        run: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
+      - name: Pushes to github pages
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
+        with:
+          source-directory: "dist/angular-personal-portfolio"
+          destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
+          destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
+          user-email: ${{ secrets.EMAIL }}
+          target-branch: main
