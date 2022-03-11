@@ -57,6 +57,8 @@ jobs:
           persist-credentials: false
       - name: Build
         run: |
+          npm install -g @angular/cli
+          npm install
           ng build --prod --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
       - name: Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
