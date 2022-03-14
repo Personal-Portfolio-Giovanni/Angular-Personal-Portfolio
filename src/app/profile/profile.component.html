@@ -1,41 +1,48 @@
 <div class="bgimg-1"></div>
 <div class="caption">
-  <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text">
-      <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
-        Giovanni <span style="color: #777">Lamarmora</span>
-      </p>
-      <a
-        *ngIf="downloadCV"
-        [@inOutAnimation]
-        href="https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing"
-        target="_blank"
-        id="cv"
-        >Download <span style="color: #777">CV</span></a
-      >
-    <p class="follow">
-      Follow Me
-      <a href="https://www.facebook.com/gio.lamarmora" target="_blank"
-        ><img
-          src="../../assets/img/social/facebook.png"
-          class="logo"
-          alt=""
-          srcset=""
-      /></a>
-      <a href="https://www.linkedin.com/in/giovannilamarmora" target="_blank"
-        ><img
-          src="../../assets/img/social/linkedin.png"
-          class="logo"
-          alt=""
-          srcset=""
-      /></a>
-      <a href="https://www.instagram.com/gio_lamarmora" target="_blank"
-        ><img
-          src="../../assets/img/social/ig.png"
-          class="logo"
-          alt=""
-          srcset=""
-      /></a>
+  <div
+    (mouseover)="downloadCV = true"
+    (mouseout)="downloadCV = false"
+    class="text"
+  >
+    <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
+      Giovanni <span style="color: #777">Lamarmora</span>
     </p>
+    <a
+      *ngIf="downloadCV"
+      [@inOutAnimation]
+      href="https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing"
+      target="_blank"
+      id="cv"
+      >Download <span style="color: #777">CV</span></a
+    >
+    <div class="nav-wrapper">
+      <div class="sl-nav" style="color: aliceblue">
+        <i
+          class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}"
+          style="margin-right: 5px"
+        ></i>
+        <ul>
+          <li style="color: aliceblue">
+            <b>{{ "profile.currentLanguage" | translate }}</b>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <div class="triangle"></div>
+            <ul>
+              <li>
+                <i class="sl-flag flag-it"></i>
+                <span id="italian" (click)="changeLanguage('it')">Italian</span>
+              </li>
+              <li>
+                <i class="sl-flag flag-en"></i>
+                <span id="english" class="active" (click)="changeLanguage('en')"
+                  >English</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="image-cropper">
     <img
@@ -46,16 +53,36 @@
   </div>
   <div class="title">
     <h3 class="h3">
-      Hello, I'm
-      <span style="color: cornflowerblue">Giovanni Lamarmora</span>, Java
-      Developer based in Milan.
+      {{ "profile.description.pt1" | translate
+      }}<span style="color: cornflowerblue">Giovanni Lamarmora</span
+      >{{ "profile.description.pt2" | translate }}
     </h3>
   </div>
   <div class="contact">
     <p>
       E-Mail: giovannilamarmora.working@gmail.com <br />
       WebSite: giovannilamarmora.wixsite.com/giovanni <br />
-      Phone: +44 7854621358 <br />
+      {{ "profile.phone" | translate }} <br />
     </p>
   </div>
+  <p class="follow">
+    {{ "profile.follow" | translate }}
+    <a href="https://www.facebook.com/gio.lamarmora" target="_blank"
+      ><img
+        src="../../assets/img/social/facebook.png"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+    <a href="https://www.linkedin.com/in/giovannilamarmora" target="_blank"
+      ><img
+        src="../../assets/img/social/linkedin.png"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+    <a href="https://www.instagram.com/gio_lamarmora" target="_blank"
+      ><img src="../../assets/img/social/ig.png" class="logo" alt="" srcset=""
+    /></a>
+  </p>
 </div>
