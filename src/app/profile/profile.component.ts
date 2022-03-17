@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
@@ -20,7 +21,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   downloadCV: boolean = false;
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
+  changeLanguage(lan: string) {
+    this.translate.setDefaultLang(lan);
+    let languageIT = document.getElementById('italian') as HTMLElement;
+    let languageEN = document.getElementById('english') as HTMLElement;
+    if (lan == 'it') {
+      languageIT.classList.add('active');
+      languageEN.classList.remove('active');
+    } else {
+      languageEN.classList.add('active');
+      languageIT.classList.remove('active');
+    }
+  }
 }
