@@ -1,13 +1,6 @@
-.logo {
-  margin-left: 15px;
-  width: 25px;
-  height: 25px;
-  display: inline;
-}
-
 .bgimg-1 {
   position: relative;
-  opacity: 0.15;
+  opacity: 0.1;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,19 +57,11 @@
   max-width: 300px;
 }
 
-.border {
-  margin-left: calc(50% - 200px);
-  color: #fff;
-  padding: 10px;
-  width: 400px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
 
 .h3 {
   letter-spacing: 5px !important;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif !important;
+  font: 50px "Lato", sans-serif !important;
   color: azure;
   text-align: center;
 }
@@ -95,55 +80,14 @@ a {
   margin-left: 50%;
   margin-right: 5%;
 }
-.contact {
-  position: absolute;
-  max-width: 600px;
-  bottom: 1%;
-  margin-left: 1%;
-}
 
-.image-cropper {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  overflow: hidden;
-  border-radius: 50%;
-  top: calc(50% - 150px);
-  left: calc(10%);
-}
 
-.profile {
-  width: 300px;
-  display: inline;
-  margin: 0% auto;
-}
-
-.hidden_mobile {
-  display: block;
-}
-.hidden_desktop {
-  display: none;
-}
 
 @media screen and (max-width: 1024px) {
   .bgimg-1 {
     background-attachment: scroll;
   }
-  .image-cropper {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    top: 10%;
-    left: calc(50% - 100px);
-  }
 
-  .profile {
-    width: 200px;
-    display: inline;
-    margin: 0% auto;
-  }
 
   .title {
     width: auto;
@@ -151,6 +95,7 @@ a {
     left: -50%;
     margin-left: calc(100% - 300px);
   }
+}
 
   @media screen and (max-width: 780px) {
     .title {
@@ -158,17 +103,7 @@ a {
       top: 55%;
       left: -50%;
       margin-left: 55%;
-    }
-    .contact {
-      font-size: small;
-    }
 
-    .hidden_mobile {
-      display: none;
-    }
-    .hidden_desktop {
-      display: block;
-    }
   }
 }
 
