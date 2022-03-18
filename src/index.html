@@ -7,12 +7,12 @@
   <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VT47TDXGS"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{environment.googleID}}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-0VT47TDXGS');
+    gtag('config', '{{environment.googleID}}');
   </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="manifest" href="manifest.webmanifest" />

@@ -27,7 +27,9 @@ export class ProfileComponent implements OnInit {
     translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+  
   changeLanguage(lan: string) {
     this.translate.setDefaultLang(lan);
     let languageIT = document.getElementById('italian') as HTMLElement;
