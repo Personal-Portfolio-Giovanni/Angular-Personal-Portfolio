@@ -7,5 +7,9 @@
       "pt1": "Ciao, Sono ",
       "pt2": ", Java Developer con sede a Milano."
     }
+  },
+  "biography": {
+    "title": "Biografia",
+    "text": "Appassionato della Tecnologia, fin da piccolo ho sempre sognato di poter lavorare in un azienda informatica. Mi sono diplomato come Perito Meccanico, ma la mia passione mi ha spinto successivamente a Intraprendere degli studi privati, anche grazie a dei corsi di formazione nell'ambito IT. Durante la mia crescita professionale ho utilizzato il mio tempo libero per applicare ed espandere le mie conoscenze in ambito informatico, ciò mi ha consentito di effettuare dei lavori da freelance che mi hanno spinto a voler espandere le mie conoscenze fino ad arrivare a studiare la programmazione in Java. Per questo mi sono iscritto al corso Generation in “Sviluppatore Java”. Il mio sogno è quello di diventare uno Sviluppatore per una Grande Azienda."
   }
 }

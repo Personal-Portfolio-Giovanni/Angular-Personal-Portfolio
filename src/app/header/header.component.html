@@ -1,0 +1,30 @@
+<div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text">
+    <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
+        Giovanni <span style="color: #777">Lamarmora</span>
+    </p>
+    <a *ngIf="downloadCV" [@inOutAnimation]
+        href="https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing" target="_blank"
+        id="cv">Download <span style="color: #777">CV</span></a>
+    <div class="nav-wrapper">
+        <div class="sl-nav" style="color: aliceblue">
+            <i class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}" style="margin-right: 5px"></i>
+            <ul>
+                <li style="color: aliceblue">
+                    <b>{{ "profile.currentLanguage" | translate }}</b>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="triangle"></div>
+                    <ul>
+                        <li>
+                            <i class="sl-flag flag-it"></i>
+                            <span id="italian" (click)="changeLanguage('it')">Italian</span>
+                        </li>
+                        <li>
+                            <i class="sl-flag flag-en"></i>
+                            <span id="english" class="active" (click)="changeLanguage('en')">English</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

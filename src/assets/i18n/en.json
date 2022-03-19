@@ -7,5 +7,9 @@
       "pt1": "Hello, I am ",
       "pt2": ", Java Developer based in Milan."
     }
+  },
+  "biography": {
+    "title": "Biography",
+    "text": "Example test"
   }
 }
