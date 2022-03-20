@@ -2,6 +2,18 @@
   margin-top: 30px;
   font-weight: bold;
 }
+.navbar-inverse {
+  background-color: #111 !important;
+  transition: background-color 800ms linear;
+}
+
+#navbar {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  height: 80px;
+  z-index: 80;
+}
 
 #cv {
   margin-left: 3%;
@@ -44,7 +56,6 @@ a {
   color: aliceblue;
   text-align: left;
 }
-
 
 .profile {
   width: 300px;

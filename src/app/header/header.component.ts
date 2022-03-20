@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../environments/environment';
 
@@ -11,11 +11,17 @@ import { environment } from '../../environments/environment';
     trigger('inOutAnimation', [
       transition(':enter', [
         style({ height: 0, opacity: 0 }),
-        animate('0.3s ease-out', style({ height: 300, opacity: 1 })),
+        animate(
+          '0.3s ease-out',
+          style({ height: 300, opacity: 1, display: 'block' })
+        ),
       ]),
       transition(':leave', [
         style({ height: 300, opacity: 1 }),
-        animate('0.3s ease-in', style({ height: 0, opacity: 0 })),
+        animate(
+          '0.3s ease-in',
+          style({ height: 0, opacity: 0, display: 'none' })
+        ),
       ]),
     ]),
   ],
@@ -38,6 +44,16 @@ export class HeaderComponent implements OnInit {
     } else {
       languageEN.classList.add('active');
       languageIT.classList.remove('active');
+    }
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    console.log('Test');
+    let element = document.getElementById('navbar') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('navbar-inverse');
+    } else {
+      element.classList.remove('navbar-inverse');
     }
   }
 }
