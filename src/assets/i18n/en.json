@@ -1,11 +1,16 @@
 {
   "profile": {
+    "downloadCV": "https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing",
     "currentLanguage": "English",
     "currentLanguageIcon": "flag-en",
     "follow": "Follow Me",
     "description": {
       "pt1": "Hello, I am ",
-      "pt2": ", Java Developer based in Milan."
+      "pt2": " based in Milan."
     }
+  },
+  "biography": {
+    "title": "Biography",
+    "text": "Passionate about technology, from an early age I have always dreamed of being able to work in an IT company. I graduated as a mechanical expert, but my passion subsequently led me to undertake private studies, also thanks to training courses in the IT field. During my professional growth I used my free time to study and expand my knowledge in the IT field, this allowed me to carry out freelance jobs that led me to want to expand my knowledge up to study developing in Java. I currently hold the role of Junior Specialist for an IT company, and I am specializing on the Angular side. For the future I hope to be able to collaborate in the growth of a big company."
   }
 }
