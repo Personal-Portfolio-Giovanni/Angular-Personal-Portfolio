@@ -1,18 +1,28 @@
-.text {
-  margin-top: 30px;
-  font-weight: bold;
-}
-.navbar-inverse {
-  background-color: #111 !important;
-  transition: background-color 800ms linear;
-}
-
 #navbar {
   position: absolute;
   width: 100%;
   top: 0%;
   height: 80px;
   z-index: 80;
+}
+
+.navbar-inverse {
+  background-color: #111 !important;
+  transition: background-color 800ms linear;
+}
+
+.text {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#name {
+  margin-left: 3%;
+  text-align: center;
+  display: inline;
+  width: 200px;
+  position: absolute;
+  z-index: 100;
 }
 
 #cv {
@@ -25,42 +35,11 @@
   text-decoration: none;
   color: aliceblue;
 }
-#name {
-  margin-left: 3%;
-  text-align: center;
-  display: inline;
-  width: 200px;
-  position: absolute;
-  z-index: 100;
-}
-
-.border {
-  margin-left: calc(50% - 200px);
-  color: #fff;
-  padding: 10px;
-  width: 400px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-.h3 {
-  letter-spacing: 5px !important;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif !important;
-  color: azure;
-  text-align: center;
-}
 
 p,
 a {
   color: aliceblue;
   text-align: left;
-}
-
-.profile {
-  width: 300px;
-  display: inline;
-  margin: 0% auto;
 }
 
 .hidden_mobile {
@@ -70,24 +49,16 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
-  .profile {
-    width: 200px;
-    display: inline;
-    margin: 0% auto;
+@media screen and (max-width: 780px) {
+  .hidden_mobile {
+    display: none;
   }
-
-  @media screen and (max-width: 780px) {
-    .hidden_mobile {
-      display: none;
-    }
-    .hidden_desktop {
-      display: block;
-    }
+  .hidden_desktop {
+    display: block;
   }
 }
 
-/* Language */
+/* Language Section CSS */
 .nav-wrapper {
   position: absolute;
   width: 300px;
@@ -187,3 +158,4 @@ a {
   background-size: cover;
   background-position: center center;
 }
+/* END Language Section CSS */

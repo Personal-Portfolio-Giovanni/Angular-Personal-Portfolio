@@ -36,10 +36,22 @@ a {
   text-align: left;
 }
 
+@media screen and (max-width: 1650px) {
+  .biografia {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .biografia {
     font-size: small;
     margin-left: -30px;
     margin-right: -30px;
+  }
+
+  .border {
+    width: 300px;
+    margin-left: calc(50% - (300px / 2));
   }
 }

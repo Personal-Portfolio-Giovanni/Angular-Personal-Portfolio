@@ -6,9 +6,8 @@ import { environment } from '../../environments/environment';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
   environment = environment;
-  constructor() {}
-
-  ngOnInit(): void {}
+  fullName: string = 'Giovanni Lamarmora';
+  email: string = 'giovannilamarmora.working@gmail.com';
 }

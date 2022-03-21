@@ -10,16 +10,16 @@ import { environment } from '../../environments/environment';
   animations: [
     trigger('inOutAnimation', [
       transition(':enter', [
-        style({ height: 0, opacity: 0 }),
+        style({ height: 0, opacity: 0, display: 'none' }),
         animate(
-          '0.3s ease-out',
+          '0.5s ease-out',
           style({ height: 300, opacity: 1, display: 'block' })
         ),
       ]),
       transition(':leave', [
-        style({ height: 300, opacity: 1 }),
+        style({ height: 300, opacity: 1, display: 'block' }),
         animate(
-          '0.3s ease-in',
+          '0.5s ease-in',
           style({ height: 0, opacity: 0, display: 'none' })
         ),
       ]),
@@ -29,6 +29,8 @@ import { environment } from '../../environments/environment';
 export class HeaderComponent implements OnInit {
   environment = environment;
   downloadCV: boolean = false;
+  firstname: string = 'Giovanni';
+  lastname: string = 'Lamarmora';
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
   }

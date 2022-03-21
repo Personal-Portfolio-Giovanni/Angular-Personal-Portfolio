@@ -1,10 +1,9 @@
 <nav id="navbar" (scroll)="onWindowScroll()">
     <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text">
         <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
-            Giovanni <span style="color: #777">Lamarmora</span>
+            {{firstname}} <span style="color: #777">{{lastname}}</span>
         </p>
-        <a *ngIf="downloadCV" [@inOutAnimation]
-            href="https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing" target="_blank"
+        <a *ngIf="downloadCV" [@inOutAnimation] href="{{ 'profile.downloadCV' | translate }}" target="_blank"
             id="cv">Download <span style="color: #777">CV</span></a>
     </div>
     <div class="nav-wrapper">
@@ -29,5 +28,4 @@
             </ul>
         </div>
     </div>
-
 </nav>
