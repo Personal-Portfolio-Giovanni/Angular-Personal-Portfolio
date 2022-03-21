@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "../../"
+  baseUrl: '../../',
+  googleID: 'G-0VT47TDXGS',
 };
 
 /*

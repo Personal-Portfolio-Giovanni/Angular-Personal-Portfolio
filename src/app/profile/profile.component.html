@@ -1,49 +1,24 @@
 <div class="bgimg-1"></div>
 <div class="caption">
-  <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text">
-    <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
-      Giovanni <span style="color: #777">Lamarmora</span>
-    </p>
-    <a *ngIf="downloadCV" [@inOutAnimation]
-      href="https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing" target="_blank"
-      id="cv">Download <span style="color: #777">CV</span></a>
-    <div class="nav-wrapper">
-      <div class="sl-nav" style="color: aliceblue">
-        <i class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}" style="margin-right: 5px"></i>
-        <ul>
-          <li style="color: aliceblue">
-            <b>{{ "profile.currentLanguage" | translate }}</b>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <div class="triangle"></div>
-            <ul>
-              <li>
-                <i class="sl-flag flag-it"></i>
-                <span id="italian" (click)="changeLanguage('it')">Italian</span>
-              </li>
-              <li>
-                <i class="sl-flag flag-en"></i>
-                <span id="english" class="active" (click)="changeLanguage('en')">English</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <app-header></app-header>
   <div class="image-cropper">
     <img
       src="https://media-exp1.licdn.com/dms/image/C4D03AQH8e_2qWvDl9g/profile-displayphoto-shrink_800_800/0/1620846625034?e=1652313600&v=beta&t=PlCVpLWgMNubE0Wb-p6XO-kHoWOYCpDRzUq0jXcU5hQ"
       class="profile" alt="" />
   </div>
   <div class="title">
-    <h3 class="h3">
+    <h3 class="h3 console-container">
       {{ "profile.description.pt1" | translate
-      }}<span style="color: cornflowerblue">Giovanni Lamarmora</span>{{ "profile.description.pt2" | translate }}
+      }}
+      <span style="color: cornflowerblue">{{fullName}}</span>,<br>
+      <span style="color: cornflowerblue" id='text'></span>
+      <div class='console-underscore' id='console'>&#95;</div>
+      {{ "profile.description.pt2" | translate }}
     </h3>
   </div>
   <div class="contact hidden_mobile">
     <p>
-      E-Mail: giovannilamarmora.working@gmail.com
+      E-Mail: {{email}}
     </p>
   </div>
   <p class="follow">
