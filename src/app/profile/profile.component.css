@@ -128,7 +128,7 @@ a {
   }
 
   @media screen and (max-width: 780px) {
-    .title {
+    .title, .console-container {
       width: auto;
       top: 55%;
       left: -50%;
@@ -152,7 +152,7 @@ a {
   font-size: 4em;
   text-align: center;
   height: 200px;
-  width: 600px;
+  max-width: 600px;
   display: block;
   color: white;
   margin: auto;
