@@ -73,6 +73,18 @@ export class ProfileComponent implements OnInit {
           }
         }
       }, 400);
+
+  
+  changeLanguage(lan: string) {
+    this.translate.setDefaultLang(lan);
+    let languageIT = document.getElementById('italian') as HTMLElement;
+    let languageEN = document.getElementById('english') as HTMLElement;
+    if (lan == 'it') {
+      languageIT.classList.add('active');
+      languageEN.classList.remove('active');
+    } else {
+      languageEN.classList.add('active');
+      languageIT.classList.remove('active');
     }
   }
 }
