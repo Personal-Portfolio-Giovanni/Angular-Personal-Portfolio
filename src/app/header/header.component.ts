@@ -50,7 +50,6 @@ export class HeaderComponent implements OnInit {
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    console.log('Test');
     let element = document.getElementById('navbar') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('navbar-inverse');
