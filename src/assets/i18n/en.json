@@ -12,5 +12,47 @@
   "biography": {
     "title": "Biography",
     "text": "Passionate about technology, from an early age I have always dreamed of being able to work in an IT company. I graduated as a mechanical expert, but my passion subsequently led me to undertake private studies, also thanks to training courses in the IT field. During my professional growth I used my free time to study and expand my knowledge in the IT field, this allowed me to carry out freelance jobs that led me to want to expand my knowledge up to study developing in Java. I currently hold the role of Junior Specialist for an IT company, and I am specializing on the Angular side. For the future I hope to be able to collaborate in the growth of a big company."
-  }
+  },
+  "works-section": {
+    "title": "Work Experience"
+    
+  },
+  "works": [
+      {
+        "id": 1,
+        "title": "Be | Shaping the Future",
+        "from": "From June 2021",
+        "to": "Now",
+        "role": "Junior Specialist",
+        "where": "Milan, Italy",
+        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code>"
+      },
+      {
+        "id":2,
+        "title": "Freelance Web Developer",
+        "from": "From January 2017",
+        "to": "Now",
+        "role": "Graphic Web Design",
+        "where": "Bristol, United Kingdom",
+        "description": "Continuous design and maintenance of websites with content creation & design of web pages with social connection and web site testing with different browsers and formats."
+      },
+      {
+        "id":3,
+        "title": "Freelance IT Technician",
+        "from": "From May 2012",
+        "to": "To January 2020",
+        "role": "IT Technician",
+        "where": "Bristol, United Kingdom",
+        "description": "& bull; Diagnose and troubleshoot efficiently while preserving data integrity throughout the process. <br> &bull; Keep the <code>Windows and Mac operating system up to date.</code><br>&bull; Upgrading old laptops with a lite operating system <code>(Linux / Chrome OS / Debian).</code><br>&bull; Hardware upgrade of components such as RAM or SSD. <br>&bull; Troubleshooting the operating system. <br>&bull; Installation and management of software <code>(Adobe, Office, VMWare, Eclipse). </code> <br>&bull; Data recovery for private and small / medium businesses. <br>&bull; Repair and maintenance of <code>Android and iOS Smartphones. </code>"
+      },
+      {
+        "id":4,
+        "title": "Rock N Bowl",
+        "from": "From September 2018",
+        "to": "To September 2019",
+        "role": "Hostel Duty Manager",
+        "where": "Bristol, United Kingdom",
+        "description": "&bull; Reservations Manager. <br>&bull; Personnel and working hours manager. <br>&bull; Personnel Recruitment Officer. <br>&bull; Office manager. <br>&bull; Daily and weekly closing and responsible for bank deposits. <br>&bull; Management of prices for overnight stays. <br>&bull; Event organization for large groups. <br>&bull; Responsible for collaboration with Expedia, Booking.com, Agoda. <br>&bull; Head of Social Media."
+      }
+    ]
 }
