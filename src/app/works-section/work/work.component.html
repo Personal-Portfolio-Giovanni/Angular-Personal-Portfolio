@@ -1,0 +1,21 @@
+<div class="accordion-item accordion_color">
+    <h2 class="accordion-header" id="{{aria_label}}">
+        <button class="accordion-button collapsed titleWork" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#'+aria_control" aria-expanded="false" [attr.aria-controls]="aria_control">
+            {{work?.title}}
+            <span class="from hidden_mobile">{{work?.from}}<br />
+                {{work?.to}}</span>
+        </button>
+    </h2>
+    <div id="{{aria_control}}" class="accordion-collapse collapse" [attr.aria-labelledby]="aria_label"
+        data-bs-parent="#work-accordion">
+        <div class="accordion-body" style="background-color: #111 !important; color: aliceblue">
+            <h3>{{work?.role}}</h3>
+            <span class="hidden_desktop">{{work.from}}<br />
+                {{work.to}}</span>
+            <hr />
+            <h5>{{work.where}}</h5>
+            <div [innerHTML]="work.description"></div>
+        </div>
+    </div>
+</div>
