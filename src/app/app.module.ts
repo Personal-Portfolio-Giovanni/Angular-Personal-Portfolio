@@ -12,9 +12,18 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './description/description.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { WorkSectionComponent } from './works-section/works-section.component';
+import { WorkComponent } from './works-section/work/work.component';
 
 @NgModule({
-  declarations: [AppComponent, ProfileComponent, DescriptionComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+    DescriptionComponent,
+    HeaderComponent,
+    WorkSectionComponent,
+    WorkComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
