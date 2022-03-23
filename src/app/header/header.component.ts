@@ -2,6 +2,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../environments/environment';
+import { WorkSectionComponent } from '../works-section/works-section.component';
 
 @Component({
   selector: 'app-header',
@@ -31,7 +32,9 @@ export class HeaderComponent implements OnInit {
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
   lastname: string = 'Lamarmora';
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService
+  ) {
     translate.setDefaultLang('en');
   }
 

@@ -15,7 +15,6 @@
   },
   "works-section": {
     "title": "Work Experience"
-    
   },
   "works": [
       {
@@ -43,7 +42,7 @@
         "to": "To January 2020",
         "role": "IT Technician",
         "where": "Bristol, United Kingdom",
-        "description": "& bull; Diagnose and troubleshoot efficiently while preserving data integrity throughout the process. <br> &bull; Keep the <code>Windows and Mac operating system up to date.</code><br>&bull; Upgrading old laptops with a lite operating system <code>(Linux / Chrome OS / Debian).</code><br>&bull; Hardware upgrade of components such as RAM or SSD. <br>&bull; Troubleshooting the operating system. <br>&bull; Installation and management of software <code>(Adobe, Office, VMWare, Eclipse). </code> <br>&bull; Data recovery for private and small / medium businesses. <br>&bull; Repair and maintenance of <code>Android and iOS Smartphones. </code>"
+        "description": "&bull; Diagnose and troubleshoot efficiently while preserving data integrity throughout the process. <br> &bull; Keep the <code>Windows and Mac operating system up to date.</code><br>&bull; Upgrading old laptops with a lite operating system <code>(Linux / Chrome OS / Debian).</code><br>&bull; Hardware upgrade of components such as RAM or SSD. <br>&bull; Troubleshooting the operating system. <br>&bull; Installation and management of software <code>(Adobe, Office, VMWare, Eclipse). </code> <br>&bull; Data recovery for private and small / medium businesses. <br>&bull; Repair and maintenance of <code>Android and iOS Smartphones. </code>"
       },
       {
         "id":4,
