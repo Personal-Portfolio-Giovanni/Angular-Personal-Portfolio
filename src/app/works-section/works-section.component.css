@@ -2,7 +2,7 @@
   color: #777;
   background-color: #111;
   text-align: center;
-  padding: 50px 80px;
+  padding: 80px 100px;
   text-align: justify;
 }
 /* Title Section Description */
@@ -45,7 +45,7 @@
 /* END Title Section Description */
 
 #work-accordion {
-  margin-top: -50px;
+  margin-top: 0px;
   margin-left: calc(50% - (1500px / 2));
   max-width: 1500px;
   padding-top: 10px;
