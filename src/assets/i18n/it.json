@@ -53,5 +53,8 @@
         "where": "Bristol, United Kingdom",
         "description": "&bull; Responsabile delle prenotazioni.<br>&bull; Responsabile Del personale e alle ore lavorative.<br>&bull; Addetto all'assunzione del personale.<br>&bull; Responsabile d'ufficio.<br>&bull; Chiusura Giornaliera e settimanale e responsabile dei depositi in banca.<br>&bull; Gestione Prezzi dei pernottamenti.<br>&bull; Organizzazione eventi per grandi gruppi.<br>&bull; Responsabile della collaborazione con Expedia, Booking.com, Agoda.<br>&bull; Responsabile dei Social Media."
       }
-    ]
+    ],
+  "footer":{
+    "title":"Giovanni Lamarmora | Portfolio è stato sviluppato con AngularJS v13"
+  }
 }
