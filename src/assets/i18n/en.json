@@ -53,5 +53,8 @@
         "where": "Bristol, United Kingdom",
         "description": "&bull; Reservations Manager. <br>&bull; Personnel and working hours manager. <br>&bull; Personnel Recruitment Officer. <br>&bull; Office manager. <br>&bull; Daily and weekly closing and responsible for bank deposits. <br>&bull; Management of prices for overnight stays. <br>&bull; Event organization for large groups. <br>&bull; Responsible for collaboration with Expedia, Booking.com, Agoda. <br>&bull; Head of Social Media."
       }
-    ]
+    ],
+  "footer":{
+    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS v13"
+  }
 }

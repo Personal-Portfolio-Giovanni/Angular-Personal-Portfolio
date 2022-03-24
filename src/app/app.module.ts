@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './works-section/works-section.component';
 import { WorkComponent } from './works-section/work/work.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { WorkComponent } from './works-section/work/work.component';
     HeaderComponent,
     WorkSectionComponent,
     WorkComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
