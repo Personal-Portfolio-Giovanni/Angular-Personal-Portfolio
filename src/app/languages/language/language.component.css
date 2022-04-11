@@ -1,0 +1,42 @@
+.h3 {
+    letter-spacing: 5px !important;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif !important;
+    color: azure;
+    text-align: center;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.row{
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap:wrap !important;
+}
+
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 25px;
+    height: 25px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+}
+
+.flag-it {
+    background: url("https://media.istockphoto.com/vectors/italian-flag-vector-id690489086?k=20&m=690489086&s=612x612&w=0&h=xy2Wz9eIEdt_NPawL77q232A0NTz3eP9btbUJEOy6Fo=");
+    background-size: cover;
+    background-position: center center;
+}
+
+p,
+a {
+    color: aliceblue;
+    text-align: left;
+}
+

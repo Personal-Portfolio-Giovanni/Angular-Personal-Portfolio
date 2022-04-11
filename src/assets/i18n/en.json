@@ -59,15 +59,49 @@
   },
   "languages": {
     "title": "Languages",
-    "data": 
+    "data": [
       {
         "name": "Italian",
         "flags": "flag-it",
         "description": "Native Languages",
         "speaking_title": "Speaking",
-        "speaking_rate": "90",
-        "speaking_width": "width: 90%"
+        "speaking_rate": "100",
+        "speaking_width": "width: 100%",
+        "writing_title": "Writing",
+        "writing_rate": "100",
+        "writing_width": "width: 100%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "100",
+        "comprehension_width": "width: 100%"
+      },
+      {
+        "name": "English",
+        "flags": "flag-en",
+        "description": "Native Languages",
+        "speaking_title": "Speaking",
+        "speaking_rate": "83",
+        "speaking_width": "width: 83%",
+        "writing_title": "Writing",
+        "writing_rate": "83",
+        "writing_width": "width: 83%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "83",
+        "comprehension_width": "width: 83%"
+      },
+      {
+        "name": "Spanish",
+        "flags": "flag-es",
+        "description": "Native Languages",
+        "speaking_title": "Speaking",
+        "speaking_rate": "67",
+        "speaking_width": "width: 67%",
+        "writing_title": "Writing",
+        "writing_rate": "50",
+        "writing_width": "width: 50%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "67",
+        "comprehension_width": "width: 67%"
       }
-    
+    ]
   }
 }

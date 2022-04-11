@@ -8,33 +8,8 @@
     </div>
     <!-- Heading end-->
     <!-- My Skills -->
-    <div class="row gx-5 container-language">
-        <div class="col-md-4">
-            <h2 class="text-6 text-white fw-600 mt-4 mb-4"><i
-                    class="sl-flag {{'languages.data.flags' | translate}}"></i> {{'languages.data.name' | translate}}
-            </h2>
-            <h5 style="margin-top: -10px;">{{'languages.data.description' | translate}}</h5>
-            <p class="text-light fw-500 text-start mb-2">{{'languages.data.speaking_title' | translate}} <span
-                    class="float-end">{{'languages.data.speaking_rate' | translate}}%</span></p>
-            <div class="progress progress-sm bg-dark mb-4">
-                <div class="progress-bar" role="progressbar" [attr.style]="'languages.data.speaking_width' | translate"
-                    [attr.aria-valuenow]="'languages.data.speaking_rate' | translate" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-            </div>
-            <p class="text-light fw-500 text-start mb-2">{{'languages.data.speaking_title' | translate}} <span
-                    class="float-end">{{'languages.data.speaking_rate' | translate}}%</span></p>
-            <div class="progress progress-sm bg-dark mb-4">
-                <div class="progress-bar" role="progressbar" [attr.style]="'languages.data.speaking_width' | translate"
-                    [attr.aria-valuenow]="'languages.data.speaking_rate' | translate" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-            </div>
-            <p class="text-light fw-500 text-start mb-2">{{'languages.data.speaking_title' | translate}} <span
-                    class="float-end">{{'languages.data.speaking_rate' | translate}}%</span></p>
-            <div class="progress progress-sm bg-dark mb-4">
-                <div class="progress-bar" role="progressbar" [attr.style]="'languages.data.speaking_width' | translate"
-                    [attr.aria-valuenow]="'languages.data.speaking_rate' | translate" aria-valuemin="0"
-                    aria-valuemax="100"></div>
-            </div>
-        </div>
+    <div class="row wrap container-language">
+        <app-language></app-language>
+        <!-- <app-language [language]="language" *ngFor="let language of 'languages.data' |translate"></app-language> -->
     </div>
 </div>

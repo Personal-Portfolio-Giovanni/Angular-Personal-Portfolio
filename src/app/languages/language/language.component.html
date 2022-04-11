@@ -1,0 +1,29 @@
+<div *ngFor="let language of 'languages.data' |translate" class="row wrap container-language">
+    <div class="col-md-4">
+        <h2 class="text-6 text-white fw-600 mt-4 mb-4"><i class="sl-flag {{language.flags | translate}}"></i>
+            {{language.name | translate}}
+        </h2>
+        <h5 style="margin-top: -10px;">{{language.description | translate}}</h5>
+        <p class="text-light fw-500 text-start mb-2">{{language.speaking_title | translate}} <span
+                class="float-end">{{language.speaking_rate | translate}}%</span></p>
+        <div class="progress progress-sm bg-dark mb-4">
+            <div class="progress-bar" role="progressbar" [attr.style]="language.speaking_width | translate"
+                [attr.aria-valuenow]="language.speaking_rate | translate" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <p class="text-light fw-500 text-start mb-2">{{language.writing_title | translate}} <span
+                class="float-end">{{language.writing_rate | translate}}%</span></p>
+        <div class="progress progress-sm bg-dark mb-4">
+            <div class="progress-bar" role="progressbar" [attr.style]="language.writing_width | translate"
+                [attr.aria-valuenow]="language.writing_rate | translate" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <p class="text-light fw-500 text-start mb-2">{{language.comprehension_title | translate}} <span
+                class="float-end">{{language.comprehension_rate | translate}}%</span></p>
+        <div class="progress progress-sm bg-dark mb-4">
+            <div class="progress-bar" role="progressbar" [attr.style]="language.comprehension_width | translate"
+                [attr.aria-valuenow]="language.comprehension_rate | translate" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+</div>
