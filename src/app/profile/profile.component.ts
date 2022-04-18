@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
   fullName: string = 'Giovanni Lamarmora';
   email: string = 'giovannilamarmora.working@gmail.com';
 
-  words = ['Java Developer.', 'Web Developer.'];
+  words = ['Java Developer', 'Web Developer', 'Full Stack Developer'];
   id = 'text';
   colors = ['white'];
   constructor() {}

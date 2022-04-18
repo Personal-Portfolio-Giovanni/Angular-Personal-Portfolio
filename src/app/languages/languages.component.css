@@ -96,3 +96,10 @@ a {
     margin-right: -80px;
   }
 }
+/*
+@media screen and (max-width: 1700px) {
+  .boxer {
+    max-width: 1500px;
+    margin-left: calc(50% - (1500px / 2));
+  }
+}*/

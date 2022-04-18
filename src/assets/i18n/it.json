@@ -55,6 +55,54 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio è stato sviluppato con AngularJS v13"
+    "title":"Giovanni Lamarmora | Portfolio è stato sviluppato con AngularJS e Bootstrap"
+  },
+  "languages": {
+    "title": "Lingue",
+    "data": [
+      {
+        "name": "Italiano",
+        "flags": "flag-it",
+        "description": "Madrelingua",
+        "speaking_title": "Parlato",
+        "speaking_rate": "100",
+        "speaking_width": "width: 100%",
+        "writing_title": "Scritto",
+        "writing_rate": "100",
+        "writing_width": "width: 100%",
+        "comprehension_title": "Comprensione",
+        "comprehension_rate": "100",
+        "comprehension_width": "width: 100%"
+      },
+      {
+        "name": "Inglese",
+        "flags": "flag-en",
+        "description": "B1 al College Green Centre St George's Road Bristol",
+        "speaking_title": "Parlato",
+        "speaking_rate": "83",
+        "speaking_width": "width: 83%",
+        "writing_title": "Scritto",
+        "writing_rate": "83",
+        "writing_width": "width: 83%",
+        "comprehension_title": "Comprensione",
+        "comprehension_rate": "83",
+        "comprehension_width": "width: 83%"
+      },
+      {
+        "name": "Spagnolo",
+        "flags": "flag-es",
+        "description": "B1",
+        "speaking_title": "Parlato",
+        "speaking_rate": "67",
+        "speaking_width": "width: 67%",
+        "writing_title": "Scritto",
+        "writing_rate": "50",
+        "writing_width": "width: 50%",
+        "comprehension_title": "Comprensione",
+        "comprehension_rate": "67",
+        "comprehension_width": "width: 67%"
+      }
+    ]
   }
 }
+

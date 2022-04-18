@@ -8,8 +8,10 @@
     </div>
     <!-- Heading end-->
     <!-- My Skills -->
-    <div class="row wrap container-language">
-        <app-language></app-language>
-        <!-- <app-language [language]="language" *ngFor="let language of 'languages.data' |translate"></app-language> -->
+    <div class="row container-language">
+        <div class="inline boxer">
+            <app-language [language]="language" *ngFor="let language of 'languages.data' |translate">
+            </app-language>
+        </div>
     </div>
 </div>

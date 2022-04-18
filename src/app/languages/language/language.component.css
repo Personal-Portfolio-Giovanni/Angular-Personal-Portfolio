@@ -5,6 +5,11 @@
     color: azure;
     text-align: center;
 }
+.boxer{
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1500px;
+}
 
 .progress {
     border-radius: 10px;
@@ -33,6 +38,16 @@
     background-size: cover;
     background-position: center center;
 }
+.flag-en {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png");
+    background-size: cover;
+    background-position: center center;
+}
+.flag-es {
+    background: url("https://www.viaggiaregratis.eu/wp-content/uploads/2020/09/bandiera-spagnola-stemma.jpg");
+    background-size: cover;
+    background-position: center center;
+}
 
 p,
 a {
@@ -40,3 +55,10 @@ a {
     text-align: left;
 }
 
+@media screen and (max-width: 500px) {
+    .col{
+        width: 100% !important;
+        margin-left: -10px;
+        margin-right: 150px;
+    }
+}

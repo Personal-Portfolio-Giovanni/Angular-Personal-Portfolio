@@ -55,7 +55,7 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS v13"
+    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS and Bootstrap"
   },
   "languages": {
     "title": "Languages",
@@ -77,7 +77,7 @@
       {
         "name": "English",
         "flags": "flag-en",
-        "description": "Native Languages",
+        "description": "B1 at College Green Centre St George's Road Bristol",
         "speaking_title": "Speaking",
         "speaking_rate": "83",
         "speaking_width": "width: 83%",
@@ -91,7 +91,7 @@
       {
         "name": "Spanish",
         "flags": "flag-es",
-        "description": "Native Languages",
+        "description": "B1",
         "speaking_title": "Speaking",
         "speaking_rate": "67",
         "speaking_width": "width: 67%",
