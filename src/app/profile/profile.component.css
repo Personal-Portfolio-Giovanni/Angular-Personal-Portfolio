@@ -41,7 +41,7 @@ app-header {
 .scroll {
   position: absolute;
   bottom: 1%;
-  left: 50%;
+  left: calc(50% - 5px);
   color: aliceblue;
 }
 /* Icon Animation */
@@ -121,6 +121,7 @@ p,
 a {
   color: aliceblue;
   text-align: left;
+  text-decoration: none;
 }
 
 .hidden_mobile {
@@ -199,7 +200,7 @@ a {
   .scroll {
     position: absolute;
     bottom: 10%;
-    left: 50%;
+    left: calc(50% - 5px);
     color: aliceblue;
   }
   @-webkit-keyframes mover {

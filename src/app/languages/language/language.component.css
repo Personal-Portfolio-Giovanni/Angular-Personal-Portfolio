@@ -1,0 +1,64 @@
+.h3 {
+    letter-spacing: 5px !important;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif !important;
+    color: azure;
+    text-align: center;
+}
+.boxer{
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1500px;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.row{
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap:wrap !important;
+}
+
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 25px;
+    height: 25px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+}
+
+.flag-it {
+    background: url("https://media.istockphoto.com/vectors/italian-flag-vector-id690489086?k=20&m=690489086&s=612x612&w=0&h=xy2Wz9eIEdt_NPawL77q232A0NTz3eP9btbUJEOy6Fo=");
+    background-size: cover;
+    background-position: center center;
+}
+.flag-en {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png");
+    background-size: cover;
+    background-position: center center;
+}
+.flag-es {
+    background: url("https://www.viaggiaregratis.eu/wp-content/uploads/2020/09/bandiera-spagnola-stemma.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+p,
+a {
+    color: aliceblue;
+    text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+    .col{
+        width: 100% !important;
+        margin-left: -10px;
+        margin-right: 150px;
+    }
+}

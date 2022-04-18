@@ -15,6 +15,8 @@ import { RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './works-section/works-section.component';
 import { WorkComponent } from './works-section/work/work.component';
 import { FooterComponent } from './footer/footer.component';
+import { LanguagesComponent } from './languages/languages.component';
+import { LanguageComponent } from './languages/language/language.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     WorkSectionComponent,
     WorkComponent,
     FooterComponent,
+    LanguagesComponent,
+    LanguageComponent,
   ],
   imports: [
     BrowserModule,
