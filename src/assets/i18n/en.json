@@ -21,7 +21,7 @@
         "id": 1,
         "title": "Be | Shaping the Future",
         "from": "From June 2021",
-        "to": "Now",
+        "to": "Current",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
         "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code>"
@@ -30,7 +30,7 @@
         "id":2,
         "title": "Freelance Web Developer",
         "from": "From January 2017",
-        "to": "Now",
+        "to": "Current",
         "role": "Graphic Web Design",
         "where": "Bristol, United Kingdom",
         "description": "Continuous design and maintenance of websites with content creation & design of web pages with social connection and web site testing with different browsers and formats."
@@ -55,6 +55,53 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS v13"
+    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS and Bootstrap"
+  },
+  "languages": {
+    "title": "Languages",
+    "data": [
+      {
+        "name": "Italian",
+        "flags": "flag-it",
+        "description": "Native Languages",
+        "speaking_title": "Speaking",
+        "speaking_rate": "100",
+        "speaking_width": "width: 100%",
+        "writing_title": "Writing",
+        "writing_rate": "100",
+        "writing_width": "width: 100%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "100",
+        "comprehension_width": "width: 100%"
+      },
+      {
+        "name": "English",
+        "flags": "flag-en",
+        "description": "B1 at College Green Centre St George's Road Bristol",
+        "speaking_title": "Speaking",
+        "speaking_rate": "83",
+        "speaking_width": "width: 83%",
+        "writing_title": "Writing",
+        "writing_rate": "83",
+        "writing_width": "width: 83%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "83",
+        "comprehension_width": "width: 83%"
+      },
+      {
+        "name": "Spanish",
+        "flags": "flag-es",
+        "description": "B1",
+        "speaking_title": "Speaking",
+        "speaking_rate": "67",
+        "speaking_width": "width: 67%",
+        "writing_title": "Writing",
+        "writing_rate": "50",
+        "writing_width": "width: 50%",
+        "comprehension_title": "Comprehension",
+        "comprehension_rate": "67",
+        "comprehension_width": "width: 67%"
+      }
+    ]
   }
 }

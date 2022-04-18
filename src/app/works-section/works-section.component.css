@@ -104,18 +104,16 @@ a {
   .hidden_desktop {
     display: block;
   }
+
   #work-accordion {
     margin-top: 50px;
     margin-left: -10%;
     margin-right: -10%;
   }
-  .text-24 {
-    margin-left: 0% !important;
-  }
 }
 
 @media screen and (max-width: 560px) {
-  .text-24 {
+  /*.text-24 {
     margin-top: 50px;
     margin-left: -10px !important;
     font-size: calc(1rem + 8.4vw) !important;
@@ -124,10 +122,24 @@ a {
 
   .text-9 {
     margin-top: 50px;
-  }
+  }*/
   #work-accordion {
     margin-top: 70px;
     margin-left: -20%;
     margin-right: -20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-title {
+    width: fit-content;
+    max-width: 340px;
+    margin-left: calc(50% - (340px / 2));
+  }
+
+  #work-accordion {
+    margin-top: 70px;
+    margin-left: -45%;
+    margin-right: -45%;
   }
 }
