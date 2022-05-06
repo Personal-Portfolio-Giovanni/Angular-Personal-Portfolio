@@ -17,6 +17,7 @@ import { WorkComponent } from './works-section/work/work.component';
 import { FooterComponent } from './footer/footer.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { LanguageComponent } from './languages/language/language.component';
+import { CourseSectionComponent } from './course-section/course-section.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LanguageComponent } from './languages/language/language.component';
     FooterComponent,
     LanguagesComponent,
     LanguageComponent,
+    CourseSectionComponent,
   ],
   imports: [
     BrowserModule,
