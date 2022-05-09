@@ -24,7 +24,7 @@
         "to": "Attuale",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
-        "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift.</code>"
+        "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
         "id":2,

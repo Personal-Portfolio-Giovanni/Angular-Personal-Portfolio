@@ -9,58 +9,5 @@
     <!-- Heading end-->
     <div class="accordion accordion-flush" id="work-accordion">
         <app-work [work]="work" *ngFor="let work of 'works' |translate"></app-work>
-        <div class="accordion-item accordion_color">
-            <h2 class="accordion-header" id="aria_label">
-                <button class="accordion-button collapsed titleWork" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#aria_control" aria-expanded="false" aria-controls="aria_control">
-                    Title
-                    <span class="from hidden_mobile">From<br />
-                        To</span>
-                </button>
-            </h2>
-            <div id="aria_control" class="accordion-collapse collapse" aria-labelledby="aria_label"
-                data-bs-parent="#work-accordion">
-                <div class="accordion-body" style="background-color: #111 !important; color: aliceblue">
-                    <h3>Role</h3>
-                    <span class="hidden_desktop">From<br />
-                        to</span>
-                    <hr />
-                    <h5>where</h5>
-                    <div>Joined the UniCredit group immediately after hiring, I worked on several projects using
-                        different technologies,
-                        including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code
-                        Coverage for to be able
-                        to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests
-                        locally and in the
-                        environment of the entire application using Postman with the relative enviroments. <br> Good
-                        knowledge of the
-                        application's Pre-Deploy and Deploy environments, such as
-                        <code> Jenkins, Docker and OpenShift Pods. </code>
-                        <div class="row mt-3">
-                            <div class="col-md-3">
-                                <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Spring_Boot.png" alt=""
-                                    srcset="">
-                                <p class="text-white mt-2">- Spring Boot Framework<br>- Quarkus Framework </p>
-                            </div>
-                            <div class="col-md-3">
-                                <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Angular.png" alt=""
-                                    srcset="">
-                                <p class="text-white mt-2">- AngularJS Framework<br>- Typescript </p>
-                            </div>
-                            <div class="col-md-3">
-                                <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Java_logo.png" alt=""
-                                    srcset="">
-                                <p class="text-white mt-2">- Java v11 <br>- Hibernate and JPA </p>
-                            </div>
-                            <div class="col-md-3">
-                                <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/mysql.png" alt=""
-                                    srcset="">
-                                <p class="text-white mt-2">- Oracle SQL <br>- MySQL <br>- PostgreSQL </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
