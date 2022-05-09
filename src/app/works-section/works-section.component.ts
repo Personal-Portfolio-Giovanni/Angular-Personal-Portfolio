@@ -9,6 +9,7 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { HeaderComponent } from '../header/header.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-works-section',
@@ -16,6 +17,7 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./works-section.component.css'],
 })
 export class WorkSectionComponent {
+  environment = environment;
   worksSubscription: Subscription = new Subscription();
   @Output('works') works: Array<Work> = [];
 }
