@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { LanguageComponent } from './languages/language/language.component';
 import { CourseSectionComponent } from './course-section/course-section.component';
+import { CourseComponent } from './course-section/course/course.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CourseSectionComponent } from './course-section/course-section.componen
     LanguagesComponent,
     LanguageComponent,
     CourseSectionComponent,
+    CourseComponent,
   ],
   imports: [
     BrowserModule,
