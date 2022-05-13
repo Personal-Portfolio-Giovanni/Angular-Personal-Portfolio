@@ -1,1 +1,21 @@
-<p>course works!</p>
+<div class="accordion-item accordion_color">
+    <h2 class="accordion-header" id="{{aria_label}}">
+        <button class="accordion-button collapsed titlecourse" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#'+aria_control" aria-expanded="false" [attr.aria-controls]="aria_control">
+            {{course?.title}}
+            <span class="from hidden_mobile">{{course?.from}}<br />
+                {{course?.to}}</span>
+        </button>
+    </h2>
+    <div id="{{aria_control}}" class="accordion-collapse collapse" [attr.aria-labelledby]="aria_label"
+        data-bs-parent="#course-accordion">
+        <div class="accordion-body" style="background-color: #111 !important; color: aliceblue">
+            <h3>{{course?.role}}</h3>
+            <span class="hidden_desktop">{{course.from}}<br />
+                {{course.to}}</span>
+            <hr />
+            <h5>{{course.where}}</h5>
+            <div [innerHTML]="course.description"></div>
+        </div>
+    </div>
+</div>

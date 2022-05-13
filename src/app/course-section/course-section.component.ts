@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -6,12 +7,16 @@ import { environment } from 'src/environments/environment';
   templateUrl: './course-section.component.html',
   styleUrls: ['./course-section.component.css'],
 })
-export class CourseSectionComponent implements OnInit {
-  environment = environment;
-  aria_label: string = 'flush-heading';
-  aria_control: string = 'flush-collapse';
-
-  constructor() {}
-
-  ngOnInit(): void {}
+export class CourseSectionComponent {
+  courseSubscription: Subscription = new Subscription();
+  @Output('course') works: Array<Course> = [];
+}
+export interface Course {
+  id: number;
+  title: string;
+  from: string;
+  to: string;
+  role: string;
+  where: string;
+  description: string;
 }
