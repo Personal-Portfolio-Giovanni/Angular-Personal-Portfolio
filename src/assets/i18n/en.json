@@ -109,12 +109,12 @@
     "courses": [
       {
         "id": 1,
-        "title": "Be | Shaping the Future",
-        "from": "From June 2021",
-        "to": "Current",
-        "role": "Junior Specialist",
+        "title": "Generation Italy",
+        "from": "From February 2021",
+        "to": "To May 2021",
+        "role": "Java Developer Course",
         "where": "Milan, Italy",
-        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code>"
+        "description": "The 12-week online course, with daily frequency from 9AM to 6PM, organized by Generation Italy (Mc Kinsey) in collaboration with Intesa Sanpaolo, allowed me to acquire the basics for the development of software applications and management of web services. In particular, we have explored the main types of server applications (Jee, Mvc and Ajax) and the Spring and Hibernate frameworks. The final weeks were dedicated to Soap and Restful web services and to the realization of a project. At the same time we have worked for the development of behavioral skills such as: teamwork, adaptability, communication, persistence, personal responsibility, growth mentality and future orientation."
       }
     ]
   }
