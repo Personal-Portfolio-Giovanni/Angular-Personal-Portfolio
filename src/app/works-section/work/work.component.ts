@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-work',
@@ -6,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./work.component.css'],
 })
 export class WorkComponent implements OnInit {
+  environment = environment;
   @Input() work!: Work;
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
@@ -23,6 +25,6 @@ export interface Work {
   from: string;
   to: string;
   role: string;
-  where: string,
+  where: string;
   description: string;
 }
