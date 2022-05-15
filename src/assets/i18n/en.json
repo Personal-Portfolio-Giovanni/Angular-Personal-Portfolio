@@ -24,7 +24,7 @@
         "to": "Current",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
-        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code>"
+        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code> <br> At the moment I'm working as a Full stack Developer in a financial project, using the following technologies: <br><code> Java, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
         "id":2,
@@ -101,6 +101,47 @@
         "comprehension_title": "Comprehension",
         "comprehension_rate": "67",
         "comprehension_width": "width: 67%"
+      }
+    ]
+  },
+  "course-section": {
+    "title": "Professional Training",
+    "courses": [
+      {
+        "id": 1,
+        "title": "Generation Italy",
+        "from": "From February 2021",
+        "to": "To May 2021",
+        "role": "Java Developer Course",
+        "where": "Milan, Italy",
+        "description": "The 12-week online course, with daily frequency from 9AM to 6PM, organized by Generation Italy (Mc Kinsey) in collaboration with <code>Intesa Sanpaolo</code>, allowed me to acquire the basics for the development of software applications and management of web services.<br>In particular, we have explored the main types of server applications <code>(Jee, Mvc and Ajax)</code> and the <code>Spring</code> and <code>Hibernate</code> frameworks, with some FrontEnd such as <code>HTML5, CSS and JavaScript</code>.<br>The final weeks were dedicated to <code>Soap and Restful web services</code> and to the realization of a project. <br>At the same time we have worked for the development of behavioral skills such as: <code>teamwork, adaptability, communication, persistence, personal responsibility, growth mentality and future orientation.</code>"
+      },
+      {
+        "id": 2,
+        "title": "Cisco Networking Academy",
+        "from": "From September 2018",
+        "to": "To November 2019",
+        "role": "CCNA 1, 2, 3, 4 Routing And Switching",
+        "where": "City of Bristol College, Bristol, United Kingdom",
+        "description": "<strong><h4>CCNA 1: Introduction to Networks, Score: 89.5/100</h4></strong> <br>I've have achieved student level credential for completing CCNA Routing and Switching: Introduction to Networks, and i acquired the following capabilities:<br>&bull; Explain network technologies.<br>&bull; Explain how devices access local and remote network resources.<br>&bull; Describe router hardware.<br>&bull; Explain how switching operates in a small to medium-sized business network.<br>&bull; Design an IP addressing scheme to provide network connectivity for a small to medium- sized business network.<br>&bull; Configure initial settings on a network device.<br>&bull; Implement basic network connectivity between devices.<br>&bull; Configure monitoring tools available for small to medium-sized business networks.<br><hr><strong><h4>CCNA 2: Routing and Switching Essentials, Score: 89.1/100</h4></strong> <br>I've successfully complete the CCNA Routing and Switching: Routing and Switching Essentials , and i acquired the following capabilities:<br>&bull; Determinate how a router will Forward traffic based on the contents of a routing table.<br>&bull; Explain how switching operates in a small to medium-sized business network.<br>&bull; Use monitoring tools and network management protocols to troubleshoot data networks.<br>&bull; Configure monitoring tools available for small to medium-sized business networks.<br>&bull; Configure initial settings on a network device.<br>&bull; Configure <code>Ethernet Switch</code> ports.<br>&bull; Implement <code>VLANs</code>.<br>&bull; Implement static routing and <code>RIPv2</code>.<br>&bull; Implement <code>DHCP</code> on a router.<br>&bull; Implement network address translation <code>(NAT)</code>.<br>&bull; Implement access control lists <code>(ACLs)</code> to filter Traffic.<br><hr><strong><h4>CCNA 3: Scaling Networks</h4></strong> <br>I've successfully completed the CCNA Routing and Switching: Scaling Networks, and i acquired the following capabilities:<br>&bull; Describe the operations and benefits of the Spanning Tree Protocol <code>(STP)</code>. <br>&bull; Configure and troubleshoot <code>STP</code> operations. <br>&bull; Describe the operations and benefits of link aggregation and <code>Cisco VLAN Trunk Protocol (VTP)</code>. <br>&bull; Configure and troubleshoot <code>VTP, STP, DTP, and RSTP</code>. <br>&bull; Configure and troubleshoot <codeinter-VLAN routing</code>. <br>&bull; Configure and troubleshoot <code>EtherChannel and HSRP</code>. <br>&bull; Configure and troubleshoot basic operations of routers in a complex routed network for <code>IPv4 and IPv6</code>. <br>&bull; Configure and troubleshoot advanced operations of routers and implement <code>OSPF and EIGRP</code> routing protocols for <code>IPv4 and IPv6</code>. <br><hr><strong><h4>CCNA 4: Advanced Networks</h4></strong><br> I've successfully completed the CCNA Routing and Switching: Advanced Networks, and i acquired the following capabilities:<br>&bull; Describe different <code>WAN</code> technologies and their benefits.&bull; Configure and troubleshoot <code>PPP</code>.<br>&bull; Configure <code>PPPoE, GRE, and single-homed eBGP</code>.&bull; Configure and troubleshoot extended <code>IPv4 and IPv6 ACLs</code>.&bull; Explain how to mitigate common <code>LAN</code> security attacks.&bull; Describe <code>QoS</code> operation.&bull; Describe evolving networks including cloud, virtualization, SDN, and the Internet of Things&bull; Troubleshoot end-to-end connectivity in a small to medium-sized business network, using a systematic approach."
+      },
+      {
+        "id": 3,
+        "title": "English Language: Level B1",
+        "from": "From January 2017",
+        "to": "To May 2017",
+        "role": "English Course Level B1",
+        "where": "City of Bristol College, Bristol, United Kingdom",
+        "description": "I've successfully completed the English course for a Level B1"
+      },
+      {
+        "id": 4,
+        "title": "CEH Cyber Security",
+        "from": "From November 2017",
+        "to": "To February 2018",
+        "role": "Cyber Security: Introducing to the World of Cyber Security",
+        "where": "Smart Learning, Udemy",
+        "description": "I've successfully completed the course of Cyber Security CEH , and i acquired the following capabilities:<br>&bull; What is an Ethical Hacker.<br>&bull; What are the main vectors of attack on a network.<br>&bull; The stages of a cyber attack.<br>&bull; How to carry out a Penetration Testing.<br>&bull; How to create your own workshop.<br>&bull; Use virtual machines.<br>&bull; Install <code>Windows and Kali Linux</code> operating systems.<br>&bull; Run the main <code>Linux commands</code>.<br>&bull; Create concept maps.<br>&bull; Understanding the basic operation of a network.<br>&bull; What is an <code>IP address</code>.<br>&bull; How to use the <code>PING-ARP-TRACEROUTE</code>.<br>&bull; How NAT-DNS-DHCP works.<br>&bull; Perform basic operations with Netcat.<br>&bull; Use Cisco Packet Tracer for network simulation.<br>&bull; How a switch works and what <code>VLANs</code> are.<br>&bull; The difference between a router and a firewall.<br>&bull; What is meant by <code>Google Hacking</code>.<br>&bull; Collect information on Social Media.<br>&bull; How to query a <code>DNS</code>.<br>&bull; Finding vulnerabilities with <code>Shodan</code>.<br>&bull; Install and configure a honeypot.<br>&bull; Scan a network.<br>&bull; Sniff packets with Wireshark.<br>&bull; The difference between TCP and UDP protocol.<br>&bull; The techniques of Banner Grabbing.<br>&bull; Banner capture with <code>TELNET, NETCAT and NMAP</code>.<br>&bull; Active and passive fingerprinting methods.<br>&bull; Perform a vulnerability assessment.<br>&bull; Nessus installation and configuration.<br>&bull; Launch a scan with Nexpose.<br>&bull; Different Types of Exploitation.<br>&bull; Introduction and configuration of Metasploit.<br>&bull; Use the <code>METERPRETER</code> shell.<br>&bull; Evade Antivirus with <code>Veil</code>.<br>&bull; How to escalate privileges.<br>&bull; How to inject malicious code.<br>&bull; Install a backdoor on a target system.<br>&bull; The pivoting techniques of a network.<br>&bull; How to write the final Penetration Testing report."
       }
     ]
   }
