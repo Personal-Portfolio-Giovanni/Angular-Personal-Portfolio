@@ -90,3 +90,9 @@ a {
         display: block;
     }
 }
+
+.logo-develop {
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 30px;
+}

@@ -15,8 +15,8 @@ export class WorkComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.aria_label = this.aria_label + this.work.id;
-    this.aria_control = this.aria_control + this.work.id;
+    this.aria_label = this.aria_label + 'Work' + this.work.id;
+    this.aria_control = this.aria_control + 'Work' + this.work.id;
   }
 }
 export interface Work {

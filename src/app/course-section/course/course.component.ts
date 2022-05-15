@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-course',
@@ -6,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./course.component.css'],
 })
 export class CourseComponent implements OnInit {
+  environment = environment;
   @Input() course!: Course;
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
@@ -13,8 +15,8 @@ export class CourseComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.aria_label = this.aria_label + this.course.id;
-    this.aria_control = this.aria_control + this.course.id;
+    this.aria_label = this.aria_label + 'Course' + this.course.id;
+    this.aria_control = this.aria_control + 'Course' + this.course.id;
   }
 }
 export interface Course {
