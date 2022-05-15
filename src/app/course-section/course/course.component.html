@@ -46,7 +46,7 @@
                     <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/CSS.png" alt="" srcset="">
                     <p class="text-white mt-2">&bull; CSS</p>
                 </div>
-                <div class="col-md-3" *ngIf="course.description.includes('Cisco')">
+                <div class="col-md-3" *ngIf="course.description.includes('Networking')">
                     <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Cisco.png" alt=""
                         srcset="">
                     <p class="text-white mt-2">&bull; Cisco Networking Academy</p>
@@ -55,6 +55,17 @@
                     <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/BristolCollege.jpg" alt=""
                         srcset="">
                     <p class="text-white mt-2">&bull; City of Bristol College</p>
+                </div>
+                <div class="col-md-3" *ngIf="course.description.includes('CEH')">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/CEH.png" alt="" srcset="">
+                    <p class="text-white mt-2">&bull; Certified Ethical
+                        Hacker: <a href="{{environment.CEHCertificateUrl}}" target="_blank">
+                            Certificate</a></p>
+                </div>
+                <div class="col-md-3" *ngIf="course.description.includes('Kali')">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Kali-Linux.webp" alt=""
+                        srcset="">
+                    <p class="text-white mt-2">&bull; Kali Linux OS</p>
                 </div>
             </div>
         </div>
