@@ -1,6 +1,9 @@
 <section class="course-section">
     <app-title-section [title]="'course-section.title' | translate" [sub_title]="'Summary'"></app-title-section>
     <div class="accordion accordion-flush" id="course-accordion">
-        <app-course [course]="course" *ngFor="let course of 'course-section.courses' |translate"></app-course>
+        <!-- <app-course [course]="course" *ngFor="let course of 'course-section.courses' |translate"></app-course> -->
+        <div *ngFor="let course of 'course-section.courses' |translate">
+            <app-accordion-content [content]="course" [code]="'course'"></app-accordion-content>
+        </div>
     </div>
 </section>

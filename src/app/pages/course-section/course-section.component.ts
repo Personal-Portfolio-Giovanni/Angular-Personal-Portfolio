@@ -9,5 +9,5 @@ import { Course } from './course/course.component';
 })
 export class CourseSectionComponent {
   courseSubscription: Subscription = new Subscription();
-  @Output('course') works: Array<Course> = [];
+  @Output('course') course: Array<Course> = [];
 }

@@ -1,4 +1,4 @@
-export interface Work {
+export interface WorkInterface {
   id: number;
   title: string;
   from: string;

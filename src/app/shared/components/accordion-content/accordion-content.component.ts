@@ -8,6 +8,7 @@ import { AccordionConstants } from '../../class/accordion-constant.class';
   styleUrls: ['./accordion-content.component.css'],
 })
 export class AccordionContentComponent implements OnInit {
+  @Input('code') code!: string;
   environment = environment;
   @Input('content') content!: any;
   aria_label: string = 'flush-heading';
@@ -20,8 +21,7 @@ export class AccordionContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.aria_label = this.aria_label + this.content.title + this.content.id;
-    this.aria_control =
-      this.aria_control + this.content.title + this.content.id;
+    this.aria_label = this.aria_label + this.code + this.content.id;
+    this.aria_control = this.aria_control + this.code + this.content.id;
   }
 }
