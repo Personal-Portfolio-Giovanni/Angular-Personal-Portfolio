@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Course } from './course/course.component';
 
 @Component({
   selector: 'app-course-section',
@@ -10,13 +10,4 @@ import { environment } from 'src/environments/environment';
 export class CourseSectionComponent {
   courseSubscription: Subscription = new Subscription();
   @Output('course') works: Array<Course> = [];
-}
-export interface Course {
-  id: number;
-  title: string;
-  from: string;
-  to: string;
-  role: string;
-  where: string;
-  description: string;
 }
