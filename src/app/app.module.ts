@@ -19,6 +19,7 @@ import { LanguagesComponent } from './languages/languages.component';
 import { LanguageComponent } from './languages/language/language.component';
 import { CourseSectionComponent } from './course-section/course-section.component';
 import { CourseComponent } from './course-section/course/course.component';
+import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CourseComponent } from './course-section/course/course.component';
     LanguageComponent,
     CourseSectionComponent,
     CourseComponent,
+    TitleSectionComponent,
   ],
   imports: [
     BrowserModule,
