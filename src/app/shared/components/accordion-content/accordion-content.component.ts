@@ -8,9 +8,11 @@ import { AccordionConstants } from '../../class/accordion-constant.class';
   styleUrls: ['./accordion-content.component.css'],
 })
 export class AccordionContentComponent implements OnInit {
+  @Input('parentData') parentData!: string;
   @Input('code') code!: string;
-  environment = environment;
   @Input('content') content!: any;
+
+  environment = environment;
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
 

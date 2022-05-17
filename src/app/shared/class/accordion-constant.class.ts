@@ -17,3 +17,13 @@ export enum AccordionConstants {
   CEH = 'ceh',
   COLLEGE = 'college',
 }
+
+export enum CourseType {
+  CODE = 'Course',
+  PARENTID = 'course-accordion',
+}
+
+export enum WorkType {
+  CODE = 'Work',
+  PARENTID = 'work-accordion',
+}
