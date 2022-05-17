@@ -18,7 +18,6 @@ import { FooterComponent } from './core/footer/footer.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
 import { LanguageComponent } from './pages/languages/language/language.component';
 import { CourseSectionComponent } from './pages/course-section/course-section.component';
-import { CourseComponent } from './pages/course-section/course/course.component';
 import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
 import { AccordionContentComponent } from './shared/components/accordion-content/accordion-content.component';
 
@@ -34,7 +33,6 @@ import { AccordionContentComponent } from './shared/components/accordion-content
     LanguagesComponent,
     LanguageComponent,
     CourseSectionComponent,
-    CourseComponent,
     TitleSectionComponent,
     AccordionContentComponent,
   ],
