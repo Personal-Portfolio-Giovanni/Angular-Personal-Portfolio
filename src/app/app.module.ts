@@ -13,7 +13,6 @@ import { DescriptionComponent } from './pages/description/description.component'
 import { HeaderComponent } from './core/header/header.component';
 import { RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './pages/works-section/works-section.component';
-import { WorkComponent } from './pages/works-section/work/work.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
 import { LanguageComponent } from './pages/languages/language/language.component';
@@ -28,7 +27,6 @@ import { AccordionContentComponent } from './shared/components/accordion-content
     DescriptionComponent,
     HeaderComponent,
     WorkSectionComponent,
-    WorkComponent,
     FooterComponent,
     LanguagesComponent,
     LanguageComponent,

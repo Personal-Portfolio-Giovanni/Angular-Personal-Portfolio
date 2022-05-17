@@ -1,6 +1,6 @@
 import { Component, Output } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Work } from './work/work.component';
+import { WorkType } from 'src/app/shared/class/accordion-constant.class';
+import { WorkInterface } from 'src/app/shared/interfaces/work.interface';
 
 @Component({
   selector: 'app-works-section',
@@ -8,6 +8,7 @@ import { Work } from './work/work.component';
   styleUrls: ['./works-section.component.css'],
 })
 export class WorkSectionComponent {
-  worksSubscription: Subscription = new Subscription();
-  @Output('works') works: Array<Work> = [];
+  @Output('works') works: Array<WorkInterface> = [];
+  @Output('code') code: string = WorkType.CODE;
+  @Output('parentID') parentID: string = WorkType.PARENTID;
 }
