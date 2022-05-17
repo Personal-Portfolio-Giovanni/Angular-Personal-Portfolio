@@ -1,0 +1,57 @@
+.h3 {
+    letter-spacing: 5px !important;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif !important;
+    color: azure;
+    text-align: center;
+}
+
+p,
+a {
+    color: aliceblue;
+    text-align: left;
+}
+
+.from {
+    position: absolute;
+    right: 60px;
+    font-size: small;
+    text-align: end;
+    float: right;
+}
+
+.title {
+    background-color: #111 !important;
+    color: aliceblue !important;
+}
+
+.hidden_mobile {
+    display: block;
+}
+
+.hidden_desktop {
+    display: none;
+}
+
+.accordion_color {
+    background-color: #282e34 !important;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 780px) {
+    .hidden_mobile {
+        display: none;
+    }
+
+    .hidden_desktop {
+        display: block;
+    }
+}
+
+.logo-develop {
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 30px;
+}

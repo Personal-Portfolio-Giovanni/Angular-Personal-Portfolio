@@ -1,0 +1,115 @@
+<div class="accordion-item accordion_color">
+    <h2 class="accordion-header" id="{{aria_label}}">
+        <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#'+aria_control" aria-expanded="false" [attr.aria-controls]="aria_control">
+            {{content?.title}}
+            <span class="from hidden_mobile">{{content?.from}}<br />
+                {{content?.to}}</span>
+        </button>
+    </h2>
+    <div id="{{aria_control}}" class="accordion-collapse collapse" [attr.aria-labelledby]="aria_label"
+        [attr.data-bs-parent]="'#'+parentData">
+        <div class="accordion-body" style="background-color: #111 !important; color: aliceblue">
+            <h3>{{content?.role}}</h3>
+            <span class="hidden_desktop">{{content.from}}<br />
+                {{content.to}}</span>
+            <hr />
+            <h5>{{content.where}}</h5>
+            <div [innerHTML]="content.description"></div>
+            <div class="row mt-3">
+                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.SPRING)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Spring_Boot.png" alt=""
+                        srcset="">
+                    <div class="mt-2">
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.SPRING)">&bull; Spring
+                            Boot
+                            Framework </p>
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.QUARKUS)">&bull; Quarkus
+                            Framework </p>
+                    </div>
+                </div>
+                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.ANGULAR)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Angular.png" alt=""
+                        srcset="">
+                    <div class="mt-2">
+                        <p class="text-white mb-0">&bull; Angular Framework</p>
+                        <p class="text-white mb-0">&bull; Typescript </p>
+                    </div>
+                </div>
+                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Java_logo.png" alt=""
+                        srcset="">
+                    <div class="mt-2">
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA)">&bull; Java
+                            Enterprice Edition</p>
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.HIBERNATE)">&bull;
+                            Hibernate and JPA </p>
+                    </div>
+                </div>
+                <div class="col-md-3"
+                    *ngIf="content.title.includes('Be | Shaping') || content.description.toLowerCase().includes(accordionConstant.MYSQL)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/mysql.png" alt=""
+                        srcset="">
+                    <div class="mt-2">
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.ORACLE)">&bull; Oracle
+                            SQL</p>
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.MYSQL)">&bull; MySQL
+                            Database</p>
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.POSTGRESQL)">&bull;
+                            PostgreSQL </p>
+                    </div>
+                </div>
+                <div class="col-md-3"
+                    *ngIf="content.title.toLowerCase().includes(accordionConstant.WEBDEVELOPER) || content.description.toLowerCase().includes(accordionConstant.FRONTEND)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/html5.jpg" alt=""
+                        srcset="">
+                    <div class="mt-2">
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.HTML)">&bull; HTML5</p>
+                        <p class="text-white mb-0"
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVASCRIPT)">&bull;
+                            Javascript </p>
+                    </div>
+                </div>
+                <div class="col-md-3"
+                    *ngIf="content.title.toLowerCase().includes(accordionConstant.WEBDEVELOPER) || content.description.toLowerCase().includes(accordionConstant.CSS)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/CSS.png" alt="" srcset="">
+                    <p class="text-white mt-2"
+                        *ngIf="content.description.toLowerCase().includes(accordionConstant.CSS)">&bull; CSS</p>
+                </div>
+                <div class="col-md-3" *ngIf="content.title.toLowerCase().includes(accordionConstant.WEBDEVELOPER)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Wix.png" alt="" srcset="">
+                    <p class="text-white mt-2">&bull; Wix Drag and Drop<br>&bull; Wix Database </p>
+                </div>
+                <div class="col-md-3" *ngIf="content.title.toLowerCase().includes(accordionConstant.NETWORKING)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Cisco.png" alt=""
+                        srcset="">
+                    <p class="text-white mt-2">&bull; Cisco Networking Academy</p>
+                </div>
+                <div class="col-md-3" *ngIf="content.where.toLowerCase().includes(accordionConstant.COLLEGE)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/BristolCollege.jpg" alt=""
+                        srcset="">
+                    <p class="text-white mt-2">&bull; City of Bristol College</p>
+                </div>
+                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.CEH)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/CEH.png" alt="" srcset="">
+                    <p class="text-white mt-2">&bull; Certified Ethical
+                        Hacker: <a href="{{environment.CEHCertificateUrl}}" target="_blank">
+                            Certificate</a></p>
+                </div>
+                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.KALI)">
+                    <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Kali-Linux.webp" alt=""
+                        srcset="">
+                    <p class="text-white mt-2">&bull; Kali Linux OS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

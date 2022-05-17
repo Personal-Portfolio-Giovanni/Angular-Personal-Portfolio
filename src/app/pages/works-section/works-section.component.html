@@ -1,0 +1,8 @@
+<section class="work-section">
+    <app-title-section [title]="'works-section.title' | translate" [sub_title]="'Summary'"></app-title-section>
+    <div class="accordion accordion-flush" id="{{parentID}}">
+        <div *ngFor="let work of 'works' |translate">
+            <app-accordion-content [parentData]="parentID" [content]="work" [code]="code"></app-accordion-content>
+        </div>
+    </div>
+</section>
