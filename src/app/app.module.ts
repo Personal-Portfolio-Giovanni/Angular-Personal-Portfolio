@@ -19,7 +19,7 @@ import { LanguageComponent } from './pages/languages/language/language.component
 import { CourseSectionComponent } from './pages/course-section/course-section.component';
 import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
 import { AccordionContentComponent } from './shared/components/accordion-content/accordion-content.component';
-import { InfoSectionComponent } from './info-section/info-section.component';
+import { InfoSectionComponent } from './core/info-section/info-section.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,6 @@ import { InfoSectionComponent } from './info-section/info-section.component';
     CourseSectionComponent,
     TitleSectionComponent,
     AccordionContentComponent,
-    CourseComponent,
     InfoSectionComponent,
   ],
   imports: [
