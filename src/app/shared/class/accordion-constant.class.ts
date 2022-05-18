@@ -28,3 +28,11 @@ export enum WorkType {
   CODE = 'Work',
   PARENTID = 'work-accordion',
 }
+
+export enum ClassType {
+  BIOGRAPHY = 'biography-title-section',
+  WORK = 'work-title-section',
+  LANGUAGES = 'languages-title-section',
+  COURSE = 'course-title-section',
+  INFO = 'info-title-section',
+}

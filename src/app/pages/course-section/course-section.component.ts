@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { CourseType } from 'src/app/shared/class/accordion-constant.class';
+import { Component, Output } from '@angular/core';
+import { ClassType, CourseType } from 'src/app/shared/class/accordion-constant.class';
 import { CourseInterface } from 'src/app/shared/interfaces/course.interface';
 
 @Component({
@@ -9,8 +8,11 @@ import { CourseInterface } from 'src/app/shared/interfaces/course.interface';
   styleUrls: ['./course-section.component.css'],
 })
 export class CourseSectionComponent {
-  courseSubscription: Subscription = new Subscription();
   @Output('course') course: Array<CourseInterface> = [];
   @Output('parentID') parentID: string = CourseType.PARENTID;
   @Output('code') code: string = CourseType.CODE;
+
+  public get classType(): typeof ClassType {
+    return ClassType;
+  }
 }
