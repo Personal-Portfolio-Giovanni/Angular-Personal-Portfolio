@@ -16,6 +16,14 @@ export class ProfileComponent implements OnInit {
   colors = ['white'];
   constructor() {}
 
+  scrollTo(element: any): void {
+    (document.getElementById(element) as HTMLElement).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
+
   ngOnInit(): void {
     this.consoleText(this.words, this.id, this.colors);
   }
