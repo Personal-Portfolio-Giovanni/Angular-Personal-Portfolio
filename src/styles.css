@@ -7,4 +7,5 @@ html {
   font-family: "Montserrat", sans-serif !important;
   color: #777;
   background-color: #000 !important;
+  scroll-behavior: smooth;
 }

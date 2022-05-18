@@ -24,7 +24,7 @@
         "to": "Current",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
-        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code> <br> At the moment I'm working as a Full stack Developer in a financial project, using the following technologies: <br><code> Java, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
+        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods</code> and Database such as <code>MySQL, Oracle SQL.</code> <br> At the moment I'm working as a Full stack Developer in a financial project, using the following technologies: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
         "id":2,
@@ -33,7 +33,7 @@
         "to": "Current",
         "role": "Graphic Web Design",
         "where": "Bristol, United Kingdom",
-        "description": "Continuous design and maintenance of websites with content creation & design of web pages with social connection and web site testing with different browsers and formats."
+        "description": "Continuous design and maintenance of websites with content creation & design of <code>HTML CSS And Javascript</code> web pages with social connection and web site testing with different browsers and formats."
       },
       {
         "id":3,

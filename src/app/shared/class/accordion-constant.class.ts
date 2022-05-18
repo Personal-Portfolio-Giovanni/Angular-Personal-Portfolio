@@ -2,7 +2,8 @@ export enum AccordionConstants {
   SPRING = 'spring',
   QUARKUS = 'quarkus',
   ANGULAR = 'angular',
-  JAVA = 'java',
+  JAVA = 'java ee',
+  JEE = 'jee',
   HIBERNATE = 'hibernate',
   MYSQL = 'mysql',
   ORACLE = 'oracle',
@@ -26,4 +27,12 @@ export enum CourseType {
 export enum WorkType {
   CODE = 'Work',
   PARENTID = 'work-accordion',
+}
+
+export enum ClassType {
+  BIOGRAPHY = 'biography-title-section',
+  WORK = 'work-title-section',
+  LANGUAGES = 'languages-title-section',
+  COURSE = 'course-title-section',
+  INFO = 'info-title-section',
 }

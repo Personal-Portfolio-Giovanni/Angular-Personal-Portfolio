@@ -11,7 +11,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/description/description.component';
 import { HeaderComponent } from './core/header/header.component';
-import { RouterModule } from '@angular/router';
+import { ExtraOptions, RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './pages/works-section/works-section.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
@@ -19,7 +19,7 @@ import { LanguageComponent } from './pages/languages/language/language.component
 import { CourseSectionComponent } from './pages/course-section/course-section.component';
 import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
 import { AccordionContentComponent } from './shared/components/accordion-content/accordion-content.component';
-import { InfoSectionComponent } from './info-section/info-section.component';
+import { InfoSectionComponent } from './core/info-section/info-section.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,6 @@ import { InfoSectionComponent } from './info-section/info-section.component';
     CourseSectionComponent,
     TitleSectionComponent,
     AccordionContentComponent,
-    CourseComponent,
     InfoSectionComponent,
   ],
   imports: [

@@ -1,5 +1,8 @@
 import { Component, Output } from '@angular/core';
-import { WorkType } from 'src/app/shared/class/accordion-constant.class';
+import {
+  ClassType,
+  WorkType,
+} from 'src/app/shared/class/accordion-constant.class';
 import { WorkInterface } from 'src/app/shared/interfaces/work.interface';
 
 @Component({
@@ -11,4 +14,8 @@ export class WorkSectionComponent {
   @Output('works') works: Array<WorkInterface> = [];
   @Output('code') code: string = WorkType.CODE;
   @Output('parentID') parentID: string = WorkType.PARENTID;
+
+  public get classType(): typeof ClassType {
+    return ClassType;
+  }
 }

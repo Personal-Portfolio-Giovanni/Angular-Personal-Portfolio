@@ -38,12 +38,14 @@
                         <p class="text-white mb-0">&bull; Typescript </p>
                     </div>
                 </div>
-                <div class="col-md-3" *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA)">
+                <div class="col-md-3"
+                    *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA) || content.description.toLowerCase().includes(accordionConstant.JEE)">
                     <img class="logo-develop" src="{{environment.baseUrl}}assets/img/develop/Java_logo.png" alt=""
                         srcset="">
                     <div class="mt-2">
                         <p class="text-white mb-0"
-                            *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA)">&bull; Java
+                            *ngIf="content.description.toLowerCase().includes(accordionConstant.JAVA) || content.description.toLowerCase().includes(accordionConstant.JEE)">
+                            &bull; Java
                             Enterprice Edition</p>
                         <p class="text-white mb-0"
                             *ngIf="content.description.toLowerCase().includes(accordionConstant.HIBERNATE)">&bull;
