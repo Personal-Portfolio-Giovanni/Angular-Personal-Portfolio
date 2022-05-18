@@ -4,21 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { DescriptionComponent } from './description/description.component';
-import { HeaderComponent } from './header/header.component';
-import { RouterModule } from '@angular/router';
-import { WorkSectionComponent } from './works-section/works-section.component';
-import { WorkComponent } from './works-section/work/work.component';
-import { FooterComponent } from './footer/footer.component';
-import { LanguagesComponent } from './languages/languages.component';
-import { LanguageComponent } from './languages/language/language.component';
-import { CourseSectionComponent } from './course-section/course-section.component';
-import { CourseComponent } from './course-section/course/course.component';
+import { DescriptionComponent } from './pages/description/description.component';
+import { HeaderComponent } from './core/header/header.component';
+import { ExtraOptions, RouterModule } from '@angular/router';
+import { WorkSectionComponent } from './pages/works-section/works-section.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { LanguagesComponent } from './pages/languages/languages.component';
+import { LanguageComponent } from './pages/languages/language/language.component';
+import { CourseSectionComponent } from './pages/course-section/course-section.component';
+import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
+import { AccordionContentComponent } from './shared/components/accordion-content/accordion-content.component';
+import { InfoSectionComponent } from './core/info-section/info-section.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { CourseComponent } from './course-section/course/course.component';
     DescriptionComponent,
     HeaderComponent,
     WorkSectionComponent,
-    WorkComponent,
     FooterComponent,
     LanguagesComponent,
     LanguageComponent,
     CourseSectionComponent,
-    CourseComponent,
+    TitleSectionComponent,
+    AccordionContentComponent,
+    InfoSectionComponent,
   ],
   imports: [
     BrowserModule,

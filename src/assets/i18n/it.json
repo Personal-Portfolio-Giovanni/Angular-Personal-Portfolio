@@ -24,7 +24,7 @@
         "to": "Attuale",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
-        "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
+        "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift</code> e Database come <code>MySQL, Oracle SQL.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
         "id":2,
@@ -33,7 +33,7 @@
         "to": "Attuale",
         "role": "Graphic Web Design",
         "where": "Bristol, United Kingdom",
-        "description": "Progettazione e manutenzione continua di siti web con creazione di contenuti & design delle pagine web con collegamento social e test del web site con differenti Browser e formati."
+        "description": "Progettazione e manutenzione continua di siti web <code>HTML CSS e Javascript</code> con creazione di contenuti & design delle pagine web con collegamento social e test del web site con differenti Browser e formati."
       },
       {
         "id":3,
@@ -144,6 +144,10 @@
         "description": "Ho correttamente completato il corso di Cyber Security CEH , ed ho acquisito le seguenti capacità:<br>&bull; Che cos'è un Ethical Hacker.<br>&bull; Quali sono i principali vettori di attacco ad una rete.<br>&bull; Le fasi di un attacco informatico.<br>&bull; Come si effettua un Penetration Testing.<br>&bull; Come creare il proprio laboratorio.<br>&bull; Utilizzare le macchine virtuali.<br>&bull; Installare sistemi operativi <code>Windows e Kali Linux</code>.<br>&bull; Eseguire i principali <code>comandi per Linux</code>.<br>&bull; Creare delle mappe concettuali.<br>&bull; Capire il funzionamento base di una rete.<br>&bull; Cos'è un <code>indirizzo IP</code>.<br>&bull; Come si utilizza il <code>PING-ARP-TRACEROUTE</code>.<br>&bull; Il funzionamento di <code>NAT-DNS-DHCP</code>.<br>&bull; Eseguire operazioni di base con <code>Netcat</code>.<br>&bull; Utilizzare <code>Cisco Packet Tracer</code> per la simulazione delle reti.<br>&bull; Come funziona una switch e cosa sono le <code>VLAN</code>.<br>&bull; La differenza tra un <code>router e un firewall</code>.<br>&bull; Cosa si intende per <code>Google Hacking</code>.<br>&bull; Raccogliere informazioni sui Social Media.<br>&bull; Come si interroga un <code>DNS</code>.<br>&bull; Trovare vulnerabilità con <code>Shodan</code>.<br>&bull; Installare e configurare un <code>honeypot</code>.<br>&bull; Effettuare la scansione di una rete.<br>&bull; Effettuare lo sniffing dei pacchetti con <code>Wireshark</code>.<br>&bull; La differenza tra protocollo <code>TCP e UDP</code>.<br>&bull; Le tecniche del Banner Grabbing.<br>&bull; La cattura dei banner con <code>TELNET,NETCAT e NMAP</code>.<br>&bull; Metodi di fingerprinting attivo e passivo.<br>&bull; Effettuare un vulnerability assessment.<br>&bull; L'installazione e configurazione di <code>Nessus</code>.<br>&bull; Lanciare una scansione con <code>Nexpose</code>.<br>&bull; Differenti tipi di Exploitation.<br>&bull; Introduzione e configurazione di Metasploit.<br>&bull; Utilizzare la shell <code>METERPRETER</code>.<br>&bull; Eludere gli antivirus con Veil.<br>&bull; Come effettuare l'escalation dei privilegi.<br>&bull; Come iniettare codice malevolo.<br>&bull; Installare una backdoor su un sistema bersaglio.<br>&bull; Le tecniche di pivoting di una rete.<br>&bull; Come scrivere il report finale del Penetration Testing.<br>"
       }
     ]
+  },
+  "info":{
+    "title": "Questo Sito e in costruzione",
+    "text": "La versione visualizzata non è la versione ufficiale, nuovi contenuti arriveranno presto."
   }
 }
 

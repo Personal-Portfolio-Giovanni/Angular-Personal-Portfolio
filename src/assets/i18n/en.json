@@ -24,7 +24,7 @@
         "to": "Current",
         "role": "Junior Specialist",
         "where": "Milan, Italy",
-        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods. </code> <br> At the moment I'm working as a Full stack Developer in a financial project, using the following technologies: <br><code> Java, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
+        "description": "Joined the UniCredit group immediately after hiring, I worked on several projects using different technologies, including <code> JPA, Hibernate, Quarkus, Spring Boot. </code> <br> I got a good command of Code Coverage for to be able to carry out the tests correctly with <code> JUnit and Mockito </code>, while for the tests locally and in the environment of the entire application using Postman with the relative enviroments. <br> Good knowledge of the application's Pre-Deploy and Deploy environments, such as <code> Jenkins, Docker and OpenShift Pods</code> and Database such as <code>MySQL, Oracle SQL.</code> <br> At the moment I'm working as a Full stack Developer in a financial project, using the following technologies: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
         "id":2,
@@ -33,7 +33,7 @@
         "to": "Current",
         "role": "Graphic Web Design",
         "where": "Bristol, United Kingdom",
-        "description": "Continuous design and maintenance of websites with content creation & design of web pages with social connection and web site testing with different browsers and formats."
+        "description": "Continuous design and maintenance of websites with content creation & design of <code>HTML CSS And Javascript</code> web pages with social connection and web site testing with different browsers and formats."
       },
       {
         "id":3,
@@ -144,5 +144,9 @@
         "description": "I've successfully completed the course of Cyber Security CEH , and i acquired the following capabilities:<br>&bull; What is an Ethical Hacker.<br>&bull; What are the main vectors of attack on a network.<br>&bull; The stages of a cyber attack.<br>&bull; How to carry out a Penetration Testing.<br>&bull; How to create your own workshop.<br>&bull; Use virtual machines.<br>&bull; Install <code>Windows and Kali Linux</code> operating systems.<br>&bull; Run the main <code>Linux commands</code>.<br>&bull; Create concept maps.<br>&bull; Understanding the basic operation of a network.<br>&bull; What is an <code>IP address</code>.<br>&bull; How to use the <code>PING-ARP-TRACEROUTE</code>.<br>&bull; How NAT-DNS-DHCP works.<br>&bull; Perform basic operations with Netcat.<br>&bull; Use Cisco Packet Tracer for network simulation.<br>&bull; How a switch works and what <code>VLANs</code> are.<br>&bull; The difference between a router and a firewall.<br>&bull; What is meant by <code>Google Hacking</code>.<br>&bull; Collect information on Social Media.<br>&bull; How to query a <code>DNS</code>.<br>&bull; Finding vulnerabilities with <code>Shodan</code>.<br>&bull; Install and configure a honeypot.<br>&bull; Scan a network.<br>&bull; Sniff packets with Wireshark.<br>&bull; The difference between TCP and UDP protocol.<br>&bull; The techniques of Banner Grabbing.<br>&bull; Banner capture with <code>TELNET, NETCAT and NMAP</code>.<br>&bull; Active and passive fingerprinting methods.<br>&bull; Perform a vulnerability assessment.<br>&bull; Nessus installation and configuration.<br>&bull; Launch a scan with Nexpose.<br>&bull; Different Types of Exploitation.<br>&bull; Introduction and configuration of Metasploit.<br>&bull; Use the <code>METERPRETER</code> shell.<br>&bull; Evade Antivirus with <code>Veil</code>.<br>&bull; How to escalate privileges.<br>&bull; How to inject malicious code.<br>&bull; Install a backdoor on a target system.<br>&bull; The pivoting techniques of a network.<br>&bull; How to write the final Penetration Testing report."
       }
     ]
+  },
+  "info":{
+    "title": "This WebSite is under developing",
+    "text": "The version showed it's not the official version, new content are coming soon, Stay Tuned."
   }
 }

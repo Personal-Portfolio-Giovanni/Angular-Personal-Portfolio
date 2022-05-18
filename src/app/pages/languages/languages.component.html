@@ -1,0 +1,11 @@
+<div class="boxer-bio">
+    <app-title-section [class]="classType.LANGUAGES" [title]="'languages.title' | translate" [sub_title]="'Languages'">
+    </app-title-section>
+    <!-- My Skills -->
+    <div class="row container-language">
+        <div class="inline boxer">
+            <app-language [language]="language" *ngFor="let language of 'languages.data' |translate">
+            </app-language>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+/* Title Section Description */
+.text-9 {
+    font-size: 36px !important;
+    font-size: 2.25rem !important;
+}
+
+.text-24 {
+    font-size: calc(1.95rem + 8.4vw) !important;
+    line-height: 1.3;
+}
+
+@media (min-width: 1200px) {
+    .text-24 {
+        font-size: 8.25rem !important;
+    }
+}
+
+.opacity-1 {
+    opacity: 0.1;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-100 {
+    font-weight: 100 !important;
+}
+
+/*== Heading Separator Line ==*/
+.heading-separator-line {
+    width: 80px;
+}
+
+.border-primary {
+    border-color: cornflowerblue !important;
+    /*border-color: #20c997 !important;*/
+}
+
+/* END Title Section Description */
+
+p,
+a {
+    color: aliceblue;
+    text-align: left;
+}
+
+.hidden_mobile {
+    display: block;
+}
+
+.hidden_desktop {
+    display: none;
+}
+
+/* Change Design For Responsive Mobile Content */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 780px) {
+    .hidden_mobile {
+        display: none;
+    }
+
+    .hidden_desktop {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .languages-title-section {
+        .text-24 {
+            font-size: calc(1rem + 8.4vw) !important;
+            line-height: 1.4;
+        }
+    
+        .container-title {
+            width: fit-content;
+            margin-left: calc(50% - (474px / 2));
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .languages-title-section {
+        .text-24 {
+            font-size: calc(1rem + 8.4vw) !important;
+            line-height: 1;
+        }
+    
+        .container-title {
+            width: fit-content;
+            margin-left: calc(50% - (390px / 2));
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .biography-title-section{
+        .container-title {
+            width: fit-content;
+            margin-left: calc(50% - (230px / 2));
+        }
+    }
+    
+    .work-title-section{
+        .container-title {
+            width: fit-content;
+            max-width: 340px;
+            margin-left: calc(50% - (340px / 2));
+        }
+    }
+
+    .languages-title-section{
+        .container-title {
+            width: fit-content;
+            margin-left: calc(50% - (318px / 2));
+        }
+    }
+
+    .course-title-section{
+        .container-title {
+            width: fit-content;
+            max-width: 340px;
+            margin-left: calc(50% - (340px / 2));
+        }
+    }
+
+    .info-title-section  {
+        .container-title {
+            width: fit-content;
+            max-width: 340px;
+            margin-left: calc(50% - (220px / 2));
+            p{
+                width: fit-content !important;
+                right: calc(40% - (220px / 2));
+            }
+        }
+    }
+}
