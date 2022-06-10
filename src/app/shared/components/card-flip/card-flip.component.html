@@ -1,0 +1,20 @@
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-side front">
+            <div class="featured-box text-center" style="padding-top: 30%;">
+                <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
+                        data-to="250">{{project.number}}</span>+
+                </h4>
+                <p class="text-light mb-0">{{project.description}}</p>
+            </div>
+        </div>
+        <div class="card-side back">
+            <div class="">
+                <h4 class="text-center text-white fw-bolder text-uppercase">{{project.titleSecondPage}}</h4>
+                <hr>
+                <h5 *ngFor="let item of project.descriptionSecondPage" class="text-start text-white fs-6">&bull;
+                    {{item}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

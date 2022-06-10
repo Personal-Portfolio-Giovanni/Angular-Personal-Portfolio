@@ -20,6 +20,8 @@ import { CourseSectionComponent } from './pages/course-section/course-section.co
 import { TitleSectionComponent } from './shared/components/title-section/title-section.component';
 import { AccordionContentComponent } from './shared/components/accordion-content/accordion-content.component';
 import { InfoSectionComponent } from './core/info-section/info-section.component';
+import { PersonalProjectComponent } from './pages/personal-project/personal-project.component';
+import { CardFlipComponent } from './shared/components/card-flip/card-flip.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { InfoSectionComponent } from './core/info-section/info-section.component
     TitleSectionComponent,
     AccordionContentComponent,
     InfoSectionComponent,
+    PersonalProjectComponent,
+    CardFlipComponent,
   ],
   imports: [
     BrowserModule,
