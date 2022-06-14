@@ -22,6 +22,7 @@ import { AccordionContentComponent } from './shared/components/accordion-content
 import { InfoSectionComponent } from './core/info-section/info-section.component';
 import { PersonalProjectComponent } from './pages/personal-project/personal-project.component';
 import { CardFlipComponent } from './shared/components/card-flip/card-flip.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CardFlipComponent } from './shared/components/card-flip/card-flip.compo
     InfoSectionComponent,
     PersonalProjectComponent,
     CardFlipComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -145,6 +145,30 @@
       }
     ]
   },
+  "contact":{
+    "title": "Get in Touch",
+    "profile_title": "Profile",
+    "name": "Giovanni Lamarmora",
+    "name_title": "Name",
+    "age": "27",
+    "age_title": "Age",
+    "from": "Milan, Italy",
+    "from_title": "From",
+    "downloadCV": "Download CV",
+    "follow_me": "Follow me",
+    "contact_me": "Send me a Message",
+    "email_title": "Email",
+    "description": "Tell me more about your request...",
+    "send": "Send Message",
+    "experience": "1",
+    "experience_title": "Years Experiance",
+    "work_project": "4",
+    "work_project_title": "Projects Done <br>Be | Shaping The Future",
+    "project": "4",
+    "project_title": "Personal Projects",
+    "course": "8",
+    "course_title": "Courses Done"
+  },
   "project-section": {
     "title": "Personal Projects",
     "projects": [
