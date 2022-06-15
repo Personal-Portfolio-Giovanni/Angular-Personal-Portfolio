@@ -38,23 +38,24 @@
             <div class="col-md-8 col-xl-9 order-0 order-md-1">
                 <h2 class="mb-3 text-5 text-white text-uppercase text-center text-md-start">{{ 'contact.contact_me' |
                     translate }}</h2>
-                <form id="contact-form" class="form-dark" action="php/mail.php" method="post">
+                <form type="submit" id="contact-form" class="form-dark">
                     <div class="row g-4">
                         <div class="col-xl-6">
-                            <input name="name" type="text" class="form-control" required
+                            <input name="name" type="text" class="form-control" #name required
                                 placeholder="{{ 'contact.name_title' | translate }}">
                         </div>
                         <div class="col-xl-6">
-                            <input name="email" type="email" class="form-control" required
+                            <input name="email" type="email" class="form-control" #email required
                                 placeholder="{{ 'contact.email_title' | translate }}">
                         </div>
                         <div class="col">
-                            <textarea name="form-message" class="form-control" rows="5" required
+                            <textarea name="message" class="form-control" rows="5" #message required
                                 placeholder="{{ 'contact.description' | translate }}"></textarea>
                         </div>
                     </div>
                     <p class="text-center mt-4 mb-0">
-                        <button id="submit-btn" class="btn btn-primary rounded-pill d-inline-flex" type="submit">{{
+                        <button id="submit-btn" (click)="sendEmail()"
+                            class="btn btn-primary rounded-pill d-inline-flex">{{
                             'contact.send' | translate }}</button>
                     </p>
                 </form>
