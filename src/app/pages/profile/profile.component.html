@@ -15,24 +15,23 @@
     </h3>
   </div>
   <div class="scroll">
-    <div class="icon-animation"><a pageScroll href="#go-to-biography"><i
-          class="fa-solid fa-arrow-down-long"></i></a>
+    <div class="icon-animation"><a pageScroll href="#go-to-biography"><i class="fa-solid fa-arrow-down-long"></i></a>
     </div>
   </div>
-  <div class="contact hidden_mobile">
+  <!--<div class="contact hidden_mobile">
     <a href="mailto:{{email}}?subject=[Contact Me] Portfolio">
       E-Mail: {{email}}
     </a>
-  </div>
+  </div>-->
   <p class="follow">
     {{ "profile.follow" | translate }}
-    <a href="https://www.facebook.com/gio.lamarmora" target="_blank"><img
+    <a href="{{environment.facebookUrl}}" target="_blank"><img
         src="{{environment.baseUrl}}assets/img/social/facebook.png" class="logo" alt="" srcset="" /></a>
-    <a href="https://www.linkedin.com/in/giovannilamarmora" target="_blank"><img
+    <a href="{{environment.linkedinUrl}}" target="_blank"><img
         src="{{environment.baseUrl}}assets/img/social/linkedin.png" class="logo" alt="" srcset="" /></a>
-    <a href="https://www.instagram.com/gio_lamarmora" target="_blank"><img
-        src="{{environment.baseUrl}}assets/img/social/ig.png" class="logo" alt="" srcset="" /></a>
-    <a href="https://github.com/giovannilamarmora" target="_blank"><img
-        src="{{environment.baseUrl}}assets/img/social/git.png" class="logo" alt="" srcset="" /></a>
+    <a href="{{environment.instagramUrl}}" target="_blank"><img src="{{environment.baseUrl}}assets/img/social/ig.png"
+        class="logo" alt="" srcset="" /></a>
+    <a href="{{environment.githubUrl}}" target="_blank"><img src="{{environment.baseUrl}}assets/img/social/git.png"
+        class="logo" alt="" srcset="" /></a>
   </p>
 </div>

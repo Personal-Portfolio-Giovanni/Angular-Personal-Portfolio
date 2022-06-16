@@ -1,6 +1,5 @@
 {
   "profile": {
-    "downloadCV": "https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing",
     "currentLanguage": "English",
     "currentLanguageIcon": "flag-en",
     "follow": "Follow Me",
@@ -55,7 +54,9 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS and Bootstrap"
+    "title_1":"Giovanni Lamarmora | Portfolio",
+    "title_2":"was made with AngularJS and Bootstrap.",
+    "title_3":"Copyright © 2022 Giovanni Lamarmora. All rights reserved."
   },
   "languages": {
     "title": "Languages",
@@ -167,7 +168,15 @@
     "project": "4",
     "project_title": "Personal Projects",
     "course": "8",
-    "course_title": "Courses Done"
+    "course_title": "Courses Done",
+    "send_email": {
+      "title": "Hi $NAME$ , do you want to send the email?",
+      "not_send": "Don't send",
+      "send": "Send",
+      "send_error": "Error sending the email!",
+      "send_success": "Email sent successfully!",
+      "not_send_error": "Not Sended!"
+    }
   },
   "project-section": {
     "title": "Personal Projects",
