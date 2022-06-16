@@ -170,11 +170,11 @@
     "course": "8",
     "course_title": "Courses Done",
     "send_email": {
-      "title": "Hi $NAME$ , do you want to send the email?",
+      "title": "Hi $NAME$ , do you want to send the message?",
       "not_send": "Don't send",
       "send": "Send",
-      "send_error": "Error sending the email!",
-      "send_success": "Email sent successfully!",
+      "send_error": "Error sending the message!",
+      "send_success": "Message sent successfully!",
       "not_send_error": "Not Sended!"
     }
   },

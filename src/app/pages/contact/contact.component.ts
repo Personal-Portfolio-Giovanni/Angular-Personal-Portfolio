@@ -48,16 +48,17 @@ export class ContactComponent implements OnInit {
       this.email,
       this.message
     );
-    if (isSentEmail) {
-      Swal.fire(
-        this.translate.instant('contact.send_email.send_success'),
-        '',
-        'success'
-      );
-      this.name = '';
-      this.email = '';
-      this.message = '';
-    } else {
+    // TODO: Find a better way to handle this
+    /* if (isSentEmail) { */
+    Swal.fire(
+      this.translate.instant('contact.send_email.send_success'),
+      '',
+      'success'
+    );
+    this.name = '';
+    this.email = '';
+    this.message = '';
+    /* }  else {
       Swal.fire(
         this.translate.instant('contact.send_email.send_error'),
         '',
@@ -66,7 +67,7 @@ export class ContactComponent implements OnInit {
       this.name = '';
       this.email = '';
       this.message = '';
-    }
+    }*/
   }
 
   ngOnInit(): void {}

@@ -170,12 +170,12 @@
     "course": "8",
     "course_title": "Corsi eseguiti",
     "send_email": {
-      "title": "Ciao $NAME$ , vuoi inviare l'email?",
+      "title": "Ciao $NAME$ , vuoi inviare il messaggio?",
       "not_send": "Non Inviare",
       "send": "Invia",
-      "send_error": "Errore durante l'invio della email!",
-      "send_success": "Email inviata correttamente!",
-      "not_send_error": "Non inviata!"
+      "send_error": "Errore durante l'invio del messaggio!",
+      "send_success": "Messaggio inviato correttamente!",
+      "not_send_error": "Non inviato!"
     }
   },
   "info":{
