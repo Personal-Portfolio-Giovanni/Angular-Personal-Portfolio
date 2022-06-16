@@ -12,6 +12,11 @@
   margin-right: 10%;
 }
 
+.no-link{
+  color: #777;
+  text-decoration: none;
+}
+
 .source-code {
   text-align: end;
   float: right;

@@ -1,6 +1,5 @@
 {
   "profile": {
-    "downloadCV": "https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing",
     "currentLanguage": "English",
     "currentLanguageIcon": "flag-en",
     "follow": "Follow Me",
@@ -55,7 +54,9 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio was made with AngularJS and Bootstrap"
+    "title_1":"Giovanni Lamarmora | Portfolio",
+    "title_2":"was made with AngularJS and Bootstrap.",
+    "title_3":"Copyright © 2022 Giovanni Lamarmora. All rights reserved."
   },
   "languages": {
     "title": "Languages",
@@ -142,6 +143,57 @@
         "role": "Cyber Security: Introducing to the World of Cyber Security",
         "where": "Smart Learning, Udemy",
         "description": "I've successfully completed the course of Cyber Security CEH , and i acquired the following capabilities:<br>&bull; What is an Ethical Hacker.<br>&bull; What are the main vectors of attack on a network.<br>&bull; The stages of a cyber attack.<br>&bull; How to carry out a Penetration Testing.<br>&bull; How to create your own workshop.<br>&bull; Use virtual machines.<br>&bull; Install <code>Windows and Kali Linux</code> operating systems.<br>&bull; Run the main <code>Linux commands</code>.<br>&bull; Create concept maps.<br>&bull; Understanding the basic operation of a network.<br>&bull; What is an <code>IP address</code>.<br>&bull; How to use the <code>PING-ARP-TRACEROUTE</code>.<br>&bull; How NAT-DNS-DHCP works.<br>&bull; Perform basic operations with Netcat.<br>&bull; Use Cisco Packet Tracer for network simulation.<br>&bull; How a switch works and what <code>VLANs</code> are.<br>&bull; The difference between a router and a firewall.<br>&bull; What is meant by <code>Google Hacking</code>.<br>&bull; Collect information on Social Media.<br>&bull; How to query a <code>DNS</code>.<br>&bull; Finding vulnerabilities with <code>Shodan</code>.<br>&bull; Install and configure a honeypot.<br>&bull; Scan a network.<br>&bull; Sniff packets with Wireshark.<br>&bull; The difference between TCP and UDP protocol.<br>&bull; The techniques of Banner Grabbing.<br>&bull; Banner capture with <code>TELNET, NETCAT and NMAP</code>.<br>&bull; Active and passive fingerprinting methods.<br>&bull; Perform a vulnerability assessment.<br>&bull; Nessus installation and configuration.<br>&bull; Launch a scan with Nexpose.<br>&bull; Different Types of Exploitation.<br>&bull; Introduction and configuration of Metasploit.<br>&bull; Use the <code>METERPRETER</code> shell.<br>&bull; Evade Antivirus with <code>Veil</code>.<br>&bull; How to escalate privileges.<br>&bull; How to inject malicious code.<br>&bull; Install a backdoor on a target system.<br>&bull; The pivoting techniques of a network.<br>&bull; How to write the final Penetration Testing report."
+      }
+    ]
+  },
+  "contact":{
+    "title": "Get in Touch",
+    "profile_title": "Profile",
+    "name": "Giovanni Lamarmora",
+    "name_title": "Name",
+    "age": "27",
+    "age_title": "Age",
+    "from": "Milan, Italy",
+    "from_title": "From",
+    "downloadCV": "Download CV",
+    "follow_me": "Follow me",
+    "contact_me": "Send me a Message",
+    "email_title": "Email",
+    "description": "Tell me more about your request...",
+    "send": "Send Message",
+    "experience": "1",
+    "experience_title": "Years Experiance",
+    "work_project": "4",
+    "work_project_title": "Projects Done <br>Be | Shaping The Future",
+    "project": "4",
+    "project_title": "Personal Projects",
+    "course": "8",
+    "course_title": "Courses Done",
+    "send_email": {
+      "title": "Hi $NAME$ , do you want to send the email?",
+      "not_send": "Don't send",
+      "send": "Send",
+      "send_error": "Error sending the email!",
+      "send_success": "Email sent successfully!",
+      "not_send_error": "Not Sended!"
+    }
+  },
+  "project-section": {
+    "title": "Personal Projects",
+    "projects": [
+      {
+        "id": 1,
+        "number": "4",
+        "description": "Project with Be | Shaping the future.",
+        "titleSecondPage": "Technology Used",
+        "descriptionSecondPage": ["Spring Boot Framework", "JPA and Hibernate Framework", "PostgreSQL and OracleSQL", "Angular"]
+      },
+      {
+        "id": 2,
+        "number": "4",
+        "description": "Project with Be | Shaping the future.",
+        "titleSecondPage": "Technology Used",
+        "descriptionSecondPage": ["Spring Boot Framework", "JPA and Hibernate Framework", "PostgreSQL and OracleSQL", "Angular"]
       }
     ]
   },
