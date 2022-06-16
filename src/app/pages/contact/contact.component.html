@@ -14,23 +14,19 @@
                     <li class="border-0"><span class="fw-600 me-2">{{ 'contact.from_title' | translate }}:</span>{{
                         'contact.from' | translate }}</li>
                 </ul>
-                <a href="{{ 'profile.downloadCV' | translate }}" target="_blank" class="btn btn-primary rounded-pill">{{
+                <a href="{{env.downloadResumeUrl}}" target="_blank" class="btn btn-primary rounded-pill">{{
                     'contact.downloadCV' | translate }}</a>
                 <hr>
                 <h2 class="mb-3 text-5 text-white text-uppercase">{{ 'contact.follow_me' | translate }}</h2>
                 <ul class="social-icons social-icons-muted justify-content-center justify-content-md-start">
-                    <li class="social-icons-dribbble"><a data-bs-toggle="tooltip"
-                            href="https://www.instagram.com/gio_lamarmora" target="_blank" title="Dribbble"><i
-                                class="fab fa-instagram"></i></a></li>
-                    <li class="social-icons-twitter"><a data-bs-toggle="tooltip"
-                            href="https://www.linkedin.com/in/giovannilamarmora" target="_blank" title="Twitter"><i
-                                class="fab fa-linkedin"></i></a></li>
-                    <li class="social-icons-facebook"><a data-bs-toggle="tooltip"
-                            href="https://www.facebook.com/gio.lamarmora" target="_blank" title="Facebook"><i
-                                class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons-github"><a data-bs-toggle="tooltip"
-                            href="https://github.com/giovannilamarmora" target="_blank" title="GitHub"><i
-                                class="fab fa-github"></i></a></li>
+                    <li class="social-icons-dribbble"><a data-bs-toggle="tooltip" href="{{env.instagramUrl}}"
+                            target="_blank" title="Dribbble"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="{{env.linkedinUrl}}"
+                            target="_blank" title="Twitter"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="{{env.facebookUrl}}"
+                            target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-github"><a data-bs-toggle="tooltip" href="{{env.githubUrl}}" target="_blank"
+                            title="GitHub"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
 
@@ -38,23 +34,24 @@
             <div class="col-md-8 col-xl-9 order-0 order-md-1">
                 <h2 class="mb-3 text-5 text-white text-uppercase text-center text-md-start">{{ 'contact.contact_me' |
                     translate }}</h2>
-                <form type="submit" id="contact-form" class="form-dark">
+                <form #f="ngForm" type="submit" id="contact-form" class="form-dark">
                     <div class="row g-4">
                         <div class="col-xl-6">
-                            <input name="name" type="text" class="form-control" #name required
-                                placeholder="{{ 'contact.name_title' | translate }}">
+                            <input name="name" type="text" class="form-control" [(ngModel)]="name" #name1="ngModel"
+                                required placeholder="{{ 'contact.name_title' | translate }}">
                         </div>
                         <div class="col-xl-6">
-                            <input name="email" type="email" class="form-control" #email required
-                                placeholder="{{ 'contact.email_title' | translate }}">
+                            <input name="email" type="email" class="form-control" [(ngModel)]="email" #email1="ngModel"
+                                required placeholder="{{ 'contact.email_title' | translate }}">
                         </div>
                         <div class="col">
-                            <textarea name="message" class="form-control" rows="5" #message required
+                            <textarea name="message" class="form-control" rows="5" [(ngModel)]="message"
+                                #message1="ngModel" required
                                 placeholder="{{ 'contact.description' | translate }}"></textarea>
                         </div>
                     </div>
                     <p class="text-center mt-4 mb-0">
-                        <button id="submit-btn" (click)="sendEmail()"
+                        <button [disabled]="f.invalid" id="submit-btn" (click)="confirmSend()"
                             class="btn btn-primary rounded-pill d-inline-flex">{{
                             'contact.send' | translate }}</button>
                     </p>

@@ -3,7 +3,7 @@
         <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
             {{firstname}} <span style="color: #777">{{lastname}}</span>
         </p>
-        <a *ngIf="downloadCV" [@inOutAnimation] href="{{ 'profile.downloadCV' | translate }}" target="_blank"
+        <a *ngIf="downloadCV" [@inOutAnimation] href="{{ environment.downloadResumeUrl }}" target="_blank"
             id="cv">Download <span style="color: #777">CV</span></a>
     </div>
     <div class="nav-wrapper">

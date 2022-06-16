@@ -1,6 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { EmailSenderService } from 'src/app/shared/services/email.service';
+import { environment } from 'src/environments/environment';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -8,28 +10,63 @@ import { EmailSenderService } from 'src/app/shared/services/email.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  @ViewChild('name') name_el!: ElementRef;
-  @ViewChild('email') email_el!: ElementRef;
-  @ViewChild('message') message_el!: ElementRef;
-  constructor(private sender: EmailSenderService) {}
+  env = environment;
+  name!: string;
+  email!: string;
+  message!: string;
+  constructor(
+    private sender: EmailSenderService,
+    private translate: TranslateService
+  ) {}
 
-  validateForm(): boolean {
-    if (
-      this.name_el != undefined &&
-      this.email_el != undefined &&
-      this.message_el != undefined
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+  confirmSend() {
+    Swal.fire({
+      title: this.translate
+        .instant('contact.send_email.title')
+        .replace('$NAME$', this.name),
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: this.translate.instant('contact.send_email.send'),
+      denyButtonText: this.translate.instant('contact.send_email.not_send'),
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        this.sendEmail();
+      } else if (result.isDenied) {
+        Swal.fire(
+          this.translate.instant('contact.send_email.not_send_error'),
+          '',
+          'info'
+        );
+      }
+    });
   }
 
-  sendEmail() {
-    const name = this.name_el.nativeElement.value;
-    const email = this.email_el.nativeElement.value;
-    const message = this.message_el.nativeElement.value;
-    this.sender.sendEmail(name, email, message);
+  async sendEmail() {
+    const isSentEmail: boolean = await this.sender.sendEmail(
+      this.name,
+      this.email,
+      this.message
+    );
+    if (isSentEmail) {
+      Swal.fire(
+        this.translate.instant('contact.send_email.send_success'),
+        '',
+        'success'
+      );
+      this.name = '';
+      this.email = '';
+      this.message = '';
+    } else {
+      Swal.fire(
+        this.translate.instant('contact.send_email.send_error'),
+        '',
+        'error'
+      );
+      this.name = '';
+      this.email = '';
+      this.message = '';
+    }
   }
 
   ngOnInit(): void {}

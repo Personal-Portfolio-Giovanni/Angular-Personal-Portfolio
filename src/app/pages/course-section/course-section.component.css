@@ -13,14 +13,6 @@
     padding-top: 10px;
 }
 
-.hidden_mobile {
-    display: block;
-}
-
-.hidden_desktop {
-    display: none;
-}
-
 @media screen and (max-width: 1650px) {
     #course-accordion {
         margin-left: 0px;
