@@ -1,0 +1,103 @@
+<!-- Contact Me
+    ============================================= -->
+<section id="contact" class="section bg-dark-2">
+    <div class="container px-lg-5">
+        <app-title-section [title]="'contact.title' | translate" [sub_title]="'Contact'"></app-title-section>
+        <div class="row gy-5">
+            <div class="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
+                <h2 class="mb-3 text-5 text-white text-uppercase">{{ 'contact.profile_title' | translate }}</h2>
+                <ul class="list-style-2 list-style-light text-light">
+                    <li><span class="fw-600 me-2">{{ 'contact.name_title' | translate }}:</span>{{ 'contact.name' |
+                        translate }}</li>
+                    <li><span class="fw-600 me-2">{{ 'contact.age_title' | translate }}:</span>{{ 'contact.age' |
+                        translate }}</li>
+                    <li class="border-0"><span class="fw-600 me-2">{{ 'contact.from_title' | translate }}:</span>{{
+                        'contact.from' | translate }}</li>
+                </ul>
+                <a href="{{env.downloadResumeUrl}}" target="_blank" class="btn btn-primary rounded-pill">{{
+                    'contact.downloadCV' | translate }}</a>
+                <hr>
+                <h2 class="mb-3 text-5 text-white text-uppercase">{{ 'contact.follow_me' | translate }}</h2>
+                <ul class="social-icons social-icons-muted justify-content-center justify-content-md-start">
+                    <li class="social-icons-dribbble"><a data-bs-toggle="tooltip" href="{{env.instagramUrl}}"
+                            target="_blank" title="Dribbble"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="{{env.linkedinUrl}}"
+                            target="_blank" title="Twitter"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="{{env.facebookUrl}}"
+                            target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-github"><a data-bs-toggle="tooltip" href="{{env.githubUrl}}" target="_blank"
+                            title="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Message Section -->
+            <div class="col-md-8 col-xl-9 order-0 order-md-1">
+                <h2 class="mb-3 text-5 text-white text-uppercase text-center text-md-start">{{ 'contact.contact_me' |
+                    translate }}</h2>
+                <form #f="ngForm" type="submit" id="contact-form" class="form-dark">
+                    <div class="row g-4">
+                        <div class="col-xl-6">
+                            <input name="name" type="text" class="form-control" [(ngModel)]="name" #name1="ngModel"
+                                required placeholder="{{ 'contact.name_title' | translate }}">
+                        </div>
+                        <div class="col-xl-6">
+                            <input name="email" type="email" class="form-control" [(ngModel)]="email" #email1="ngModel"
+                                required placeholder="{{ 'contact.email_title' | translate }}">
+                        </div>
+                        <div class="col">
+                            <textarea name="message" class="form-control" rows="5" [(ngModel)]="message"
+                                #message1="ngModel" required
+                                placeholder="{{ 'contact.description' | translate }}"></textarea>
+                        </div>
+                    </div>
+                    <p class="text-center mt-4 mb-0">
+                        <button [disabled]="f.invalid" id="submit-btn" (click)="confirmSend()"
+                            class="btn btn-primary rounded-pill d-inline-flex">{{
+                            'contact.send' | translate }}</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="brands-grid separator-border separator-border-light mt-5">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="featured-box text-center">
+                        <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
+                                attr.data-to="{{ 'contact.experience' | translate }}">{{ 'contact.experience' |
+                                translate }}</span>+
+                        </h4>
+                        <p class="text-light mb-0">{{ 'contact.experience_title' | translate }}</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="featured-box text-center">
+                        <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
+                                attr.data-to="{{ 'contact.work_project' | translate }}">{{ 'contact.work_project' |
+                                translate }}</span>+
+                        </h4>
+                        <p [innerHTML]="'contact.work_project_title' | translate" class="text-light mb-0"></p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="featured-box text-center">
+                        <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
+                                attr.data-to="{{ 'contact.project' | translate }}">{{ 'contact.project' | translate
+                                }}</span>+
+                        </h4>
+                        <p class="text-light mb-0">{{ 'contact.project_title' | translate }}</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="featured-box text-center">
+                        <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
+                                attr.data-to="{{ 'contact.course' | translate }}">{{ 'contact.course' | translate
+                                }}</span>+
+                        </h4>
+                        <p class="text-light mb-0">{{ 'contact.course_title' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Me end -->

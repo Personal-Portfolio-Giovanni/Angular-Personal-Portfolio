@@ -1,6 +1,5 @@
 {
   "profile": {
-    "downloadCV": "https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing",
     "currentLanguage": "Italian",
     "currentLanguageIcon": "flag-it",
     "follow": "Seguimi",
@@ -55,7 +54,9 @@
       }
     ],
   "footer":{
-    "title":"Giovanni Lamarmora | Portfolio è stato sviluppato con AngularJS e Bootstrap"
+    "title_1":"Giovanni Lamarmora | Portfolio",
+    "title_2":"è stato sviluppato con AngularJS e Bootstrap.",
+    "title_3":"Copyright © 2022 Giovanni Lamarmora. All rights reserved."
   },
   "languages": {
     "title": "Lingue",
@@ -144,6 +145,38 @@
         "description": "Ho correttamente completato il corso di Cyber Security CEH , ed ho acquisito le seguenti capacità:<br>&bull; Che cos'è un Ethical Hacker.<br>&bull; Quali sono i principali vettori di attacco ad una rete.<br>&bull; Le fasi di un attacco informatico.<br>&bull; Come si effettua un Penetration Testing.<br>&bull; Come creare il proprio laboratorio.<br>&bull; Utilizzare le macchine virtuali.<br>&bull; Installare sistemi operativi <code>Windows e Kali Linux</code>.<br>&bull; Eseguire i principali <code>comandi per Linux</code>.<br>&bull; Creare delle mappe concettuali.<br>&bull; Capire il funzionamento base di una rete.<br>&bull; Cos'è un <code>indirizzo IP</code>.<br>&bull; Come si utilizza il <code>PING-ARP-TRACEROUTE</code>.<br>&bull; Il funzionamento di <code>NAT-DNS-DHCP</code>.<br>&bull; Eseguire operazioni di base con <code>Netcat</code>.<br>&bull; Utilizzare <code>Cisco Packet Tracer</code> per la simulazione delle reti.<br>&bull; Come funziona una switch e cosa sono le <code>VLAN</code>.<br>&bull; La differenza tra un <code>router e un firewall</code>.<br>&bull; Cosa si intende per <code>Google Hacking</code>.<br>&bull; Raccogliere informazioni sui Social Media.<br>&bull; Come si interroga un <code>DNS</code>.<br>&bull; Trovare vulnerabilità con <code>Shodan</code>.<br>&bull; Installare e configurare un <code>honeypot</code>.<br>&bull; Effettuare la scansione di una rete.<br>&bull; Effettuare lo sniffing dei pacchetti con <code>Wireshark</code>.<br>&bull; La differenza tra protocollo <code>TCP e UDP</code>.<br>&bull; Le tecniche del Banner Grabbing.<br>&bull; La cattura dei banner con <code>TELNET,NETCAT e NMAP</code>.<br>&bull; Metodi di fingerprinting attivo e passivo.<br>&bull; Effettuare un vulnerability assessment.<br>&bull; L'installazione e configurazione di <code>Nessus</code>.<br>&bull; Lanciare una scansione con <code>Nexpose</code>.<br>&bull; Differenti tipi di Exploitation.<br>&bull; Introduzione e configurazione di Metasploit.<br>&bull; Utilizzare la shell <code>METERPRETER</code>.<br>&bull; Eludere gli antivirus con Veil.<br>&bull; Come effettuare l'escalation dei privilegi.<br>&bull; Come iniettare codice malevolo.<br>&bull; Installare una backdoor su un sistema bersaglio.<br>&bull; Le tecniche di pivoting di una rete.<br>&bull; Come scrivere il report finale del Penetration Testing.<br>"
       }
     ]
+  },
+  "contact":{
+    "title": "Contattami",
+    "profile_title": "Profilo",
+    "name": "Giovanni Lamarmora",
+    "name_title": "Nome",
+    "age": "27",
+    "age_title": "Età",
+    "from": "Milano, Italia",
+    "from_title": "Da",
+    "downloadCV": "Download CV",
+    "follow_me": "Seguimi",
+    "contact_me": "Inviami un messaggio",
+    "email_title": "Email",
+    "description": "Dimmi di più riguardo la tua Richiesta...",
+    "send": "Invia Messaggio",
+    "experience": "1",
+    "experience_title": "Anni di esperienza",
+    "work_project": "4",
+    "work_project_title": "Progetti eseguiti <br>Be | Shaping The Future",
+    "project": "4",
+    "project_title": "Progetti Personali",
+    "course": "8",
+    "course_title": "Corsi eseguiti",
+    "send_email": {
+      "title": "Ciao $NAME$ , vuoi inviare l'email?",
+      "not_send": "Non Inviare",
+      "send": "Invia",
+      "send_error": "Errore durante l'invio della email!",
+      "send_success": "Email inviata correttamente!",
+      "not_send_error": "Non inviata!"
+    }
   },
   "info":{
     "title": "Questo Sito e in costruzione",

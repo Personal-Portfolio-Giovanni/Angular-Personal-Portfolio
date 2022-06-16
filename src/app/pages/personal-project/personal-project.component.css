@@ -1,0 +1,16 @@
+.project-section {
+    color: #777;
+    background-color: #282e34;
+    text-align: center;
+    padding: 80px 100px;
+    text-align: justify;
+}
+
+
+.hidden_mobile {
+    display: block;
+}
+
+.hidden_desktop {
+    display: none;
+}
