@@ -30,7 +30,7 @@
             "styles": [
               "src/styles.css", "src/assets/animation/sliding-animations.css"
             ],
-            "scripts": [],
+            "scripts": ["src/assets/animation/reveal-up.js"],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
           },
