@@ -4,6 +4,7 @@ import { filter } from 'rxjs';
 import { environment } from '../environments/environment';
 
 declare let gtag: Function;
+declare function reveal(): any;
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent {
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.setUpAnalytics();
+    reveal();
   }
   setUpAnalytics() {
     this.router.events
