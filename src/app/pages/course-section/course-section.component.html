@@ -1,7 +1,7 @@
 <section class="course-section">
     <app-title-section [class]="classType.COURSE" [title]="'course-section.title' | translate" [sub_title]="'Summary'">
     </app-title-section>
-    <div class="accordion accordion-flush" id="{{parentID}}">
+    <div class="accordion accordion-flush revealUp" id="{{parentID}}">
         <div *ngFor="let course of 'course-section.courses' |translate">
             <app-accordion-content [parentData]="parentID" [content]="course" [code]="code"></app-accordion-content>
         </div>

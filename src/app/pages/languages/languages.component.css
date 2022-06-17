@@ -62,6 +62,8 @@ a {
 .container-language{
   display : flex !important;
   justify-content: between !important;
+  max-width: 1500px !important;
+  margin-left: calc(50% - (1500px / 2));
 }
 
 @media screen and (max-width: 780px) {

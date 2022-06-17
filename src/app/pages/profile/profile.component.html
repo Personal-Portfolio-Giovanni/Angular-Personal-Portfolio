@@ -1,11 +1,11 @@
 <div class="bgimg-1"></div>
 <div class="caption">
   <app-header></app-header>
-  <div class="image-cropper">
+  <div class="image-cropper shape">
     <img src="{{environment.profileImageUrl}}" class="profile" alt="" />
   </div>
-  <div class="title">
-    <h3 class="h3 console-container">
+  <div class="title slide-up">
+    <h3 class="h3 revealUp console-container">
       {{ "profile.description.pt1" | translate
       }}
       <span style="color: cornflowerblue">{{fullName}}</span>,<br>
@@ -25,7 +25,7 @@
       E-Mail: {{email}}
     </a>
   </div>-->
-  <p class="follow">
+  <p class="follow slide-right">
     {{ "profile.follow" | translate }}
     <a href="{{environment.facebookUrl}}" target="_blank"><img
         src="{{environment.baseUrl}}assets/img/social/facebook.png" class="logo" alt="" srcset="" /></a>
