@@ -1,5 +1,8 @@
 import { Component, Output } from '@angular/core';
-import { ClassType, CourseType } from 'src/app/shared/class/accordion-constant.class';
+import {
+  ClassType,
+  CourseType,
+} from 'src/app/shared/class/accordion-constant.class';
 import { CourseInterface } from 'src/app/shared/interfaces/course.interface';
 
 @Component({

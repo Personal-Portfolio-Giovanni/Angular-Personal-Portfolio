@@ -28,9 +28,9 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css", "src/assets/animation/sliding-animations.css"
+              "src/styles.css", "src/assets/animation/sliding-animations.css", "src/assets/animation/particle-animation/style.css"
             ],
-            "scripts": ["src/assets/animation/reveal-up.js"],
+            "scripts": ["src/assets/animation/reveal-up.js", "src/assets/animation/particle-animation/script.js", "src/assets/animation/animate-on-view.js"],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
           },

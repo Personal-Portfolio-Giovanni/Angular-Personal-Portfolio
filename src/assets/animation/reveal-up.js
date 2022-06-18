@@ -1,8 +1,8 @@
 // REVEAL //
 function reveal() {
+  console.log("Reveal Up is loaded.");
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".revealUp").forEach(function (elem) {
-    console.log("Dentro Animazione")
     ScrollTrigger.create({
       trigger: elem,
       start: "top 80%",
