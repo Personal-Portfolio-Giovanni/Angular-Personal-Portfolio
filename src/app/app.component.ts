@@ -5,6 +5,7 @@ import { environment } from '../environments/environment';
 
 declare let gtag: Function;
 declare function reveal(): any;
+declare function particlesJS(): any;
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.setUpAnalytics();
     reveal();
+    particlesJS();
   }
   setUpAnalytics() {
     this.router.events
