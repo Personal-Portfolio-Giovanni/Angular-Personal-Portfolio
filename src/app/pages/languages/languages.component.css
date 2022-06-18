@@ -59,11 +59,10 @@ a {
   text-align: left;
 }
 
-.container-language{
-  display : flex !important;
-  justify-content: between !important;
+.container-language {
+  position: relative;
+  justify-content: center !important;
   max-width: 1500px !important;
-  margin-left: calc(50% - (1500px / 2));
 }
 
 @media screen and (max-width: 780px) {
@@ -98,10 +97,10 @@ a {
     margin-right: -80px;
   }
 }
-/*
-@media screen and (max-width: 1700px) {
-  .boxer {
+
+@media screen and (min-width: 1700px) {
+  .container-language {
     max-width: 1500px;
     margin-left: calc(50% - (1500px / 2));
   }
-}*/
+}

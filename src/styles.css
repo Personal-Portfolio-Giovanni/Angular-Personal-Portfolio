@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import "./assets/animation/sliding-animations.css";
+@import "./assets/animation/particle-animation/style.css";
 
 body,
 html {
@@ -13,10 +14,13 @@ html {
 
 @media screen and (max-width: 780px) {
   .hidden_mobile {
-    display: none;
+    visibility: hidden;
+  }
+  .hidden_desktop {
+    visibility: visible;
   }
 }
 
 .hidden_desktop {
-  display: none;
+  visibility: hidden;
 }
