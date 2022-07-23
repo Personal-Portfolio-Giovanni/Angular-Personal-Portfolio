@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RevealUpAnimations } from 'src/assets/animation/reveal_up';
 import { environment } from 'src/environments/environment';
 import { AccordionConstants } from '../../class/accordion-constant.class';
 
@@ -12,11 +13,25 @@ export class AccordionContentComponent implements OnInit {
   @Input('code') code!: string;
   @Input('content') content!: any;
 
+  isOpen: boolean = true;
+
   environment = environment;
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
 
-  constructor() {}
+  constructor(private revealUp: RevealUpAnimations) {}
+
+  startStopAnimation() {
+    /*if (this.isOpen) {
+      this.revealUp.play();
+      this.isOpen = false;
+    } else {
+      this.revealUp.play();
+      this.isOpen = true;
+    }
+    console.log(this.isOpen);*/
+    this.revealUp.stop();
+  }
 
   public get accordionConstant(): typeof AccordionConstants {
     return AccordionConstants;
