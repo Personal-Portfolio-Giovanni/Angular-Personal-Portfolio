@@ -20,7 +20,7 @@ export class RevealUpAnimations {
           trigger: element,
           start: 'top 80%',
           end: 'bottom 20%',
-          markers: true, // Change to true to view markers
+          markers: false, // Change to true to view markers
           onEnter: function () {
             gsap.fromTo(
               element,
