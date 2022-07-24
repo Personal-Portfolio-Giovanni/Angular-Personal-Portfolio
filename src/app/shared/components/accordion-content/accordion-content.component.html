@@ -1,6 +1,6 @@
 <div class="accordion-item accordion_color">
     <h2 class="accordion-header" id="{{aria_label}}">
-        <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse"
+        <button class="accordion-button collapsed title" type="button" data-bs-toggle="collapse" (click)="startStopAnimation()"
             [attr.data-bs-target]="'#'+aria_control" aria-expanded="false" [attr.aria-controls]="aria_control">
             {{content?.title}}
             <span class="from hidden_mobile">{{content?.from}}<br />

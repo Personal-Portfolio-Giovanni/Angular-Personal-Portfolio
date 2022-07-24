@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClassType } from 'src/app/shared/class/accordion-constant.class';
+import { RevealUpAnimations } from 'src/assets/animation/reveal_up';
 
 @Component({
   selector: 'app-description',
