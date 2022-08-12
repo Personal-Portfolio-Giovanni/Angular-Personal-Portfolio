@@ -1,12 +1,12 @@
 <nav id="navbar" (scroll)="onWindowScroll()">
-    <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text slide-left">
+    <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text" data-inviewport="slide-left">
         <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
             {{firstname}} <span style="color: #777">{{lastname}}</span>
         </p>
         <a *ngIf="downloadCV" [@inOutAnimation] href="{{ environment.downloadResumeUrl }}" target="_blank"
             id="cv">Download <span style="color: #777">CV</span></a>
     </div>
-    <div class="nav-wrapper slide-right">
+    <div class="nav-wrapper" data-inviewport="slide-right">
         <div class="sl-nav" style="color: aliceblue">
             <i class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}" style="margin-right: 5px"></i>
             <ul>

@@ -1,4 +1,5 @@
 export const environment = {
+  envType: "PROD",
   production: true,
   baseUrl: 'https://giovannilamarmoraproject.github.io/Portfolio/',
   googleID: 'G-0VT47TDXGS',
@@ -15,4 +16,14 @@ export const environment = {
   linkedinUrl: 'https://www.linkedin.com/in/giovannilamarmora',
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
+
+  /*
+   * Animation Variables
+   * ============================
+   * Loader
+   */
+  loadingTime: 1000,
+  isRevealUpActive: true,
+  isParticleJSActive: true,
+  isOnViewAnimationsActive: true
 };
