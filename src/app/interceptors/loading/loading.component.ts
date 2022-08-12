@@ -35,6 +35,6 @@ export class LoadingComponent implements OnInit {
         loader!.style.filter = 'alpha(opacity=' + loaderOpacity * 100 + ')';
         loaderOpacity = loaderOpacity - loaderOpacity * 0.5;
       }, 30);
-    }, 1000);
+    }, 20000);
   }
 }
