@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { LoggerService } from 'src/app/shared/services/log.service';
+import { environment } from 'src/environments/environment';
 
 const inViewport = (entries: any[], observer: any) => {
   entries.forEach((entry) => {
@@ -10,13 +12,20 @@ const inViewport = (entries: any[], observer: any) => {
   providedIn: 'root',
 })
 export class InViewStartAnimations {
+  environment = environment;
   obs: IntersectionObserver = new IntersectionObserver(inViewport);
-  obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+  constructor(private logger: LoggerService) {}
 
   animateOnView() {
-    document.querySelectorAll('[data-inviewport]').forEach((EL: any) => {
-      this.obs.observe(EL);
-      console.log(EL);
-    });
+    this.logger.LOG(
+      'Is Animate on View Active: ' + environment.isOnViewAnimationsActive
+    );
+    if (environment.isOnViewAnimationsActive) {
+      document.querySelectorAll('[data-inviewport]').forEach((EL: any) => {
+        this.obs.observe(EL);
+      });
+      this.logger.LOG('Animate on View is loaded');
+    }
   }
 }
