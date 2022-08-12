@@ -74,7 +74,7 @@ export class RevealUpAnimations {
 
   stop() {
     document.querySelectorAll('.revealUp').forEach(function (elem) {
-      elem.classList.replace('revealUp', 'stopRevealUp');
+      //elem.classList.replace('revealUp', 'stopRevealUp');
       gsap.fromTo(
         elem,
         { y: 100, autoAlpha: 0 },
@@ -89,7 +89,6 @@ export class RevealUpAnimations {
       ScrollTrigger.disable();
       ScrollTrigger.refresh();
       gsap.registerPlugin(ScrollTrigger);
-      console.log(elem);
     });
     this.logger.LOG('RevealUp is Stopped');
   }

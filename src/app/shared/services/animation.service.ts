@@ -11,6 +11,7 @@ declare function particlesJS(environment: string): any;
 })
 export class AnimationsService {
   environment = environment;
+  animation_title: string = '';
   constructor(
     public revealUp: RevealUpAnimations,
     public inViewStartAnimation: InViewStartAnimations,
@@ -28,5 +29,14 @@ export class AnimationsService {
     if (environment.isParticleJSActive) {
       particlesJS(environment.envType);
     }
+  }
+
+  changeAnimationAfterStopRevealUp() {
+    this.logger.LOG(
+      'Activating InView Animation with effect: ' + this.animation_title
+    );
+    document.querySelectorAll('#title_section').forEach((element) => {
+      element.setAttribute('data-inviewport', this.animation_title);
+    });
   }
 }

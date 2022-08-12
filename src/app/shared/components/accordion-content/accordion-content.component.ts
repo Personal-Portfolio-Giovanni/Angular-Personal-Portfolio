@@ -3,6 +3,8 @@ import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from 'src/environments/environment';
 import { AccordionConstants } from '../../class/accordion-constant.class';
 import { AnimationsService } from '../../services/animation.service';
+import { LoggerService } from '../../services/log.service';
+import { TitleSectionComponent } from '../title-section/title-section.component';
 
 @Component({
   selector: 'app-accordion-content',
@@ -20,10 +22,19 @@ export class AccordionContentComponent implements OnInit {
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
 
-  constructor(private animationService: AnimationsService) {}
+  constructor(
+    private animationService: AnimationsService,
+    private logger: LoggerService,
+  ) {}
 
   startStopAnimation() {
     this.animationService.revealUp.stop();
+    this.activateSlideUpAfterStopRevealUp();
+  }
+
+  activateSlideUpAfterStopRevealUp() {
+    this.animationService.animation_title = 'slide-up';
+    this.animationService.changeAnimationAfterStopRevealUp();
   }
 
   public get accordionConstant(): typeof AccordionConstants {

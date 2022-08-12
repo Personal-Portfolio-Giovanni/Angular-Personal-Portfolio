@@ -66,7 +66,7 @@ import { LoadingComponent } from './interceptors/loading/loading.component';
       },
     }),
   ],
-  providers: [LoadingComponent],
+  providers: [LoadingComponent, TitleSectionComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
