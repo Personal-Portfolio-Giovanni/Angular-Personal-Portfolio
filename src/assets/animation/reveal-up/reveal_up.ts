@@ -1,19 +1,24 @@
 import { Injectable } from '@angular/core';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { LoggerService } from 'src/app/shared/services/log.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RevealUpAnimations {
+  environment = environment;
   public scrollBox: any;
+  constructor(private logger: LoggerService) {}
   initAnimation() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    this.reveal();
+    if (environment.isRevealUpActive) {
+      this.logger.LOG('Is RevealUpActive: ' + environment.isRevealUpActive);
+      gsap.registerPlugin(ScrollTrigger);
+      this.reveal();
+    }
   }
   reveal() {
-    console.log('Reveal Up New is loaded.');
     document.querySelectorAll('.revealUp').forEach((element) => {
       this.scrollBox = gsap.timeline({
         scrollTrigger: {
@@ -64,11 +69,12 @@ export class RevealUpAnimations {
         },
       });
     });
+    this.logger.LOG('RevealUp is Started');
   }
 
   stop() {
-    /*document.querySelectorAll('.revealUp').forEach(function (elem) {
-      elem.classList.replace('revealUp', 'stopRevealUp');
+    document.querySelectorAll('.revealUp').forEach(function (elem) {
+      //elem.classList.replace('revealUp', 'stopRevealUp');
       gsap.fromTo(
         elem,
         { y: 100, autoAlpha: 0 },
@@ -79,11 +85,12 @@ export class RevealUpAnimations {
           ease: 'back',
           overwrite: 'auto',
         }
-      );*/
-    ScrollTrigger.disable();
-    gsap.registerPlugin(ScrollTrigger);
-    /*console.log(elem);
-    });*/
+      );
+      ScrollTrigger.disable();
+      ScrollTrigger.refresh();
+      gsap.registerPlugin(ScrollTrigger);
+    });
+    this.logger.LOG('RevealUp is Stopped');
   }
   play() {
     /*document.querySelectorAll('.revealUp').forEach(function (elem) {

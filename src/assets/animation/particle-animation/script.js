@@ -1,5 +1,5 @@
-function particlesJS() {
-    console.log('particles.js loaded');
+function particlesJS(environment) {
+    const LOG_Formatter = '[$DATE$] [$ENV$] [LOG]: $TEXT$';
     document.addEventListener('DOMContentLoaded', function () {
         particleground(document.getElementById('particles'), {
             dotColor: '#fff',
@@ -444,4 +444,14 @@ function particlesJS() {
                 clearTimeout(id);
             };
     }());
+    if (environment) {
+        environment = environment;
+    } else {
+        environment = "NOT_SPECIFIED";
+    }
+    console.log(
+      LOG_Formatter.replace('$DATE$', new Date().toDateString())
+        .replace('$ENV$', environment)
+        .replace('$TEXT$', 'ParticleJS is now Loaded')
+    );
 }

@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RevealUpAnimations } from 'src/assets/animation/reveal_up';
+import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from 'src/environments/environment';
 import { AccordionConstants } from '../../class/accordion-constant.class';
+import { AnimationsService } from '../../services/animation.service';
+import { LoggerService } from '../../services/log.service';
+import { TitleSectionComponent } from '../title-section/title-section.component';
 
 @Component({
   selector: 'app-accordion-content',
@@ -19,18 +22,19 @@ export class AccordionContentComponent implements OnInit {
   aria_label: string = 'flush-heading';
   aria_control: string = 'flush-collapse';
 
-  constructor(private revealUp: RevealUpAnimations) {}
+  constructor(
+    private animationService: AnimationsService,
+    private logger: LoggerService,
+  ) {}
 
   startStopAnimation() {
-    /*if (this.isOpen) {
-      this.revealUp.play();
-      this.isOpen = false;
-    } else {
-      this.revealUp.play();
-      this.isOpen = true;
-    }
-    console.log(this.isOpen);*/
-    this.revealUp.stop();
+    this.animationService.revealUp.stop();
+    this.activateSlideUpAfterStopRevealUp();
+  }
+
+  activateSlideUpAfterStopRevealUp() {
+    this.animationService.animation_title = 'slide-up';
+    this.animationService.changeAnimationAfterStopRevealUp();
   }
 
   public get accordionConstant(): typeof AccordionConstants {

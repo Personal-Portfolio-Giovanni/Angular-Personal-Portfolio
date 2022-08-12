@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { RevealUpAnimations } from 'src/assets/animation/reveal_up';
+import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from '../environments/environment';
+import { AnimationsService } from './shared/services/animation.service';
 
 declare let gtag: Function;
-declare function reveal(): any;
-declare function particlesJS(): any;
 
 @Component({
   selector: 'app-root',
@@ -14,12 +13,13 @@ declare function particlesJS(): any;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private router: Router, private revealUp: RevealUpAnimations) {}
+  constructor(
+    private router: Router,
+    private animationService: AnimationsService
+  ) {}
   ngOnInit(): void {
     this.setUpAnalytics();
-    //reveal();
-    this.revealUp.initAnimation();
-    particlesJS();
+    this.animationService.initAnimations();
   }
   setUpAnalytics() {
     this.router.events

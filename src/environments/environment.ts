@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  envType: "DEV",
   production: false,
   baseUrl: '../../',
   googleID: 'G-0VT47TDXGS',
@@ -18,6 +19,16 @@ export const environment = {
   linkedinUrl: 'https://www.linkedin.com/in/giovannilamarmora',
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
+
+  /*
+   * Animation Variables
+   * ============================
+   * Loader
+   */
+  loadingTime: 1000,
+  isRevealUpActive: true,
+  isParticleJSActive: true,
+  isOnViewAnimationsActive: true,
 };
 
 /*
