@@ -1,4 +1,4 @@
-function particlesJS() {
+function particlesJS(environment) {
     const LOG_Formatter = '[$DATE$] [$ENV$] [LOG]: $TEXT$';
     document.addEventListener('DOMContentLoaded', function () {
         particleground(document.getElementById('particles'), {
@@ -444,7 +444,11 @@ function particlesJS() {
                 clearTimeout(id);
             };
     }());
-    const environment = "NOT_SPECIFIED";
+    if (environment) {
+        environment = environment;
+    } else {
+        environment = "NOT_SPECIFIED";
+    }
     console.log(
       LOG_Formatter.replace('$DATE$', new Date().toDateString())
         .replace('$ENV$', environment)
