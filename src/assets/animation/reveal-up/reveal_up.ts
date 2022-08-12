@@ -1,19 +1,24 @@
 import { Injectable } from '@angular/core';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { LoggerService } from 'src/app/shared/services/log.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RevealUpAnimations {
+  environment = environment;
   public scrollBox: any;
+  constructor(private logger: LoggerService) {}
   initAnimation() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    this.reveal();
+    if (environment.isRevealUpActive) {
+      this.logger.LOG('Is RevealUpActive: ' + environment.isRevealUpActive);
+      gsap.registerPlugin(ScrollTrigger);
+      this.reveal();
+    }
   }
   reveal() {
-    console.log('RevealUp TS is loaded.');
     document.querySelectorAll('.revealUp').forEach((element) => {
       this.scrollBox = gsap.timeline({
         scrollTrigger: {
@@ -64,10 +69,10 @@ export class RevealUpAnimations {
         },
       });
     });
+    this.logger.LOG('RevealUp is Started');
   }
 
   stop() {
-    console.log('RevealUp TS is stopped.');
     document.querySelectorAll('.revealUp').forEach(function (elem) {
       elem.classList.replace('revealUp', 'stopRevealUp');
       gsap.fromTo(
@@ -86,6 +91,7 @@ export class RevealUpAnimations {
       gsap.registerPlugin(ScrollTrigger);
       console.log(elem);
     });
+    this.logger.LOG('RevealUp is Stopped');
   }
   play() {
     /*document.querySelectorAll('.revealUp').forEach(function (elem) {

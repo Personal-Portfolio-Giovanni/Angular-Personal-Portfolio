@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/shared/services/animation.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-loading',
@@ -7,7 +8,8 @@ import { AnimationsService } from 'src/app/shared/services/animation.service';
   styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent implements OnInit {
-  constructor(private animationServices: AnimationsService) {}
+  environment = environment;
+  constructor() {}
 
   removeLoader(): void {
     document.removeEventListener('DOMContentLoaded', () => {
@@ -35,6 +37,6 @@ export class LoadingComponent implements OnInit {
         loader!.style.filter = 'alpha(opacity=' + loaderOpacity * 100 + ')';
         loaderOpacity = loaderOpacity - loaderOpacity * 0.5;
       }, 30);
-    }, 20000);
+    }, environment.loadingTime);
   }
 }
