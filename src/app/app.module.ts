@@ -11,7 +11,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/description/description.component';
 import { HeaderComponent } from './core/header/header.component';
-import { ExtraOptions, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './pages/works-section/works-section.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
@@ -24,6 +24,7 @@ import { PersonalProjectComponent } from './pages/personal-project/personal-proj
 import { CardFlipComponent } from './shared/components/card-flip/card-flip.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from './interceptors/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FormsModule } from '@angular/forms';
     PersonalProjectComponent,
     CardFlipComponent,
     ContactComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,7 @@ import { FormsModule } from '@angular/forms';
       },
     }),
   ],
-  providers: [],
+  providers: [LoadingComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

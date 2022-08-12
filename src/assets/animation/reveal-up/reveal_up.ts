@@ -13,7 +13,7 @@ export class RevealUpAnimations {
     this.reveal();
   }
   reveal() {
-    console.log('Reveal Up New is loaded.');
+    console.log('RevealUp TS is loaded.');
     document.querySelectorAll('.revealUp').forEach((element) => {
       this.scrollBox = gsap.timeline({
         scrollTrigger: {
@@ -67,7 +67,8 @@ export class RevealUpAnimations {
   }
 
   stop() {
-    /*document.querySelectorAll('.revealUp').forEach(function (elem) {
+    console.log('RevealUp TS is stopped.');
+    document.querySelectorAll('.revealUp').forEach(function (elem) {
       elem.classList.replace('revealUp', 'stopRevealUp');
       gsap.fromTo(
         elem,
@@ -79,11 +80,12 @@ export class RevealUpAnimations {
           ease: 'back',
           overwrite: 'auto',
         }
-      );*/
-    ScrollTrigger.disable();
-    gsap.registerPlugin(ScrollTrigger);
-    /*console.log(elem);
-    });*/
+      );
+      ScrollTrigger.disable();
+      ScrollTrigger.refresh();
+      gsap.registerPlugin(ScrollTrigger);
+      console.log(elem);
+    });
   }
   play() {
     /*document.querySelectorAll('.revealUp').forEach(function (elem) {

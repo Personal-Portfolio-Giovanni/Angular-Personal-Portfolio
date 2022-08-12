@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RevealUpAnimations } from 'src/assets/animation/reveal_up';
+import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from 'src/environments/environment';
 import { AccordionConstants } from '../../class/accordion-constant.class';
 
