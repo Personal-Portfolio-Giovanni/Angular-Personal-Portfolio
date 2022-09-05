@@ -23,7 +23,7 @@ export const environment = {
    * Loader
    */
   loadingTime: 1000,
-  isRevealUpActive: true,
+  isRevealUpActive: false,
   isParticleJSActive: true,
   isOnViewAnimationsActive: true,
   isRevealUpTS: true,

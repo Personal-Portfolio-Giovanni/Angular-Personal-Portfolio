@@ -26,7 +26,7 @@ export const environment = {
    * Loader
    */
   loadingTime: 1000,
-  isRevealUpActive: true,
+  isRevealUpActive: false,
   isParticleJSActive: true,
   isOnViewAnimationsActive: true,
   // If isRevealUpTS: false, the Reveal Up Javascript is active
