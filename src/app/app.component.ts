@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from '../environments/environment';
 import { AnimationsService } from './shared/services/animation.service';
 

@@ -1,13 +1,12 @@
 // REVEAL //
 function reveal() {
-  console.log("Reveal Up is loaded.");
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".revealUp").forEach(function (elem) {
     ScrollTrigger.create({
       trigger: elem,
       start: "top 80%",
       end: "bottom 20%",
-      markers: true, // Change to true to view markers
+      markers: false, // Change to true to view markers
       onEnter: function () {
         gsap.fromTo(
           elem,
@@ -42,12 +41,14 @@ function reveal() {
       }
     });
   });
+  LOG('RevealUp JS is Started');
+  this.logger.LOG(ScrollTrigger.toString(), 'ScrollTrigger');
 };
 
 function stop() {
   console.log("Stop Up is loaded.");
   document.querySelectorAll(".revealUp").forEach(function (elem) {
-    elem.classList.replace("revealUp", "stopRevealUp");
+    //elem.classList.replace("revealUp", "stopRevealUp");
     gsap.fromTo(
           elem,
           { y: 100, autoAlpha: 0 },
@@ -59,8 +60,20 @@ function stop() {
             overwrite: "auto"
           }
         );
-    ScrollTrigger.disable();
-    gsap.registerPlugin(ScrollTrigger);
-    console.log(elem);
-  });
+      ScrollTrigger.disable();
+      ScrollTrigger.refresh();
+      gsap.registerPlugin(ScrollTrigger);
+    });
+    LOG('RevealUp JS is Stopped');
 }
+
+// Log Service
+let LOG_Formatter = '[$DATE$] [$ENV$] [LOG] [$CLASS$]: $TEXT$';
+
+  function LOG(text) {
+    console.log(
+      LOG_Formatter.replace('$DATE$', new Date().toDateString())
+        .replace('$ENV$', 'NOT SPECIFIED')
+        .replace('$TEXT$', text).replace('$CLASS$', 'Animation: Reveal-Up')
+    );
+  }

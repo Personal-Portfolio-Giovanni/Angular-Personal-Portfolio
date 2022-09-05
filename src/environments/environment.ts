@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  envType: "DEV",
+  envType: 'DEV',
   production: false,
   baseUrl: '../../',
   googleID: 'G-0VT47TDXGS',
@@ -29,6 +29,7 @@ export const environment = {
   isRevealUpActive: true,
   isParticleJSActive: true,
   isOnViewAnimationsActive: true,
+  isRevealUpTS: true,
 };
 
 /*
