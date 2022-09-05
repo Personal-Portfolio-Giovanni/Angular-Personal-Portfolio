@@ -19,7 +19,7 @@ export class InViewStartAnimations {
 
   animateOnView() {
     this.logger.LOG(
-      'Is Animate on View Active: ' + environment.isOnViewAnimationsActive,
+      'Is Animate on View Status Active: ' + environment.isOnViewAnimationsActive,
       'InViewStartAnimations: AnimateOnView'
     );
     if (environment.isOnViewAnimationsActive) {

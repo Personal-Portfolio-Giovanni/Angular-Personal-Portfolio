@@ -29,6 +29,7 @@ export const environment = {
   isRevealUpActive: true,
   isParticleJSActive: true,
   isOnViewAnimationsActive: true,
+  // If isRevealUpTS: false, the Reveal Up Javascript is active
   isRevealUpTS: true,
 };
 

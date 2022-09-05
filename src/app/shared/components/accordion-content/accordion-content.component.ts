@@ -24,12 +24,14 @@ export class AccordionContentComponent implements OnInit {
 
   constructor(
     private animationService: AnimationsService,
-    private logger: LoggerService,
+    private logger: LoggerService
   ) {}
 
   startStopAnimation() {
-    this.animationService.revealUp.stop();
-    this.activateSlideUpAfterStopRevealUp();
+    if (environment.isRevealUpActive) {
+      this.animationService.revealUp.stop();
+      this.activateSlideUpAfterStopRevealUp();
+    }
   }
 
   activateSlideUpAfterStopRevealUp() {

@@ -1,6 +1,6 @@
 {
   "name": "angular-personal-portfolio",
-  "version": "0.9.98",
+  "version": "0.9.99",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
