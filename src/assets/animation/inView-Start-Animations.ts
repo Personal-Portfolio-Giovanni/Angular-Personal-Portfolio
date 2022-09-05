@@ -19,13 +19,17 @@ export class InViewStartAnimations {
 
   animateOnView() {
     this.logger.LOG(
-      'Is Animate on View Active: ' + environment.isOnViewAnimationsActive
+      'Is Animate on View Active: ' + environment.isOnViewAnimationsActive,
+      'InViewStartAnimations: AnimateOnView'
     );
     if (environment.isOnViewAnimationsActive) {
       document.querySelectorAll('[data-inviewport]').forEach((EL: any) => {
         this.obs.observe(EL);
       });
-      this.logger.LOG('Animate on View is loaded');
+      this.logger.LOG(
+        'Animate on View is loaded',
+        'InViewStartAnimations: AnimateOnView'
+      );
     }
   }
 }

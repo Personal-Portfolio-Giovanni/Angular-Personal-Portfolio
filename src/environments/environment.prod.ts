@@ -1,5 +1,5 @@
 export const environment = {
-  envType: "PROD",
+  envType: 'PROD',
   production: true,
   baseUrl: 'https://giovannilamarmoraproject.github.io/Portfolio/',
   googleID: 'G-0VT47TDXGS',
@@ -25,5 +25,6 @@ export const environment = {
   loadingTime: 1000,
   isRevealUpActive: true,
   isParticleJSActive: true,
-  isOnViewAnimationsActive: true
+  isOnViewAnimationsActive: true,
+  isRevealUpTS: true,
 };
