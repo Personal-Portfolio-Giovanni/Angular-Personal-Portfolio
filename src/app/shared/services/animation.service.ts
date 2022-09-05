@@ -26,11 +26,20 @@ export class AnimationsService {
   }
 
   scrollTriggerSwitch() {
-    this.logger.LOG(
-      ScrollTrigger.toString(),
-      'ScrollTrigger TypeScript STATUS:'
-    );
-    if (environment.isRevealUpTS) {
+    if (!environment.isRevealUpActive) {
+      this.logger.LOG(
+        'Is RevealUpActive: ' +
+          environment.isRevealUpActive +
+          'Setting onView Slide Up',
+        'RevealUpAnimations: initAnimation'
+      );
+      this.animation_title = 'slide-up';
+      this.changeAnimationAfterStopRevealUp();
+    } else if (environment.isRevealUpTS) {
+      this.logger.LOG(
+        ScrollTrigger.toString(),
+        'ScrollTrigger TypeScript STATUS:'
+      );
       if (ScrollTrigger != undefined || ScrollTrigger === null) {
         this.revealUp.initAnimation();
         this.logger.LOG(
@@ -70,6 +79,24 @@ export class AnimationsService {
     );
     document.querySelectorAll('#title_section').forEach((element) => {
       element.setAttribute('data-inviewport', this.animation_title);
+    });
+  }
+
+  /**
+   * Method to let you set the OnView Animation
+   * @param querySelector id of the selector
+   * @param animation {slide-up, slide-left, slide-right}
+   */
+  setAnimation(querySelector: string, animation: string) {
+    this.logger.LOG(
+      'Activating InView Animation with effect: ' +
+        animation +
+        ' for the query: ' +
+        querySelector,
+      'AnimationsService: setAnimation'
+    );
+    document.querySelectorAll(querySelector).forEach((element) => {
+      element.setAttribute('data-inviewport', animation);
     });
   }
 }

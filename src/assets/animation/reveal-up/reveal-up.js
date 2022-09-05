@@ -42,7 +42,6 @@ function reveal() {
     });
   });
   LOG('RevealUp JS is Started');
-  this.logger.LOG(ScrollTrigger.toString(), 'ScrollTrigger');
 };
 
 function stop() {
