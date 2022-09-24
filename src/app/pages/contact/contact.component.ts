@@ -70,5 +70,26 @@ export class ContactComponent implements OnInit {
     }*/
   }
 
+  ageCalc(): number {
+    const birthdayDate: Date = new Date(
+      this.translate.instant('profile.birthdayDate')
+    );
+    const nowDate: Date = new Date();
+    var ynew = nowDate.getFullYear();
+    var mnew = nowDate.getMonth();
+    var dnew = nowDate.getDate();
+    var yold = birthdayDate.getFullYear();
+    var mold = birthdayDate.getMonth();
+    var dold = birthdayDate.getDate();
+    var diff = ynew - yold;
+    if (mold > mnew) diff--;
+    else {
+      if (mold == mnew) {
+        if (dold > dnew) diff--;
+      }
+    }
+    return diff;
+  }
+
   ngOnInit(): void {}
 }
