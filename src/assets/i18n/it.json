@@ -1,5 +1,6 @@
 {
   "profile": {
+    "birthdayDate": "1994-08-25",
     "currentLanguage": "Italian",
     "currentLanguageIcon": "flag-it",
     "follow": "Seguimi",
@@ -151,7 +152,6 @@
     "profile_title": "Profilo",
     "name": "Giovanni Lamarmora",
     "name_title": "Nome",
-    "age": "27",
     "age_title": "Età",
     "from": "Milano, Italia",
     "from_title": "Da",
