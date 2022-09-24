@@ -49,7 +49,9 @@ jobs:
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
-    needs: [dependency, build]
+    needs: 
+      - dependency 
+      - build
     steps:
       - name: "☁️ Checkout Repository"
         uses: actions/checkout@v2
