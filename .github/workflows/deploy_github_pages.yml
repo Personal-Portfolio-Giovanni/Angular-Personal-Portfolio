@@ -36,9 +36,7 @@ jobs:
     name: 📂 Build
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: 
-      - setting-up
-      - dependency
+    needs: [setting-up]
     steps:
       - name: "☁️ Checkout Repository"
         uses: actions/checkout@v2
@@ -53,7 +51,7 @@ jobs:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: [build]
+    needs: [dependency, build]
     steps:
       - name: "☁️ Checkout Repository"
         uses: actions/checkout@v2
