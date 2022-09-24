@@ -1,14 +1,14 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+const baseUrlApp: string = '../../';
 
 export const environment = {
   envType: 'DEV',
   production: false,
   baseUrl: '../../',
   googleID: 'G-0VT47TDXGS',
-  profileImageUrl:
-    'https://media-exp1.licdn.com/dms/image/C4D03AQH8e_2qWvDl9g/profile-displayphoto-shrink_800_800/0/1620846625034?e=1663804800&v=beta&t=4lNMfr2IiCvPykHMq7xMCA6Xhy5kva0Em85FnMTjz2s',
+  profileImageUrl: baseUrlApp + 'assets/img/Profile.jpg',
   CEHCertificateUrl: 'https://www.udemy.com/certificate/UC-117Y7TRV/',
   downloadResumeUrl:
     'https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing',
