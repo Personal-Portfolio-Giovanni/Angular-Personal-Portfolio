@@ -35,7 +35,6 @@ jobs:
   build:
     name: 📂 Build
     runs-on: ubuntu-latest
-    if: ${{ always() }}
     needs: [setting-up]
     steps:
       - name: "☁️ Checkout Repository"
@@ -50,7 +49,6 @@ jobs:
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
-    if: ${{ always() }}
     needs: [dependency, build]
     steps:
       - name: "☁️ Checkout Repository"
