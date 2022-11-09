@@ -74,6 +74,8 @@ jobs:
       - name: 🚀 Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
+          name: giovannilamarmora-portfolio
+          url: https://giovannilamarmoraproject.github.io/Portfolio/
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
         with:
           source-directory: "dist/angular-personal-portfolio"
