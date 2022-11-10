@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { catchError } from 'rxjs';
+import {
+  EmailResponseModel,
+  EmailSenderModel,
+  EmailTemplateModel,
+  TemplateConstant,
+} from 'src/app/shared/class/emailSender.class';
+import { ErrorResponse } from 'src/app/shared/class/error.class';
 import { EmailSenderService } from 'src/app/shared/services/email.service';
+import { LoggerService } from 'src/app/shared/services/log.service';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 
@@ -14,9 +23,13 @@ export class ContactComponent implements OnInit {
   name!: string;
   email!: string;
   message!: string;
+  emailTemplate?: EmailTemplateModel;
+  emailResponse?: EmailResponseModel;
+  errorResponse?: ErrorResponse;
   constructor(
     private sender: EmailSenderService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private logger: LoggerService
   ) {}
 
   confirmSend() {
@@ -31,6 +44,7 @@ export class ContactComponent implements OnInit {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
+        this.herokuSendEmail();
         this.sendEmail();
       } else if (result.isDenied) {
         Swal.fire(
@@ -70,6 +84,42 @@ export class ContactComponent implements OnInit {
     }*/
   }
 
+  async herokuSendEmail() {
+    //let email = this.sender.getEmailTemplate();
+    this.emailTemplate = this.sender.emailTemplate;
+
+    let title: string = this.translate.instant('email_content.title');
+    let sub_title: string = this.translate.instant('email_content.sub-title');
+    let important: string = this.translate.instant('email_content.important');
+    let thanks: string = this.translate.instant('email_content.thanks');
+    let content = this.emailTemplate.content
+      ?.replace(
+        TemplateConstant.TITLE,
+        title.replace(TemplateConstant.NAME, this.name)
+      )
+      .replace(TemplateConstant.SUBTITLE, sub_title)
+      .replace(TemplateConstant.EMAIL_TEXT, this.message)
+      .replace(TemplateConstant.IMPORTANT_TEXT, important)
+      .replace(TemplateConstant.THANKS, thanks);
+    this.logger.LOG('Building content for email sender', 'ContactComponent');
+
+    let emailSender: EmailSenderModel = new EmailSenderModel();
+    emailSender.to = this.email;
+    emailSender.bbc = 'giovannilamarmora.working@gmail.com';
+    emailSender.replyTo = 'giovannilamarmora.working@gmail.com';
+    emailSender.sentDate = new Date();
+    emailSender.subject = 'Contact Me [giovannilamarmora]';
+    emailSender.text = content;
+
+    this.logger.LOG(content!, 'ContactComponent');
+
+    localStorage.setItem('name', this.name);
+    localStorage.setItem('message', this.message);
+    localStorage.setItem('email', emailSender.to);
+
+    await this.sender.herokuSendEmail(emailSender, this.message, this.name);
+  }
+
   ageCalc(): number {
     const birthdayDate: Date = new Date(
       this.translate.instant('profile.birthdayDate')
@@ -91,5 +141,7 @@ export class ContactComponent implements OnInit {
     return diff;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sender.getEmailTemplate();
+  }
 }

@@ -74,7 +74,8 @@
               "browserTarget": "Angular-Personal-Portfolio:build:production"
             },
             "development": {
-              "browserTarget": "Angular-Personal-Portfolio:build:development"
+              "browserTarget": "Angular-Personal-Portfolio:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
