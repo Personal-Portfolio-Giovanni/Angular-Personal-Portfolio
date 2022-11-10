@@ -181,6 +181,12 @@
   "info":{
     "title": "Questo Sito e in costruzione",
     "text": "La versione visualizzata non è la versione ufficiale, nuovi contenuti arriveranno presto."
+  },
+  "email_content": {
+    "title": "BENVENUTO $NAME$!",
+    "sub-title": "Grazie per avermi contattato, questa è una copia della tua email.",
+    "important": "Ti contatterò il prima possibile, nel frattempo se hai altre domande, rispondi pure a questa email.",
+    "thanks": "Grazie, Giovanni Lamarmora"
   }
 }
 

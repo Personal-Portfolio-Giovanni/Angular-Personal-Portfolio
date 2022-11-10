@@ -200,5 +200,11 @@
   "info":{
     "title": "This WebSite is under developing",
     "text": "The version showed it's not the official version, new content are coming soon, Stay Tuned."
+  },
+  "email_content": {
+    "title": "WELCOME $NAME$!",
+    "sub-title": "Thanks to contact me, that's the copy of your email.",
+    "important": "I'll contact you back a soon as i can, in the maintime if you have any questions, just reply to this email.",
+    "thanks": "Cheers, Giovanni Lamarmora"
   }
 }
