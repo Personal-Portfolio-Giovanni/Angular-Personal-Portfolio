@@ -25,6 +25,7 @@ import { CardFlipComponent } from './shared/components/card-flip/card-flip.compo
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './interceptors/loading/loading.component';
+import { EmailSenderService } from './shared/services/email.service';
 
 @NgModule({
   declarations: [

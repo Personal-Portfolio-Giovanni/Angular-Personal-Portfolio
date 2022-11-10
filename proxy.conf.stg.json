@@ -1,0 +1,13 @@
+{
+  "/v1": {
+    "target": "https://stg-email-sender.herokuapp.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/v1": "/v1"
+    },
+    "headers": {
+      "Connection": "keep-alive"
+    }
+  }
+}
