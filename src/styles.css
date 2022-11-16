@@ -24,3 +24,7 @@ html {
 .hidden_desktop {
   visibility: hidden;
 }
+
+.border_round{
+  border-radius: 20px !important;
+}
