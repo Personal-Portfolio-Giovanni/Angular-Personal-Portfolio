@@ -36,3 +36,11 @@ export enum ClassType {
   COURSE = 'course-title-section',
   INFO = 'info-title-section',
 }
+
+export enum SwalIcon {
+  INFO = 'info',
+  QUESTION = 'question',
+  ERROR = 'error',
+  SUCCESS = 'success',
+  WARNING = 'warning',
+}
