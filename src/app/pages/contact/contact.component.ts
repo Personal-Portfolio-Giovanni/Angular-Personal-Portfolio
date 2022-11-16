@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { catchError } from 'rxjs';
+import { SwalIcon } from 'src/app/shared/class/accordion-constant.class';
 import {
   EmailResponseModel,
   EmailSenderModel,
@@ -10,8 +10,8 @@ import {
 import { ErrorResponse } from 'src/app/shared/class/error.class';
 import { EmailSenderService } from 'src/app/shared/services/email.service';
 import { LoggerService } from 'src/app/shared/services/log.service';
+import { SwalService } from 'src/app/shared/services/swal.service';
 import { environment } from 'src/environments/environment';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -29,62 +29,72 @@ export class ContactComponent implements OnInit {
   constructor(
     private sender: EmailSenderService,
     private translate: TranslateService,
-    private logger: LoggerService
+    private logger: LoggerService,
+    private swalService: SwalService
   ) {}
 
   confirmSend() {
-    Swal.fire({
-      title: this.translate
-        .instant('contact.send_email.title')
-        .replace('$NAME$', this.name),
-      showDenyButton: true,
-      showCancelButton: false,
-      confirmButtonText: this.translate.instant('contact.send_email.send'),
-      denyButtonText: this.translate.instant('contact.send_email.not_send'),
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        this.herokuSendEmail();
-        this.sendEmail();
-      } else if (result.isDenied) {
-        Swal.fire(
-          this.translate.instant('contact.send_email.not_send_error'),
-          '',
-          'info'
-        );
-      }
-    });
-  }
-
-  async sendEmail() {
-    const isSentEmail: boolean = await this.sender.sendEmail(
-      this.name,
-      this.email,
-      this.message
-    );
-    // TODO: Find a better way to handle this
-    /* if (isSentEmail) { */
-    Swal.fire(
-      this.translate.instant('contact.send_email.send_success'),
-      '',
-      'success'
-    );
-    this.name = '';
-    this.email = '';
-    this.message = '';
-    /* }  else {
-      Swal.fire(
-        this.translate.instant('contact.send_email.send_error'),
+    this.swalService
+      .confirmDialog(
+        this.translate
+          .instant('contact.send_email.title')
+          .replace('$NAME$', this.name),
         '',
-        'error'
-      );
-      this.name = '';
-      this.email = '';
-      this.message = '';
-    }*/
+        this.translate.instant('contact.send_email.send'),
+        this.translate.instant('contact.send_email.not_send')
+      )
+      .then(async (result: any) => {
+        if (result.isConfirmed) {
+          let res: any = await this.herokuSendEmail();
+          this.logger.LOG(
+            'HerokuSendEmail Response: ' + JSON.stringify(res),
+            'Response Http'
+          );
+          if (
+            res.error != null ||
+            res.error != undefined ||
+            JSON.stringify(res) === '{}'
+          ) {
+            if (JSON.stringify(res) === '{}')
+              this.logger.LOG(
+                'Heroku returned empty response, sending email with Formspree',
+                'Heroku Email Sender'
+              );
+            else
+              this.logger.LOG(
+                'Heroku returned the current error: ' +
+                  res.error.exceptionCode +
+                  ', with message: ' +
+                  res.error.message,
+                'Heroku Email Sender'
+              );
+            this.sendEmail();
+          }
+        } else if (result.isDenied) {
+          this.swalService.simpleDialog(
+            SwalIcon.INFO,
+            this.translate.instant('contact.send_email.not_send_error'),
+            ''
+          );
+        }
+      });
   }
 
-  async herokuSendEmail() {
+  sendEmail() {
+    this.sender.sendEmail(this.name, this.email, this.message);
+    this.swalService.simpleDialog(
+      SwalIcon.SUCCESS,
+      this.translate.instant('contact.send_email.send_success'),
+      ''
+    );
+    this.logger.LOG(
+      'Email to ' + this.email + ' is sucessfully send!',
+      'Formspree Email Sender'
+    );
+    this.resetForm();
+  }
+
+  herokuSendEmail(): any {
     //let email = this.sender.getEmailTemplate();
     this.emailTemplate = this.sender.emailTemplate;
 
@@ -113,11 +123,7 @@ export class ContactComponent implements OnInit {
 
     this.logger.LOG(content!, 'ContactComponent');
 
-    localStorage.setItem('name', this.name);
-    localStorage.setItem('message', this.message);
-    localStorage.setItem('email', emailSender.to);
-
-    await this.sender.herokuSendEmail(emailSender, this.message, this.name);
+    return this.sender.herokuSendEmail(emailSender);
   }
 
   ageCalc(): number {
@@ -139,6 +145,12 @@ export class ContactComponent implements OnInit {
       }
     }
     return diff;
+  }
+
+  resetForm() {
+    this.name = '';
+    this.email = '';
+    this.message = '';
   }
 
   ngOnInit(): void {
