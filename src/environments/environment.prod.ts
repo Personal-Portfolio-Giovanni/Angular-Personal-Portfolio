@@ -5,6 +5,7 @@ export const environment = {
   envType: 'PROD',
   production: true,
   baseUrl: 'https://giovannilamarmoraproject.github.io/Portfolio/',
+  baseUrlV2: baseUrlApp,
   googleID: 'G-0VT47TDXGS',
   profileImageUrl: baseUrlApp + 'assets/img/Profile.jpg',
   CEHCertificateUrl: 'https://www.udemy.com/certificate/UC-117Y7TRV/',

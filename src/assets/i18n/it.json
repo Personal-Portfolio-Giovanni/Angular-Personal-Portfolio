@@ -186,7 +186,7 @@
     "projects": [
       {
         "id": 1,
-        "img": "../../../../assets/img/project/send-email.jpg",
+        "img": "assets/img/project/send-email.jpg",
         "titleSecondPage": "Email-Sender",
         "descriptionSecondPage": ["Spring Boot Framework", "Github Workflow", "Heroku"],
         "btn_text": "Apri App",
@@ -194,7 +194,7 @@
       },
       {
         "id": 2,
-        "img": "../../../../assets/img/project/GitHub-Alternatives.jpg",
+        "img": "assets/img/project/GitHub-Alternatives.jpg",
         "titleSecondPage": "Tutti i progetti su Github",
         "btn_text": "Esplora Tutti",
         "btn_href": "https://github.com/giovannilamarmora"
