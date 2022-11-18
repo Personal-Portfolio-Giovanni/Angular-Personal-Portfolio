@@ -164,9 +164,9 @@
     "send": "Invia Messaggio",
     "experience": "1",
     "experience_title": "Anni di esperienza",
-    "work_project": "4",
+    "work_project": "5",
     "work_project_title": "Progetti eseguiti <br>Be | Shaping The Future",
-    "project": "4",
+    "project": "6",
     "project_title": "Progetti Personali",
     "course": "8",
     "course_title": "Corsi eseguiti",
@@ -178,6 +178,28 @@
       "send_success": "Messaggio inviato correttamente!",
       "not_send_error": "Non inviato!"
     }
+  },
+  "project-section": {
+    "title": "Progetti Personali",
+    "btn_project": "Esplora Tutti",
+    "go_back": "Torna alla Homepage",
+    "projects": [
+      {
+        "id": 1,
+        "img": "../../../../assets/img/project/send-email.jpg",
+        "titleSecondPage": "Email-Sender",
+        "descriptionSecondPage": ["Spring Boot Framework", "Github Workflow", "Heroku"],
+        "btn_text": "Apri App",
+        "btn_href": "https://prod-email-sender.herokuapp.com/"
+      },
+      {
+        "id": 2,
+        "img": "../../../../assets/img/project/GitHub-Alternatives.jpg",
+        "titleSecondPage": "Tutti i progetti su Github",
+        "btn_text": "Esplora Tutti",
+        "btn_href": "https://github.com/giovannilamarmora"
+      }
+    ]
   },
   "info":{
     "title": "Questo Sito e in costruzione",
