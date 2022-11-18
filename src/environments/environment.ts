@@ -7,6 +7,7 @@ export const environment = {
   envType: 'DEV',
   production: false,
   baseUrl: '../../',
+  baseUrlV2: '../../../../',
   googleID: 'G-0VT47TDXGS',
   profileImageUrl: baseUrlApp + 'assets/img/Profile.jpg',
   CEHCertificateUrl: 'https://www.udemy.com/certificate/UC-117Y7TRV/',
