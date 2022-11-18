@@ -35,6 +35,7 @@ export enum ClassType {
   LANGUAGES = 'languages-title-section',
   COURSE = 'course-title-section',
   INFO = 'info-title-section',
+  PROJECT = 'project-title-section',
 }
 
 export enum SwalIcon {
