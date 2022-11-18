@@ -4,7 +4,7 @@
     position: relative;
     height: 300px;
     max-width: 400px;
-    margin: 2rem;
+    margin: 0rem;
     box-shadow: none;
     background: none;
 }
@@ -25,11 +25,15 @@
 .card-side.back {
     transform: rotateY(-180deg);
     background-color: #4158D0;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 .card-side.front {
     background-color: #0093E9;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
@@ -70,4 +74,10 @@
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: 500;
+}
+@media (max-width: 780px) {
+    .card {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
 }
