@@ -103,25 +103,53 @@ app-header {
     }
     .container-title {
         width: fit-content;
-        margin-left: calc(50% - (474px / 2));
+        margin-left: calc(50% - (554px / 2)) !important;
         padding-bottom: 40px;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 541px) {
     .text-24 {
         font-size: calc(1rem + 8.4vw) !important;
         line-height: 1;
     }
     .container-title {
         width: fit-content;
-        margin-left: calc(50% - (390px / 2));
+        margin-left: calc(50% - (422px / 2)) !important;
     }
 }
 
 @media screen and (max-width: 500px) {
     .container-title {
         width: fit-content;
-        margin-left: calc(50% - (318px / 2));
+        margin-left: calc(50% - (348px / 2));
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container-title {
+        width: fit-content;
+        margin-left: calc(50% - (348px / 2)) !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container-title {
+        width: fit-content;
+        margin-left: calc(50% - (327px / 2)) !important;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .container-title {
+        width: fit-content;
+        margin-left: calc(50% - (272px / 2)) !important;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .container-title {
+        width: fit-content;
+        margin-left: calc(50% - (688px / 2));
     }
 }
