@@ -12,24 +12,5 @@ declare let gtag: Function;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(
-    private router: Router,
-    private animationService: AnimationsService
-  ) {}
-  ngOnInit(): void {
-    this.setUpAnalytics();
-    this.animationService.initAnimations();
-  }
-  setUpAnalytics() {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        if (event instanceof NavigationEnd) {
-          gtag('config', environment.googleID, {
-            page_path: event.urlAfterRedirects,
-          });
-        }
-      });
-  }
   title = 'Angular-Personal-Portfolio';
 }
