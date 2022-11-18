@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 
 @Component({

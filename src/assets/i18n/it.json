@@ -179,6 +179,27 @@
       "not_send_error": "Non inviato!"
     }
   },
+  "project-section": {
+    "title": "Progetti Personali",
+    "btn_project": "Esplora Tutti",
+    "projects": [
+      {
+        "id": 1,
+        "img": "../../../../assets/img/project/send-email.jpg",
+        "titleSecondPage": "Email-Sender",
+        "descriptionSecondPage": ["Spring Boot Framework", "Github Workflow", "Heroku"],
+        "btn_text": "Apri App",
+        "btn_href": "https://prod-email-sender.herokuapp.com/"
+      },
+      {
+        "id": 2,
+        "img": "../../../../assets/img/project/GitHub-Alternatives.jpg",
+        "titleSecondPage": "Tutti i progetti su Github",
+        "btn_text": "Esplora Tutti",
+        "btn_href": "https://github.com/giovannilamarmora"
+      }
+    ]
+  },
   "info":{
     "title": "Questo Sito e in costruzione",
     "text": "La versione visualizzata non è la versione ufficiale, nuovi contenuti arriveranno presto."

@@ -181,20 +181,22 @@
   },
   "project-section": {
     "title": "Personal Projects",
+    "btn_project": "Explore All",
     "projects": [
       {
         "id": 1,
-        "number": "4",
-        "description": "Project with Be | Shaping the future.",
-        "titleSecondPage": "Technology Used",
-        "descriptionSecondPage": ["Spring Boot Framework", "JPA and Hibernate Framework", "PostgreSQL and OracleSQL", "Angular"]
+        "img": "../../../../assets/img/project/send-email.jpg",
+        "titleSecondPage": "Email-Sender",
+        "descriptionSecondPage": ["Spring Boot Framework", "Github Workflow", "Heroku"],
+        "btn_text": "Open App",
+        "btn_href": "https://prod-email-sender.herokuapp.com/"
       },
       {
         "id": 2,
-        "number": "4",
-        "description": "Project with Be | Shaping the future.",
-        "titleSecondPage": "Technology Used",
-        "descriptionSecondPage": ["Spring Boot Framework", "JPA and Hibernate Framework", "PostgreSQL and OracleSQL", "Angular"]
+        "img": "../../../../assets/img/project/GitHub-Alternatives.jpg",
+        "titleSecondPage": "More Project on Github",
+        "btn_text": "Explore All",
+        "btn_href": "https://github.com/giovannilamarmora"
       }
     ]
   },
