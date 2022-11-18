@@ -164,9 +164,9 @@
     "send": "Send Message",
     "experience": "1",
     "experience_title": "Years Experiance",
-    "work_project": "4",
+    "work_project": "5",
     "work_project_title": "Projects Done <br>Be | Shaping The Future",
-    "project": "4",
+    "project": "6",
     "project_title": "Personal Projects",
     "course": "8",
     "course_title": "Courses Done",
@@ -182,6 +182,7 @@
   "project-section": {
     "title": "Personal Projects",
     "btn_project": "Explore All",
+    "go_back": "Go back to Homepage",
     "projects": [
       {
         "id": 1,

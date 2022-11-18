@@ -19,6 +19,7 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.setUpAnalytics();
     this.animationService.initAnimations();
+    console.log('INIT');
   }
   setUpAnalytics() {
     this.router.events
