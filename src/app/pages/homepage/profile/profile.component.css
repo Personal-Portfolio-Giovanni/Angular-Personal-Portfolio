@@ -7,7 +7,7 @@
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url("../../../assets/img/wallpaper.jpg");
+  background-image: url("../../../../assets/img/wallpaper.jpg");
   background-color: #000;
   min-height: 100%;
 }
