@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { AnimationsService } from 'src/app/shared/services/animation.service';
+import { GoogleTagManagerService } from 'src/app/shared/services/google.tag.manager.service';
 import { environment } from 'src/environments/environment';
 
 declare let gtag: Function;
@@ -14,12 +15,13 @@ declare let gtag: Function;
 export class HomepageComponent {
   constructor(
     private router: Router,
-    private animationService: AnimationsService
+    private animationService: AnimationsService,
+    private googleTag: GoogleTagManagerService
   ) {}
   ngOnInit(): void {
     this.setUpAnalytics();
     this.animationService.initAnimations();
-    console.log('INIT');
+    this.googleTag.setUpTag();
   }
   setUpAnalytics() {
     this.router.events
@@ -32,5 +34,5 @@ export class HomepageComponent {
         }
       });
   }
-  title = 'Angular-Personal-Portfolio';
+  title = 'Giovanni Lamarmora | Portfolio';
 }
