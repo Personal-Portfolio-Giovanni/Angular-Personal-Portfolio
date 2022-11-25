@@ -31,23 +31,38 @@ export class HeaderComponent implements OnInit {
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
   lastname: string = 'Lamarmora';
+
+  private ATTR_LANGUAGE: string = 'lang';
+  private DEFAULT_LANGUAGE: string = 'en';
+
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    //translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setLanguages();
+  }
+
+  setLanguages() {
+    let languages = localStorage.getItem(this.ATTR_LANGUAGE);
+    if (!languages) languages = this.DEFAULT_LANGUAGE;
+    this.changeLanguage(languages);
+  }
+
   changeLanguage(lan: string) {
     this.translate.setDefaultLang(lan);
+    localStorage.setItem(this.ATTR_LANGUAGE, lan);
     let languageIT = document.getElementById('italian') as HTMLElement;
     let languageEN = document.getElementById('english') as HTMLElement;
-    if (lan == 'it') {
-      languageIT.classList.add('active');
-      languageEN.classList.remove('active');
-    } else {
-      languageEN.classList.add('active');
+    if (lan == this.DEFAULT_LANGUAGE) {
       languageIT.classList.remove('active');
+      languageEN.classList.add('active');
+    } else {
+      languageEN.classList.remove('active');
+      languageIT.classList.add('active');
     }
   }
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     let element = document.getElementById('navbar') as HTMLElement;
