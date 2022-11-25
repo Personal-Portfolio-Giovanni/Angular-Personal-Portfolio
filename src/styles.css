@@ -14,15 +14,26 @@ html {
 
 @media screen and (max-width: 780px) {
   .hidden_mobile {
-    visibility: hidden;
+    display: none !important;
+    visibility: hidden !important;
   }
+
   .hidden_desktop {
-    visibility: visible;
+    display: block !important;
+    visibility: visible !important;
   }
 }
 
-.hidden_desktop {
-  visibility: hidden;
+@media screen and (min-width: 780px) {
+  .hidden_mobile {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hidden_desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 
 .border_round{

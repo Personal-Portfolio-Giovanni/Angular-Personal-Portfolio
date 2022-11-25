@@ -25,29 +25,8 @@ a {
     color: aliceblue !important;
 }
 
-.hidden_mobile {
-    display: block;
-}
-
-.hidden_desktop {
-    display: none;
-}
-
 .accordion_color {
     background-color: #282e34 !important;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 780px) {
-    .hidden_mobile {
-        display: none;
-    }
-
-    .hidden_desktop {
-        display: block;
-    }
 }
 
 .logo-develop {
