@@ -15,6 +15,7 @@
 .no-link{
   color: #777;
   text-decoration: none;
+  display: inline-block !important;
 }
 
 .source-code {
