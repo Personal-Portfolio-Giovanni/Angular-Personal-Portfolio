@@ -1,6 +1,20 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {
+  CMSData,
+  Contentful,
+  ContentfulConstant,
+  Item,
+  Locale,
+} from 'src/app/shared/class/colorful.class';
+import { ContentfulService } from 'src/app/shared/services/contentful.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -27,6 +41,12 @@ import { environment } from '../../../environments/environment';
   ],
 })
 export class HeaderComponent implements OnInit {
+  @Output('changeLanguagesWork') changeLanguagesWork = new EventEmitter<
+    Array<CMSData>
+  >();
+  @Output('changeLanguagesCourse') changeLanguagesCourse = new EventEmitter<
+    Array<CMSData>
+  >();
   environment = environment;
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
@@ -35,7 +55,13 @@ export class HeaderComponent implements OnInit {
   private ATTR_LANGUAGE: string = 'lang';
   private DEFAULT_LANGUAGE: string = 'en';
 
-  constructor(private translate: TranslateService) {
+  worksData: Array<CMSData> = [];
+  coursesData: Array<CMSData> = [];
+
+  constructor(
+    private translate: TranslateService,
+    private contentService: ContentfulService
+  ) {
     //translate.setDefaultLang('en');
   }
 
@@ -57,10 +83,108 @@ export class HeaderComponent implements OnInit {
     if (lan == this.DEFAULT_LANGUAGE) {
       languageIT.classList.remove('active');
       languageEN.classList.add('active');
+      this.checkCMSData(Locale.ENGLISH);
     } else {
       languageEN.classList.remove('active');
       languageIT.classList.add('active');
+      this.checkCMSData(Locale.ITALIAN);
     }
+  }
+
+  checkCMSData(locale: Locale) {
+    let works: Item = JSON.parse(
+      localStorage.getItem(ContentfulConstant.WORKS_DATA + '_' + locale)!
+    );
+    let course: Item = JSON.parse(
+      localStorage.getItem(ContentfulConstant.COURSE_DATA + '_' + locale)!
+    );
+    let today = new Date();
+    let workUpdatedAt = new Date(
+      works != null && works.updatedAt != null
+        ? works.updatedAt!.toString()
+        : ''
+    );
+    let courseUpdatedAt = new Date(
+      course != null && course.updatedAt != null
+        ? course.updatedAt!.toString()
+        : ''
+    );
+    let isWorkUpdate =
+      workUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
+    let isCourseUpdate =
+      courseUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
+
+    if (
+      works == null ||
+      works == undefined ||
+      course == null ||
+      course == undefined ||
+      isWorkUpdate ||
+      isCourseUpdate
+    ) {
+      this.contentService.getCMSData(locale).subscribe({
+        next: (data) => {
+          this.worksData = this.buildWorks(data, 'jobs');
+          this.coursesData = this.buildWorks(data, 'courses');
+          let work: Item = new Item();
+          work.cmsData = this.worksData;
+          work.updatedAt = new Date();
+          let course: Item = new Item();
+          course.cmsData = this.coursesData;
+          course.updatedAt = new Date();
+          localStorage.setItem(
+            ContentfulConstant.WORKS_DATA + '_' + locale,
+            JSON.stringify(work)
+          );
+          localStorage.setItem(
+            ContentfulConstant.COURSE_DATA + '_' + locale,
+            JSON.stringify(course)
+          );
+          this.contentService.worksData = work.cmsData!;
+          this.contentService.courseData = course.cmsData!;
+          this.changeLanguagesWork.emit(this.worksData);
+          this.changeLanguagesCourse.emit(this.coursesData);
+        },
+      });
+    } else {
+      this.changeLanguagesWork.emit(this.worksData);
+      this.changeLanguagesCourse.emit(this.coursesData);
+      this.worksData = works.cmsData!;
+      this.contentService.worksData = works.cmsData!;
+      this.coursesData = course.cmsData!;
+      this.contentService.courseData = course.cmsData!;
+    }
+  }
+
+  buildWorks(contentful: Contentful, contentId: string): Array<CMSData> {
+    let works: Array<CMSData> = [];
+
+    contentful.items
+      ?.filter((i) => i.sys.contentType.sys.id === contentId)
+      .forEach((item: Item) => {
+        let cmsData: CMSData = new CMSData();
+        cmsData.id = item.fields?.id;
+        cmsData.title = item.fields?.title;
+        cmsData.from = item.fields?.from;
+        cmsData.to = item.fields?.to;
+        cmsData.role = item.fields?.role;
+        cmsData.where = item.fields?.where;
+        cmsData.identifier = item.fields?.identifier;
+        let description = '';
+        item.fields?.descriptionValue?.content!.forEach((content: any) => {
+          let index = 0;
+          content.content?.forEach((content1: any) => {
+            if (index == 0) {
+              description = content1.value!;
+            } else {
+              description = description + '<br>' + content1.value;
+            }
+          });
+        });
+        cmsData.description = description;
+        works.push(cmsData);
+      });
+    return works;
   }
 
   @HostListener('window:scroll', ['$event'])
