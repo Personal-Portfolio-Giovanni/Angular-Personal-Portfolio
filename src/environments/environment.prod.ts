@@ -21,6 +21,8 @@ export const environment = {
   linkedinUrl: 'https://www.linkedin.com/in/giovannilamarmora',
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
+  /* Contentful */
+  contentfulBaseUrl: 'https://cdn.contentful.com',
   worksUrl: '/spaces/uptyiu46x1l9/environments/master/entries',
 
   /*
