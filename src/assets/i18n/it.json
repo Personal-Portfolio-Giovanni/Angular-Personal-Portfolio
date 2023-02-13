@@ -19,7 +19,7 @@
   },
   "works": [
       {
-        "id": 1,
+        "identifier": 1,
         "title": "Be | Shaping the Future",
         "from": "Da Giugno 2021",
         "to": "Attuale",
@@ -28,7 +28,7 @@
         "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift</code> e Database come <code>MySQL, Oracle SQL.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
       },
       {
-        "id":2,
+        "identifier":2,
         "title": "Freelance Web Developer",
         "from": "Da Gennaio 2017",
         "to": "Attuale",
@@ -37,7 +37,7 @@
         "description": "Progettazione e manutenzione continua di siti web <code>HTML CSS e Javascript</code> con creazione di contenuti & design delle pagine web con collegamento social e test del web site con differenti Browser e formati."
       },
       {
-        "id":3,
+        "identifier":3,
         "title": "Freelance IT Technician",
         "from": "Da Maggio 2012",
         "to": "A Gennaio 2020",
@@ -46,7 +46,7 @@
         "description": "&bull; Diagnosi e risoluzione dei problemi in modo efficiente, preservando l'integrità dei dati durante il processo. <br>&bull; Mantenere aggiornato il sistema operativo <code>Windows e Mac.</code><br>&bull; Aggiornamento dei vecchi laptop con un sistema operativo lite <code>(Linux / Chrome OS / Debian).</code><br>&bull; Upgrade Hardware di componenti come RAM o SSD.<br>&bull; Risoluzione dei problemi del sistema operativo.<br>&bull; Installazione e gestione del software <code>(Adobe, Office, VMWare, Eclipse).</code><br>&bull; Recupero dati per private e Piccole/Medie Aziende.<br>&bull; Riparazione e manutenzione di Smartphone <code>Android ed iOS.</code>"
       },
       {
-        "id":4,
+        "identifier":4,
         "title": "Rock N Bowl",
         "from": "Da Settembre 2018",
         "to": "A Settembre 2019",
@@ -111,7 +111,7 @@
     "title": "Corsi Professionali",
     "courses": [
       {
-        "id": 1,
+        "identifier": 1,
         "title": "Generation Italy",
         "from": "Da Febbraio 2021",
         "to": "A Maggio 2021",
@@ -120,7 +120,7 @@
         "description": "Il corso online di 12 settimane, con frequenza giornaliera dalle ore 9 alle 18, organizzato da Generation Italy (Mc Kinsey) in collaborazione con <code>Intesa Sanpaolo</code>, mi ha permesso di acquisire le basi per lo sviluppo di applicazioni software e di gestione dei servizi web.<br>In particolare, abbiamo approfondito le principali tipologie di applicazioni server <code>(Jee, Mvc and Ajax)</code> e i Framework <code>Spring</code> e <code>Hibernate</code>, assieme al FrontEnd come <code>HTML5, CSS and JavaScript</code>.<br> Le settimane finali sono state dedicate ai servizi <code>Soap e Restful web services</code> e alla realizzazione di un progetto. <br> Nel contempo abbiamo lavorato perlo sviluppo di abilità comportamentali quali: <code>lavoro di squadra, adattabilità, comunicazione, persistenza, responsabilità personale, mentalità di crescita e orientamento al futuro.</code>"
       },
       {
-        "id": 2,
+        "identifier": 2,
         "title": "Cisco Networking Academy",
         "from": "Da Settembre 2018",
         "to": "A Novembre 2019",
@@ -129,7 +129,7 @@
         "description": "<strong><h4>CCNA 1: Introduction to Networks, Punteggio: 89.5/100</h4></strong> <br>Ho correttamente completato il corso di CCNA Routing and Switching: Introduction to Networks, ed ho acquisito le seguenti capacità:<br>&bull; Corso Di introduzione alle Reti Cisco.<br>&bull; Spiegazione delle tecnologie di rete.<br>&bull; Descrizione hardware router.<br>&bull; Configurazione parametri iniziali di rete.<br><hr><strong><h4>CCNA 2: Routing and Switching Essentials, Punteggio: 89.1/100</h4></strong> <br>Ho correttamente completato il corso di CCNA Routing and Switching: Routing and Switching Essentials, ed ho acquisito le seguenti capacità:<br>&bull; Configurazione Di un dispositivo di rete.<br>&bull; Implementazione <code>VLANs</code>.<br>&bull; Implementazione <code>DHCP</code>.<br>&bull; Implementazione <code>NAT</code>.<br><hr><strong><h4>CCNA 3: Scaling Networks</h4></strong> <br>Ho correttamente completato il corso di CCNA Routing and Switching: Scaling Networks, ed ho acquisito le seguenti capacità:<br>&bull; Configurazione e risoluzione problemi STP.<br>&bull; VLAN Trunk Protocol (VTP).<br>&bull; Configurazione e risoluzione problemi <code>Cisco VLAN Trunk Protocol (VTP), STP, DTP, e RSTP</code>.<br>&bull; Configurazione <code>inter-VLAN</code>.<br>&bull; Configurazione <code>IPV4 ed IPV6</code>.<br><hr><strong><h4>CCNA 4: Advanced Networks</h4></strong><br>Ho correttamente completato il corso di CCNA Routing and Switching: Advanced Networks, ed ho acquisito le seguenti capacità:<br>&bull; Descrivere le diverse reti WAN ed il loro funzionamento.<br>&bull; Configurazione e risoluzione problemi PPP.<br>&bull; Configurazione PPPoE, GRE, and single-homed eBGP.<br>&bull; Spiegazione su come prevenire LAN security attacks.<br>&bull; Risoluzione problemi di rete da una piccola ad una media impresa di rete.<br>"
       },
       {
-        "id": 3,
+        "identifier": 3,
         "title": "Corso Lingua Inglese: Livello B1",
         "from": "Da Gennaio 2017",
         "to": "A Maggio 2017",
@@ -138,7 +138,7 @@
         "description": "Ho correttamente completato il corso di Lingua Inglese per il Livello B1."
       },
       {
-        "id": 4,
+        "identifier": 4,
         "title": "CEH Cyber Security",
         "from": "From November 2017",
         "to": "To February 2018",
