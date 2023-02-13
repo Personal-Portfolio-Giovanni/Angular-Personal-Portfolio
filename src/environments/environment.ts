@@ -23,6 +23,10 @@ export const environment = {
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
 
+  /* Contentful */
+  contentfulBaseUrl: 'https://cdn.contentful.com',
+  worksUrl: '/spaces/uptyiu46x1l9/environments/master/entries',
+
   /*
    * Animation Variables
    * ============================

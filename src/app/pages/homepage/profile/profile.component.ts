@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CMSData } from 'src/app/shared/class/colorful.class';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -7,6 +8,11 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+  @Output('changeLanguagesWorkSection') changeLanguagesWorkSection =
+    new EventEmitter<Array<CMSData>>();
+    @Output('changeLanguagesCourseSection') changeLanguagesCourseSection =
+    new EventEmitter<Array<CMSData>>();
+
   environment = environment;
   fullName: string = 'Giovanni Lamarmora';
   email: string = 'giovannilamarmora.working@gmail.com';
@@ -26,6 +32,14 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.consoleText(this.words, this.id, this.colors);
+  }
+
+  changeLanguagesWork(works: Array<CMSData>) {
+    this.changeLanguagesWorkSection.emit(works);
+  }
+
+  changeLanguagesCourse(courses: Array<CMSData>) {
+    this.changeLanguagesCourseSection.emit(courses);
   }
 
   consoleText(words: Array<string>, id: string, colors: Array<string>) {

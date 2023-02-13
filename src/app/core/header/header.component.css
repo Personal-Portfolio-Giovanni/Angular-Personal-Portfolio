@@ -149,12 +149,12 @@ a {
   overflow: hidden;
 }
 .flag-it {
-  background: url("https://media.istockphoto.com/vectors/italian-flag-vector-id690489086?k=20&m=690489086&s=612x612&w=0&h=xy2Wz9eIEdt_NPawL77q232A0NTz3eP9btbUJEOy6Fo=");
+  background: url("../../../assets/img/languages/Italy.png");
   background-size: cover;
   background-position: center center;
 }
 .flag-en {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png");
+  background: url("../../../assets/img/languages/English.png");
   background-size: cover;
   background-position: center center;
 }
