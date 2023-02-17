@@ -13,6 +13,7 @@ import {
   ContentfulConstant,
   Item,
   Locale,
+  ProjectCMSData,
 } from 'src/app/shared/class/colorful.class';
 import { ContentfulService } from 'src/app/shared/services/contentful.service';
 import { environment } from '../../../environments/environment';
@@ -47,6 +48,9 @@ export class HeaderComponent implements OnInit {
   @Output('changeLanguagesCourse') changeLanguagesCourse = new EventEmitter<
     Array<CMSData>
   >();
+  @Output('changeLanguagesProject') changeLanguagesProject = new EventEmitter<
+    Array<CMSData>
+  >();
   environment = environment;
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
@@ -57,6 +61,7 @@ export class HeaderComponent implements OnInit {
 
   worksData: Array<CMSData> = [];
   coursesData: Array<CMSData> = [];
+  projectsData: Array<CMSData> = [];
 
   constructor(
     private translate: TranslateService,
@@ -98,6 +103,9 @@ export class HeaderComponent implements OnInit {
     let course: Item = JSON.parse(
       localStorage.getItem(ContentfulConstant.COURSE_DATA + '_' + locale)!
     );
+    let projects: Item = JSON.parse(
+      localStorage.getItem(ContentfulConstant.PROJECTS_DATA + '_' + locale)!
+    );
     let today = new Date();
     let workUpdatedAt = new Date(
       works != null && works.updatedAt != null
@@ -109,10 +117,18 @@ export class HeaderComponent implements OnInit {
         ? course.updatedAt!.toString()
         : ''
     );
+    let projectUpdatedAt = new Date(
+      projects != null && projects.updatedAt != null
+        ? projects.updatedAt!.toString()
+        : ''
+    );
     let isWorkUpdate =
       workUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
     let isCourseUpdate =
       courseUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
+    let isProjectUpdate =
+      projectUpdatedAt?.getMilliseconds()! + 604800000 >
+      today.getMilliseconds();
 
     if (
       works == null ||
@@ -120,18 +136,23 @@ export class HeaderComponent implements OnInit {
       course == null ||
       course == undefined ||
       isWorkUpdate ||
-      isCourseUpdate
+      isCourseUpdate ||
+      isProjectUpdate
     ) {
       this.contentService.getCMSData(locale).subscribe({
         next: (data) => {
           this.worksData = this.buildWorks(data, 'jobs');
           this.coursesData = this.buildWorks(data, 'courses');
+          this.projectsData = this.buildWorks(data, 'projects');
           let work: Item = new Item();
           work.cmsData = this.worksData;
           work.updatedAt = new Date();
           let course: Item = new Item();
           course.cmsData = this.coursesData;
           course.updatedAt = new Date();
+          let project: Item = new Item();
+          project.projectCmsData = this.projectsData;
+          project.updatedAt = new Date();
           localStorage.setItem(
             ContentfulConstant.WORKS_DATA + '_' + locale,
             JSON.stringify(work)
@@ -140,15 +161,22 @@ export class HeaderComponent implements OnInit {
             ContentfulConstant.COURSE_DATA + '_' + locale,
             JSON.stringify(course)
           );
+          localStorage.setItem(
+            ContentfulConstant.PROJECTS_DATA + '_' + locale,
+            JSON.stringify(project)
+          );
           this.contentService.worksData = work.cmsData!;
           this.contentService.courseData = course.cmsData!;
+          this.contentService.projectData = project.cmsData!;
           this.changeLanguagesWork.emit(this.worksData);
           this.changeLanguagesCourse.emit(this.coursesData);
+          this.changeLanguagesProject.emit(this.projectsData);
         },
       });
     } else {
       this.changeLanguagesWork.emit(this.worksData);
       this.changeLanguagesCourse.emit(this.coursesData);
+      this.changeLanguagesProject.emit(this.projectsData);
       this.worksData = works.cmsData!;
       this.contentService.worksData = works.cmsData!;
       this.coursesData = course.cmsData!;
@@ -182,6 +210,11 @@ export class HeaderComponent implements OnInit {
           });
         });
         cmsData.description = description;
+        cmsData.titleSecondPage = item.fields?.titleSecondPage;
+        cmsData.btn_href = item.fields?.btn_href;
+        cmsData.btn_text = item.fields?.btn_text;
+        cmsData.descriptionSecondPage = item.fields?.descriptionSecondPage;
+        cmsData.img = item.fields?.img;
         works.push(cmsData);
       });
     return works;

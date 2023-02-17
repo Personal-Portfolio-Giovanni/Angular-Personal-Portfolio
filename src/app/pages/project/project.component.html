@@ -1,23 +1,48 @@
-<app-header></app-header>
+<app-header
+  (changeLanguagesProject)="changeLanguagesProject($event)"
+></app-header>
 <section class="project">
-    <a routerLink="" class="link"><i class="fa fa-arrow-left" style="padding-right: 10px"></i>
-        {{'project-section.go_back' | translate}}</a>
+  <a routerLink="" class="link"
+    ><i class="fa fa-arrow-left" style="padding-right: 10px"></i>
+    {{ "project-section.go_back" | translate }}</a
+  >
 
-    <!-- Heading -->
-    <div>
-        <div align="center" class="position-relative d-flex text-center mb-5 container-title revealUp"
-            id="title_section" data-inviewport="">
-            <h2 class="text-24 text-muted opacity-1 text-uppercase fw-600 w-100 mb-0 t">Developing</h2>
-            <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0 text-center"
-                style=" text-transform: uppercase;">{{'project-section.title' | translate}}<span
-                    class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
-        </div>
+  <!-- Heading -->
+  <div>
+    <div
+      align="center"
+      class="position-relative d-flex text-center mb-5 container-title revealUp"
+      id="title_section"
+      data-inviewport=""
+    >
+      <h2
+        class="text-24 text-muted opacity-1 text-uppercase fw-600 w-100 mb-0 t"
+      >
+        Developing
+      </h2>
+      <p
+        class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0 text-center"
+        style="text-transform: uppercase"
+      >
+        {{ "project-section.title" | translate
+        }}<span
+          class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"
+        ></span>
+      </p>
     </div>
-    <!-- Heading end-->
+  </div>
+  <!-- Heading end-->
 
-    <div align="center" class="row">
-        <app-card-flip class="col-md-4 mx-auto my-5 mt-1" [project]="project"
-            *ngFor="let project of 'project-section.projects' | translate">
-        </app-card-flip>
-    </div>
+  <div align="center" class="row">
+    <app-card-flip
+      class="col-md-4 mx-auto my-5 mt-1"
+      [project]="project"
+      *ngFor="
+        let project of projects && projects.length
+          ? projects
+          : ('project-section.projects' | translate)
+      "
+    >
+    </app-card-flip>
+  </div>
 </section>
