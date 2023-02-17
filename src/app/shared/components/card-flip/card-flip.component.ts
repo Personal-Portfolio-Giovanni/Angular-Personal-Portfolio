@@ -12,5 +12,9 @@ export class CardFlipComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.project.img.includes('http')) {
+      this.project.img = environment.baseUrlV2 + this.project.img;
+    }
+  }
 }
