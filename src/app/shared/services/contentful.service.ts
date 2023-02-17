@@ -22,6 +22,7 @@ export class ContentfulService {
   environment = environment;
   public worksData: CMSData[] = [];
   public courseData: CMSData[] = [];
+  public projectData: CMSData[] = [];
 
   constructor(private http: HttpClient) {}
 
