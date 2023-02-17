@@ -19,7 +19,7 @@ export class HomepageComponent {
   constructor(
     private router: Router,
     private animationService: AnimationsService,
-    private googleTag: GoogleTagManagerService,
+    private googleTag: GoogleTagManagerService
   ) {}
   ngOnInit(): void {
     this.setUpAnalytics();
