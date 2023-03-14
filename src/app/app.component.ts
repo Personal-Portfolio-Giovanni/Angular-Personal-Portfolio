@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
-import { environment } from '../environments/environment';
-import { AnimationsService } from './shared/services/animation.service';
+import { SwUpdate } from '@angular/service-worker';
 
 declare let gtag: Function;
 
@@ -13,4 +10,14 @@ declare let gtag: Function;
 })
 export class AppComponent {
   title = 'Angular-Personal-Portfolio';
+
+  constructor(private readonly updates: SwUpdate) {
+    this.updates.versionUpdates.subscribe((event) => {
+      this.doAppUpdate();
+    });
+  }
+
+  doAppUpdate() {
+    this.updates.activateUpdate().then(() => document.location.reload());
+  }
 }

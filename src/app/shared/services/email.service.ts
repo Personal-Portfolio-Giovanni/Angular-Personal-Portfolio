@@ -4,7 +4,7 @@ import {
   HttpHeaders,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 import {
@@ -27,57 +27,29 @@ export class EmailSenderService {
 
   constructor(private http: HttpClient) {}
 
-  sendEmail(name: string, email: string, message: string): boolean {
-    this.http
-      .post(environment.emailSenderUrl, {
-        name,
-        email,
-        message,
-      })
-      .subscribe({
-        next: (v: any) => {
-          this.isSent = v.ok;
-          return this.isSent;
-        },
-        error: (e) => {
-          this.isSent = false;
-          return this.isSent;
-        },
-      });
-    return this.isSent;
+  sendEmail(name: string, email: string, message: string): Observable<object> {
+    return this.http.post(environment.emailSenderUrl, {
+      name,
+      email,
+      message,
+    });
   }
 
-  herokuSendEmail(
+  serverSendEmail(
     emailSenderModel: EmailSenderModel
-  ): EmailResponseModel | ErrorResponse {
+  ): Observable<EmailResponseModel | ErrorResponse> {
     let headers: HttpHeaders = new HttpHeaders();
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'X-Requested-With');
     headers.append('Content-Type', 'application/json');
 
-    const call: any = this.http
-      .post(environment.herokuEmailSenderUrl + this.PARAMS, emailSenderModel, {
+    return this.http.post(
+      environment.serverEmailSenderUrl + this.PARAMS,
+      emailSenderModel,
+      {
         headers: headers,
-      })
-      //.pipe(catchError(this.handleError))
-      .subscribe({
-        next: (v: EmailResponseModel) => {
-          this.emailResponse.timestamp = v.timestamp;
-          this.emailResponse.message = v.message;
-          return v;
-        },
-        error: (e) => {
-          this.errorResponse.correlationId = e.error.correlationId;
-          this.errorResponse.dateTime = e.error.dateTime;
-          this.errorResponse.url = e.url;
-          this.errorResponse.error = e.error.error;
-          return e;
-        },
-        complete: () => console.info('complete'),
-      });
-    return this.emailResponse?.message != null
-      ? this.emailResponse!
-      : this.errorResponse!;
+      }
+    );
   }
 
   getEmailTemplate(): EmailTemplateModel {

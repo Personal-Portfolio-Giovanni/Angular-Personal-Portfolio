@@ -13,7 +13,7 @@ export const environment = {
     'https://drive.google.com/file/d/1RUQ8AbiTcqq4nOnBFpw5QaCiV9tC7KAW/view?usp=sharing',
   /* Email Sender */
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
-  herokuEmailSenderUrl: 'https://prod-email-sender.herokuapp.com/v1/send-email',
+  serverEmailSenderUrl: 'https://prod-email-sender.up.railway.app/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
   /* Social Url */
   facebookUrl: 'https://www.facebook.com/gio.lamarmora',
