@@ -53,6 +53,7 @@ export class ContactComponent implements OnInit {
             ''
           );
         }
+        this.resetForm();
       });
   }
 
@@ -78,7 +79,6 @@ export class ContactComponent implements OnInit {
       'Email to ' + this.email + ' is sucessfully send!',
       'Formspree Email Sender'
     );
-    this.resetForm();
   }
 
   herokuSendEmail(): any {
@@ -114,8 +114,6 @@ export class ContactComponent implements OnInit {
 
     this.sender.serverSendEmail(emailSender).subscribe({
       next: (v: any) => {
-        response.timestamp = v.timestamp;
-        response.message = v.message;
         this.swalService.simpleDialog(
           SwalIcon.SUCCESS,
           this.translate.instant('contact.send_email.send_success'),
