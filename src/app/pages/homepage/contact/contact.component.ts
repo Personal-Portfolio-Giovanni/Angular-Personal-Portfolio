@@ -45,31 +45,7 @@ export class ContactComponent implements OnInit {
       )
       .then(async (result: any) => {
         if (result.isConfirmed) {
-          let res: any = await this.herokuSendEmail();
-          this.logger.LOG(
-            'HerokuSendEmail Response: ' + JSON.stringify(res),
-            'Response Http'
-          );
-          if (
-            res.error != null ||
-            res.error != undefined ||
-            JSON.stringify(res) === '{}'
-          ) {
-            if (JSON.stringify(res) === '{}')
-              this.logger.LOG(
-                'Heroku returned empty response, sending email with Formspree',
-                'Heroku Email Sender'
-              );
-            else
-              this.logger.LOG(
-                'Heroku returned the current error: ' +
-                  res.error.exceptionCode +
-                  ', with message: ' +
-                  res.error.message,
-                'Heroku Email Sender'
-              );
-            this.sendEmail();
-          }
+          this.herokuSendEmail();
         } else if (result.isDenied) {
           this.swalService.simpleDialog(
             SwalIcon.INFO,
@@ -81,12 +57,23 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    this.sender.sendEmail(this.name, this.email, this.message);
-    this.swalService.simpleDialog(
-      SwalIcon.SUCCESS,
-      this.translate.instant('contact.send_email.send_success'),
-      ''
-    );
+    this.sender.sendEmail(this.name, this.email, this.message).subscribe({
+      next: (v: any) => {
+        this.swalService.simpleDialog(
+          SwalIcon.SUCCESS,
+          this.translate.instant('contact.send_email.send_success'),
+          ''
+        );
+      },
+      error: (e) => {
+        this.swalService.simpleDialog(
+          SwalIcon.INFO,
+          this.translate.instant('contact.send_email.not_send_error'),
+          ''
+        );
+      },
+    });
+
     this.logger.LOG(
       'Email to ' + this.email + ' is sucessfully send!',
       'Formspree Email Sender'
@@ -123,7 +110,25 @@ export class ContactComponent implements OnInit {
 
     this.logger.LOG(content!, 'ContactComponent');
 
-    return this.sender.herokuSendEmail(emailSender);
+    let response: any;
+
+    this.sender.serverSendEmail(emailSender).subscribe({
+      next: (v: any) => {
+        response.timestamp = v.timestamp;
+        response.message = v.message;
+        this.swalService.simpleDialog(
+          SwalIcon.SUCCESS,
+          this.translate.instant('contact.send_email.send_success'),
+          ''
+        );
+        return v;
+      },
+      error: (e) => {
+        this.sendEmail();
+        return e;
+      },
+    });
+    return response;
   }
 
   ageCalc(): number {
