@@ -18,47 +18,47 @@
     "title": "Esperienza Lavorativa"
   },
   "works": [
-      {
-        "identifier": 1,
-        "title": "Be | Shaping the Future",
-        "from": "Da Giugno 2021",
-        "to": "Attuale",
-        "role": "Junior Specialist",
-        "where": "Milan, Italy",
-        "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift</code> e Database come <code>MySQL, Oracle SQL.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
-      },
-      {
-        "identifier":2,
-        "title": "Freelance Web Developer",
-        "from": "Da Gennaio 2017",
-        "to": "Attuale",
-        "role": "Graphic Web Design",
-        "where": "Bristol, United Kingdom",
-        "description": "Progettazione e manutenzione continua di siti web <code>HTML CSS e Javascript</code> con creazione di contenuti & design delle pagine web con collegamento social e test del web site con differenti Browser e formati."
-      },
-      {
-        "identifier":3,
-        "title": "Freelance IT Technician",
-        "from": "Da Maggio 2012",
-        "to": "A Gennaio 2020",
-        "role": "IT Technician",
-        "where": "Bristol, United Kingdom",
-        "description": "&bull; Diagnosi e risoluzione dei problemi in modo efficiente, preservando l'integrità dei dati durante il processo. <br>&bull; Mantenere aggiornato il sistema operativo <code>Windows e Mac.</code><br>&bull; Aggiornamento dei vecchi laptop con un sistema operativo lite <code>(Linux / Chrome OS / Debian).</code><br>&bull; Upgrade Hardware di componenti come RAM o SSD.<br>&bull; Risoluzione dei problemi del sistema operativo.<br>&bull; Installazione e gestione del software <code>(Adobe, Office, VMWare, Eclipse).</code><br>&bull; Recupero dati per private e Piccole/Medie Aziende.<br>&bull; Riparazione e manutenzione di Smartphone <code>Android ed iOS.</code>"
-      },
-      {
-        "identifier":4,
-        "title": "Rock N Bowl",
-        "from": "Da Settembre 2018",
-        "to": "A Settembre 2019",
-        "role": "Hostel Duty Manager",
-        "where": "Bristol, United Kingdom",
-        "description": "&bull; Responsabile delle prenotazioni.<br>&bull; Responsabile Del personale e alle ore lavorative.<br>&bull; Addetto all'assunzione del personale.<br>&bull; Responsabile d'ufficio.<br>&bull; Chiusura Giornaliera e settimanale e responsabile dei depositi in banca.<br>&bull; Gestione Prezzi dei pernottamenti.<br>&bull; Organizzazione eventi per grandi gruppi.<br>&bull; Responsabile della collaborazione con Expedia, Booking.com, Agoda.<br>&bull; Responsabile dei Social Media."
-      }
-    ],
-  "footer":{
-    "title_1":"Giovanni Lamarmora | Portfolio",
-    "title_2":"è stato sviluppato con AngularJS e Bootstrap.",
-    "title_3":"Copyright © 2022 Giovanni Lamarmora. All rights reserved."
+    {
+      "identifier": 1,
+      "title": "Be | Shaping the Future",
+      "from": "Da Giugno 2021",
+      "to": "Attuale",
+      "role": "Junior Specialist",
+      "where": "Milan, Italy",
+      "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift</code> e Database come <code>MySQL, Oracle SQL.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
+    },
+    {
+      "identifier": 2,
+      "title": "Freelance Web Developer",
+      "from": "Da Gennaio 2017",
+      "to": "Attuale",
+      "role": "Graphic Web Design",
+      "where": "Bristol, United Kingdom",
+      "description": "Progettazione e manutenzione continua di siti web <code>HTML CSS e Javascript</code> con creazione di contenuti & design delle pagine web con collegamento social e test del web site con differenti Browser e formati."
+    },
+    {
+      "identifier": 3,
+      "title": "Freelance IT Technician",
+      "from": "Da Maggio 2012",
+      "to": "A Gennaio 2020",
+      "role": "IT Technician",
+      "where": "Bristol, United Kingdom",
+      "description": "&bull; Diagnosi e risoluzione dei problemi in modo efficiente, preservando l'integrità dei dati durante il processo. <br>&bull; Mantenere aggiornato il sistema operativo <code>Windows e Mac.</code><br>&bull; Aggiornamento dei vecchi laptop con un sistema operativo lite <code>(Linux / Chrome OS / Debian).</code><br>&bull; Upgrade Hardware di componenti come RAM o SSD.<br>&bull; Risoluzione dei problemi del sistema operativo.<br>&bull; Installazione e gestione del software <code>(Adobe, Office, VMWare, Eclipse).</code><br>&bull; Recupero dati per private e Piccole/Medie Aziende.<br>&bull; Riparazione e manutenzione di Smartphone <code>Android ed iOS.</code>"
+    },
+    {
+      "identifier": 4,
+      "title": "Rock N Bowl",
+      "from": "Da Settembre 2018",
+      "to": "A Settembre 2019",
+      "role": "Hostel Duty Manager",
+      "where": "Bristol, United Kingdom",
+      "description": "&bull; Responsabile delle prenotazioni.<br>&bull; Responsabile Del personale e alle ore lavorative.<br>&bull; Addetto all'assunzione del personale.<br>&bull; Responsabile d'ufficio.<br>&bull; Chiusura Giornaliera e settimanale e responsabile dei depositi in banca.<br>&bull; Gestione Prezzi dei pernottamenti.<br>&bull; Organizzazione eventi per grandi gruppi.<br>&bull; Responsabile della collaborazione con Expedia, Booking.com, Agoda.<br>&bull; Responsabile dei Social Media."
+    }
+  ],
+  "footer": {
+    "title_1": "Giovanni Lamarmora | Portfolio",
+    "title_2": "è stato sviluppato con AngularJS e Bootstrap.",
+    "title_3": "Copyright © 2022 Giovanni Lamarmora. All rights reserved."
   },
   "languages": {
     "title": "Lingue",
@@ -148,7 +148,7 @@
       }
     ]
   },
-  "contact":{
+  "contact": {
     "title": "Contattami",
     "profile_title": "Profilo",
     "name": "Giovanni Lamarmora",
@@ -162,11 +162,11 @@
     "email_title": "Email",
     "description": "Dimmi di più riguardo la tua Richiesta...",
     "send": "Invia Messaggio",
-    "experience": "1",
+    "experience": "2",
     "experience_title": "Anni di esperienza",
-    "work_project": "5",
+    "work_project": "9",
     "work_project_title": "Progetti eseguiti <br>Be | Shaping The Future",
-    "project": "6",
+    "project": "10",
     "project_title": "Progetti Personali",
     "course": "8",
     "course_title": "Corsi eseguiti",
@@ -188,9 +188,13 @@
         "id": 1,
         "img": "assets/img/project/send-email.jpg",
         "titleSecondPage": "Email-Sender",
-        "descriptionSecondPage": ["Spring Boot Framework", "Github Workflow", "Heroku"],
+        "descriptionSecondPage": [
+          "Spring Boot Framework",
+          "Github Workflow",
+          "Heroku"
+        ],
         "btn_text": "Apri App",
-        "btn_href": "https://prod-email-sender.herokuapp.com/"
+        "btn_href": "https://prod-email-sender.up.railway.app"
       },
       {
         "id": 2,
@@ -201,7 +205,7 @@
       }
     ]
   },
-  "info":{
+  "info": {
     "title": "Questo Sito e in costruzione",
     "text": "La versione visualizzata non è la versione ufficiale, nuovi contenuti arriveranno presto."
   },
@@ -212,4 +216,3 @@
     "thanks": "Grazie, Giovanni Lamarmora"
   }
 }
-

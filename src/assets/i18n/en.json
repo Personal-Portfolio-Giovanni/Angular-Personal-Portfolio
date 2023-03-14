@@ -162,11 +162,11 @@
     "email_title": "Email",
     "description": "Tell me more about your request...",
     "send": "Send Message",
-    "experience": "1",
+    "experience": "2",
     "experience_title": "Years Experiance",
-    "work_project": "5",
+    "work_project": "9",
     "work_project_title": "Projects Done <br>Be | Shaping The Future",
-    "project": "6",
+    "project": "10",
     "project_title": "Personal Projects",
     "course": "8",
     "course_title": "Courses Done",
@@ -194,7 +194,7 @@
           "Heroku"
         ],
         "btn_text": "Open App",
-        "btn_href": "https://prod-email-sender.herokuapp.com/"
+        "btn_href": "https://prod-email-sender.up.railway.app"
       },
       {
         "id": 2,
