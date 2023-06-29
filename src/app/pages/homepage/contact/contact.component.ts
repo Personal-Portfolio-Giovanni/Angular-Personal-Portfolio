@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
       )
       .then(async (result: any) => {
         if (result.isConfirmed) {
-          this.herokuSendEmail();
+          this.serverSendEmail();
         } else if (result.isDenied) {
           this.swalService.simpleDialog(
             SwalIcon.INFO,
@@ -65,6 +65,10 @@ export class ContactComponent implements OnInit {
           this.translate.instant('contact.send_email.send_success'),
           ''
         );
+        this.logger.LOG(
+          'Email to ' + this.email + ' is sucessfully send!',
+          'Formspree Email Sender'
+        );
       },
       error: (e) => {
         this.swalService.simpleDialog(
@@ -72,16 +76,15 @@ export class ContactComponent implements OnInit {
           this.translate.instant('contact.send_email.not_send_error'),
           ''
         );
+        this.logger.LOG(
+          'Error on sending Email to ' + this.email + '!',
+          'Formspree Email Sender'
+        );
       },
     });
-
-    this.logger.LOG(
-      'Email to ' + this.email + ' is sucessfully send!',
-      'Formspree Email Sender'
-    );
   }
 
-  herokuSendEmail(): any {
+  serverSendEmail(): any {
     //let email = this.sender.getEmailTemplate();
     this.emailTemplate = this.sender.emailTemplate;
 

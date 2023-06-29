@@ -194,7 +194,7 @@
           "Heroku"
         ],
         "btn_text": "Open App",
-        "btn_href": "https://prod-email-sender.up.railway.app"
+        "btn_href": "https://oraclewebserver.ddns.net/email-sender"
       },
       {
         "id": 2,
