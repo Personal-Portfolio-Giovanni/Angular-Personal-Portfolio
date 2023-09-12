@@ -153,17 +153,17 @@ a {
     background-attachment: scroll;
   }
   .image-cropper {
-    width: 200px;
-    height: 200px;
+    width: 300px !important;
+    height: 300px !important;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    top: 20%;
-    left: calc(50% - 100px);
+    top: 15%;
+    left: calc(50% - 150px) !important;
   }
 
   .profile {
-    width: 200px;
+    width: 300px !important;
     display: inline;
     margin: 0% auto;
   }
@@ -234,7 +234,30 @@ a {
   left: 10px;
 }
 
+@media screen and (max-width: 380px) {
+  .image-cropper {
+    width: 250px !important;
+    height: 250px !important;
+    top: 15%;
+    left: calc(50% - 125px) !important;
+  }
+
+  .profile {
+    width: 250px !important;
+  }
+}
+
 @media screen and (max-width: 640px) {
+  .image-cropper {
+    width: 250px;
+    height: 250px;
+    top: 15%;
+    left: calc(50% - 125px);
+  }
+
+  .profile {
+    width: 250px;
+  }
   .scroll {
     position: absolute;
     bottom: 10%;
