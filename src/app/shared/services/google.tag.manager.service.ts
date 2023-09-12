@@ -26,7 +26,8 @@ export class GoogleTagManagerService {
       },
       {
         name: 'keywords',
-        content: 'Giovanni Lamarmora, Portfolio Giovanni Lamarmora',
+        content:
+          'Giovanni Lamarmora, Portfolio Giovanni Lamarmora, Svilupatore Web, Web Designer, Sviluppatore Milano',
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ]);
