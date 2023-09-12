@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
@@ -20,11 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
       - name: 🔧 Use Node.js 16.13.2
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "16.13.2"
 
@@ -34,7 +34,7 @@ jobs:
     needs: [checkout, setting-up]
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
       - name: "📦 Dependency Injection"
@@ -47,7 +47,7 @@ jobs:
     needs: [setting-up, dependency]
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
       - name: 📂 Build
@@ -63,7 +63,7 @@ jobs:
       - build
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
       - name: 📂 Build
