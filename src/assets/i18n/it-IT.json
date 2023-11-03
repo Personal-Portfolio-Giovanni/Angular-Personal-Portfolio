@@ -23,7 +23,7 @@
       "title": "Be | Shaping the Future",
       "from": "Da Giugno 2021",
       "to": "Attuale",
-      "role": "Junior Specialist",
+      "role": "Specialist",
       "where": "Milan, Italy",
       "description": "Inserito nel gruppo UniCredit subito dopo l'assunzione, ho lavorato a diversi progetti utilizzando diverse tecnologie, tra cui <code>JPA, Hibernate, Quarkus, Spring Boot.</code> <br> Ho ottenuto una buona padronanza del Coverage del codice per poter effettuare correttamente i test con <code>JUnit e Mockito</code>, mentre per i test in locale e in ambiente dell'intero applicativo utilizzando Postman con i relativi enviroment. <br> Buona conoscenza degli ambienti di Pre-Deploy e Deploy dell'applicativo, come <code>Jenkins, Docker e Pods di OpenShift</code> e Database come <code>MySQL, Oracle SQL.</code> <br> Al momento sto lavoranco come Full Stack Developer in un progetto finanziario, utilizzando le seguenti tecnologie: <br><code> Java EE, Spring Boot, Angular, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud Platform.</code>"
     },
@@ -186,7 +186,7 @@
     "projects": [
       {
         "id": 1,
-        "img": "assets/img/project/send-email.jpg",
+        "img": "assets/img/project/send-email.webp",
         "titleSecondPage": "Email-Sender",
         "descriptionSecondPage": [
           "Spring Boot Framework",
@@ -198,7 +198,7 @@
       },
       {
         "id": 2,
-        "img": "assets/img/project/GitHub-Alternatives.jpg",
+        "img": "assets/img/project/GitHub-Alternatives.webp",
         "titleSecondPage": "Tutti i progetti su Github",
         "btn_text": "Esplora Tutti",
         "btn_href": "https://github.com/giovannilamarmora"

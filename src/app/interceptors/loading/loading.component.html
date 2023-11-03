@@ -1,25 +1,75 @@
-<div id="loader">
-    <svg width="140" height="140" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g>
-            <line x1="19.9833" y1="140.333" x2="259.978" y2="139" stroke="#fff" stroke-width="4" />
-            <circle cx="20" cy="140" r="5" fill="#fff" />
-            <circle cx="260" cy="139" r="5" fill="#fff" />
-        </g>
-        <path class="circle"
-            d="M109.957 122.655L140 105.309L170.043 122.655V157.345L140 174.691L109.957 157.345V122.655Z" stroke="#fff"
-            stroke-width="4" />
-        <image x="100" y="100" width="80" height="80" attr.href="{{environment.baseUrl}}assets/img/logo.svg" />
-        <!-- Cerchio Bianco Contorno Logo -->
-        <circle class="circle" cx="140" cy="140" r="40" stroke="#fff" stroke-width="4" />
-        <!-- Cerchio Rosso In Orbita vicino Logo -->
-        <circle class="circle" cx="100" cy="192" r="13" stroke="#f7a78f" stroke-width="4" />
-        <!-- Cerchio Blu Piccolo Logo -->
-        <circle class="circle circle_s" cx="75" cy="232" r="8" stroke="#82c7c5" stroke-width="4" />
-        <!-- Cerchio Blu In Orbita vicino Logo -->
-        <circle class="circle" cx="170" cy="68" r="13" stroke="#82c7c5" stroke-width="4" />
-        <!-- Cerchio Arancio Chiuso -->
-        <circle class="circle circle_s" cx="90" cy="192" r="5" fill="#f7a78f" />
-        <!-- Cerchio Blue Chiuso -->
-        <circle class="circle circle_s" cx="185" cy="71" r="5" fill="#f5d77b" />
-    </svg>
+<div *ngIf="!isAppleDevice" id="loader">
+  <svg
+    width="140"
+    height="140"
+    viewBox="0 0 280 280"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <line
+        x1="19.9833"
+        y1="140.333"
+        x2="259.978"
+        y2="139"
+        stroke="#fff"
+        stroke-width="4"
+      />
+      <circle cx="20" cy="140" r="5" fill="#fff" />
+      <circle cx="260" cy="139" r="5" fill="#fff" />
+    </g>
+    <path
+      class="circle"
+      d="M109.957 122.655L140 105.309L170.043 122.655V157.345L140 174.691L109.957 157.345V122.655Z"
+      stroke="#fff"
+      stroke-width="4"
+    />
+    <image
+      x="100"
+      y="100"
+      width="80"
+      height="80"
+      attr.href="{{ environment.baseUrl }}assets/img/logo.svg"
+    />
+    <!-- Cerchio Bianco Contorno Logo -->
+    <circle
+      class="circle"
+      cx="140"
+      cy="140"
+      r="40"
+      stroke="#fff"
+      stroke-width="4"
+    />
+    <!-- Cerchio Rosso In Orbita vicino Logo -->
+    <circle
+      class="circle"
+      cx="100"
+      cy="192"
+      r="13"
+      stroke="#f7a78f"
+      stroke-width="4"
+    />
+    <!-- Cerchio Blu Piccolo Logo -->
+    <circle
+      class="circle circle_s"
+      cx="75"
+      cy="232"
+      r="8"
+      stroke="#82c7c5"
+      stroke-width="4"
+    />
+    <!-- Cerchio Blu In Orbita vicino Logo -->
+    <circle
+      class="circle"
+      cx="170"
+      cy="68"
+      r="13"
+      stroke="#82c7c5"
+      stroke-width="4"
+    />
+    <!-- Cerchio Arancio Chiuso -->
+    <circle class="circle circle_s" cx="90" cy="192" r="5" fill="#f7a78f" />
+    <!-- Cerchio Blue Chiuso -->
+    <circle class="circle circle_s" cx="185" cy="71" r="5" fill="#f5d77b" />
+  </svg>
 </div>
