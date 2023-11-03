@@ -1,31 +1,49 @@
 <nav id="navbar" (scroll)="onWindowScroll()">
-    <div (mouseover)="downloadCV = true" (mouseout)="downloadCV = false" class="text" data-inviewport="slide-left">
-        <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
-            {{firstname}} <span style="color: #777">{{lastname}}</span>
-        </p>
-        <a *ngIf="downloadCV" [@inOutAnimation] href="{{ environment.downloadResumeUrl }}" target="_blank"
-            id="cv">Download <span style="color: #777">CV</span></a>
+  <div
+    (mouseover)="downloadCV = true"
+    (mouseout)="downloadCV = false"
+    class="text"
+    data-inviewport="slide-left"
+  >
+    <p *ngIf="!downloadCV" [@inOutAnimation] id="name">
+      {{ firstname }} <span style="color: #777">{{ lastname }}</span>
+    </p>
+    <a
+      *ngIf="downloadCV"
+      [@inOutAnimation]
+      href="{{ environment.downloadResumeUrl }}"
+      target="_blank"
+      id="cv"
+      >Download <span style="color: #777">CV</span></a
+    >
+  </div>
+  <div class="nav-wrapper" data-inviewport="slide-right">
+    <div class="sl-nav" style="color: aliceblue">
+      <i
+        class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}"
+        style="margin-right: 5px"
+      ></i>
+      <ul>
+        <li style="color: aliceblue">
+          <b>{{ "profile.currentLanguage" | translate }}</b>
+          <!--<i class="fa fa-angle-down" aria-hidden="true"></i>-->
+          <div class="triangle"></div>
+          <ul>
+            <li>
+              <i class="sl-flag flag-it"></i>
+              <span id="italian" (click)="changeLanguage('it-IT')"
+                >Italian</span
+              >
+            </li>
+            <li>
+              <i class="sl-flag flag-en"></i>
+              <span id="english" (click)="changeLanguage('en-GB')"
+                >English</span
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="nav-wrapper" data-inviewport="slide-right">
-        <div class="sl-nav" style="color: aliceblue">
-            <i class="sl-flag {{ 'profile.currentLanguageIcon' | translate }}" style="margin-right: 5px"></i>
-            <ul>
-                <li style="color: aliceblue">
-                    <b>{{ "profile.currentLanguage" | translate }}</b>
-                    <!--<i class="fa fa-angle-down" aria-hidden="true"></i>-->
-                    <div class="triangle"></div>
-                    <ul>
-                        <li>
-                            <i class="sl-flag flag-it"></i>
-                            <span id="italian" (click)="changeLanguage('it')">Italian</span>
-                        </li>
-                        <li>
-                            <i class="sl-flag flag-en"></i>
-                            <span id="english" (click)="changeLanguage('en')">English</span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </nav>

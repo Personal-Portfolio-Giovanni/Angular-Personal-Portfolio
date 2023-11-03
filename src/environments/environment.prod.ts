@@ -7,14 +7,15 @@ export const environment = {
   baseUrl: 'https://giovannilamarmoraproject.github.io/Portfolio/',
   baseUrlV2: baseUrlApp,
   googleID: 'G-0VT47TDXGS',
-  profileImageUrl: baseUrlApp + 'assets/img/Profile.jpeg',
+  profileImageUrl: baseUrlApp + 'assets/img/Profile.webp',
   CEHCertificateUrl: 'https://www.udemy.com/certificate/UC-117Y7TRV/',
   downloadResumeUrl:
     'https://drive.google.com/file/d/1m77_ACz4PVWFuFkbw69b1mijjL2HlgP_/view?usp=sharing',
   /* Email Sender */
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
+  //serverEmailSenderUrl:'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
   serverEmailSenderUrl:
-    'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
+    'https://email-sender.hostwebserver.site/email-sender/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
   /* Social Url */
   facebookUrl: 'https://www.facebook.com/gio.lamarmora',

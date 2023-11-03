@@ -56,8 +56,8 @@ export class HeaderComponent implements OnInit {
   firstname: string = 'Giovanni';
   lastname: string = 'Lamarmora';
 
-  private ATTR_LANGUAGE: string = 'lang';
-  private DEFAULT_LANGUAGE: string = 'en';
+  private ATTR_LANGUAGE: string = 'profile_language';
+  private DEFAULT_LANGUAGE: string = 'en-GB';
 
   worksData: Array<CMSData> = [];
   coursesData: Array<CMSData> = [];

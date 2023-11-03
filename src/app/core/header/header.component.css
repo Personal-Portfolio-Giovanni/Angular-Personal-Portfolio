@@ -149,12 +149,12 @@ a {
   overflow: hidden;
 }
 .flag-it {
-  background: url("../../../assets/img/languages/Italy.png");
+  background: url("../../../assets/img/languages/Italy.webp");
   background-size: cover;
   background-position: center center;
 }
 .flag-en {
-  background: url("../../../assets/img/languages/English.png");
+  background: url("../../../assets/img/languages/English.webp");
   background-size: cover;
   background-position: center center;
 }

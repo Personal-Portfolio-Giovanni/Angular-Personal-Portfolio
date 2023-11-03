@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent implements OnInit {
+  isAppleDevice: boolean = false;
   environment = environment;
   constructor() {}
 
@@ -38,5 +39,21 @@ export class LoadingComponent implements OnInit {
         loaderOpacity = loaderOpacity - loaderOpacity * 0.5;
       }, 30);
     }, environment.loadingTime);
+  }
+
+  detectIOS() {
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    var isAppleDevice = navigator.userAgent.includes('Macintosh');
+
+    var isTouchScreen = navigator.maxTouchPoints >= 1; // true for iOS 13 (and hopefully beyond)
+    console.log(
+      'Detected device for ' +
+        navigator.userAgent +
+        ' is Apple Device: ' +
+        isIOS ||
+        (isAppleDevice && isTouchScreen)
+    );
+
+    this.isAppleDevice = isIOS || (isAppleDevice && isTouchScreen);
   }
 }
