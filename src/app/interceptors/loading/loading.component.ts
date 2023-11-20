@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/shared/services/animation.service';
+import { LoggerService } from 'src/app/shared/services/log.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -10,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class LoadingComponent implements OnInit {
   isAppleDevice: boolean = false;
   environment = environment;
-  constructor() {}
+  constructor(private logger: LoggerService) {}
 
   removeLoader(): void {
     document.removeEventListener('DOMContentLoaded', () => {
@@ -19,9 +20,11 @@ export class LoadingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    document.addEventListener('DOMContentLoaded', () => {
-      this.eventListener();
-    });
+    this.detectIOS();
+    if (!this.isAppleDevice)
+      document.addEventListener('DOMContentLoaded', () => {
+        this.eventListener();
+      });
   }
 
   eventListener() {
@@ -46,13 +49,13 @@ export class LoadingComponent implements OnInit {
     var isAppleDevice = navigator.userAgent.includes('Macintosh');
 
     var isTouchScreen = navigator.maxTouchPoints >= 1; // true for iOS 13 (and hopefully beyond)
-    console.log(
+    let message =
       'Detected device for ' +
         navigator.userAgent +
         ' is Apple Device: ' +
         isIOS ||
-        (isAppleDevice && isTouchScreen)
-    );
+      (isAppleDevice && isTouchScreen);
+    this.logger.LOG(message.toString(), 'Detecting OS');
 
     this.isAppleDevice = isIOS || (isAppleDevice && isTouchScreen);
   }
