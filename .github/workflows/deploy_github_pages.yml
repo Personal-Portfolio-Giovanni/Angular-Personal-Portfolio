@@ -61,6 +61,8 @@ jobs:
     needs:
       - dependency
       - build
+    environment:
+      name: porfolio-deploy
     steps:
       - name: "☁️ Checkout Repository"
         uses: actions/checkout@v3
@@ -89,6 +91,8 @@ jobs:
     needs:
       - dependency
       - build
+    environment:
+      name: profile-deploy
     steps:
       - name: "☁️ Checkout Repository"
         uses: actions/checkout@v3
@@ -98,7 +102,7 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install
-          ng build --prod --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}.github.io"
+          ng build --prod --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
       - name: 🚀 Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
