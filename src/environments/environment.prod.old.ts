@@ -1,9 +1,10 @@
-const baseUrlApp: string = 'https://giovannilamarmora.github.io/';
+const baseUrlApp: string =
+  'https://giovannilamarmoraproject.github.io/Portfolio/';
 
 export const environment = {
   envType: 'PROD',
   production: true,
-  baseUrl: baseUrlApp,
+  baseUrl: 'https://giovannilamarmoraproject.github.io/Portfolio/',
   baseUrlV2: baseUrlApp,
   googleID: 'G-0VT47TDXGS',
   profileImageUrl: baseUrlApp + 'assets/img/Profile.webp',

@@ -72,7 +72,7 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install
-          ng build --prod --output-hashing=none --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
+          ng build --configuration=production-old --output-hashing=none --base-href "https://${{ secrets.ORGANIZATION_USERNAME }}.github.io/${{ secrets.DESTINATION_REPOSITORY }}/"
       - name: 🚀 Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
@@ -102,7 +102,7 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install
-          ng build --prod --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
+          ng build --configuration=production --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
       - name: 🚀 Pushes to github pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
