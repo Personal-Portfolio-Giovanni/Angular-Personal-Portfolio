@@ -83,3 +83,31 @@ jobs:
           destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
           user-email: ${{ secrets.EMAIL }}
           target-branch: main
+  deploy-test:
+    name: 🚀 Deploy Test
+    runs-on: ubuntu-latest
+    needs:
+      - dependency
+      - build
+    steps:
+      - name: "☁️ Checkout Repository"
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: 📂 Build
+        run: |
+          npm install -g @angular/cli
+          npm install
+          ng build --prod --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_TEST }}.github.io"
+      - name: 🚀 Pushes to github pages
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          name: giovannilamarmora-portfolio
+          url: https://giovannilamarmora.github.io
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
+        with:
+          source-directory: "dist/angular-personal-portfolio"
+          destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
+          destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY_TEST }}"
+          user-email: ${{ secrets.EMAIL }}
+          target-branch: main
