@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
 
@@ -9,7 +10,9 @@ import { CMSData } from 'src/app/shared/class/colorful.class';
 })
 export class ProjectComponent implements OnInit {
   @Output('projects') projects: Array<CMSData> = [];
-  constructor() {}
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Giovanni Lamarmora - Project');
+  }
 
   ngOnInit(): void {}
 

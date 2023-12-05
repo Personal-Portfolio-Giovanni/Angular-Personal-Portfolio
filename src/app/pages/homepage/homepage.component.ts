@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { CMSData } from 'src/app/shared/class/colorful.class';
 import { AnimationsService } from 'src/app/shared/services/animation.service';
-import { GoogleTagManagerService } from 'src/app/shared/services/google.tag.manager.service';
 import { environment } from 'src/environments/environment';
 
 declare let gtag: Function;
@@ -19,12 +19,15 @@ export class HomepageComponent {
   constructor(
     private router: Router,
     private animationService: AnimationsService,
-    private googleTag: GoogleTagManagerService
-  ) {}
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(
+      'Giovanni Lamarmora - Web Developer based in Milan'
+    );
+  }
   ngOnInit(): void {
     this.setUpAnalytics();
     this.animationService.initAnimations();
-    this.googleTag.setUpTag();
   }
 
   changeLanguagesWork(works: Array<CMSData>) {
@@ -45,5 +48,4 @@ export class HomepageComponent {
         }
       });
   }
-  title = 'Giovanni Lamarmora | Portfolio';
 }
