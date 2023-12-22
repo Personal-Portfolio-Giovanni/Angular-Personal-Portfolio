@@ -6,7 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ProfileComponent } from './pages/homepage/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/homepage/description/description.component';
@@ -28,6 +28,7 @@ import { LoadingComponent } from './interceptors/loading/loading.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,15 @@ import { AppRoutingModule } from './app-routing.module';
       },
     }),
   ],
-  providers: [LoadingComponent, TitleSectionComponent],
+  providers: [
+    LoadingComponent,
+    TitleSectionComponent,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

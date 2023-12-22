@@ -1,6 +1,8 @@
 <app-profile
   (changeLanguagesWorkSection)="changeLanguagesWork($event)"
   (changeLanguagesCourseSection)="changeLanguagesCourse($event)"
+  (changeLanguagesProfileSection)="changeLanguagesProfile($event)"
+  [profile]="profile"
 ></app-profile>
 <app-description></app-description>
 <app-works-section [works]="works"></app-works-section>

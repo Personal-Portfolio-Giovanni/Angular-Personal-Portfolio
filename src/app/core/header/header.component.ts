@@ -9,14 +9,15 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import {
   CMSData,
+  ContentType,
   Contentful,
   ContentfulConstant,
   Item,
   Locale,
-  ProjectCMSData,
 } from 'src/app/shared/class/colorful.class';
-import { ContentfulService } from 'src/app/shared/services/contentful.service';
+import { CMSService } from 'src/app/shared/services/cms.service';
 import { environment } from '../../../environments/environment';
+import { LoggerService } from 'src/app/shared/services/log.service';
 
 @Component({
   selector: 'app-header',
@@ -51,6 +52,8 @@ export class HeaderComponent implements OnInit {
   @Output('changeLanguagesProject') changeLanguagesProject = new EventEmitter<
     Array<CMSData>
   >();
+  @Output('changeLanguagesProfile') changeLanguagesProfile =
+    new EventEmitter<CMSData>();
   environment = environment;
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
@@ -62,10 +65,12 @@ export class HeaderComponent implements OnInit {
   worksData: Array<CMSData> = [];
   coursesData: Array<CMSData> = [];
   projectsData: Array<CMSData> = [];
+  profileData: CMSData = new CMSData();
 
   constructor(
     private translate: TranslateService,
-    private contentService: ContentfulService
+    private cmsService: CMSService,
+    private logger: LoggerService
   ) {
     //translate.setDefaultLang('en');
   }
@@ -88,15 +93,46 @@ export class HeaderComponent implements OnInit {
     if (lan == this.DEFAULT_LANGUAGE) {
       languageIT.classList.remove('active');
       languageEN.classList.add('active');
-      this.checkCMSData(Locale.ENGLISH);
+      this.checkAndGetCMSData(Locale.ENGLISH);
     } else {
       languageEN.classList.remove('active');
       languageIT.classList.add('active');
-      this.checkCMSData(Locale.ITALIAN);
+      this.checkAndGetCMSData(Locale.ITALIAN);
     }
   }
 
+  checkAndGetCMSData(locale: Locale) {
+    this.cmsService.getCMSData(locale).subscribe({
+      next: (data: any) => {
+        this.logger.LOG(data.message, 'Portfolio Service');
+        let jobs: any[] = [];
+        let courses: any[] = [];
+        let projects: any[] = [];
+        let profile: any;
+        data.data.forEach((cmsData: any) => {
+          if (cmsData.contentType == ContentType.WORKS) jobs.push(cmsData.data);
+          else if (cmsData.contentType == ContentType.COURSE)
+            courses.push(cmsData.data);
+          else if (cmsData.contentType == ContentType.PROJECTS)
+            projects.push(cmsData.data);
+          else if (cmsData.contentType == ContentType.PROFILE)
+            profile = cmsData.data[0];
+        });
+        this.worksData = jobs;
+        this.coursesData = courses;
+        this.projectsData = projects;
+        this.setDataAndEmit(locale);
+      },
+      error: (e) => {
+        this.checkCMSData(locale);
+      },
+    });
+  }
+
   checkCMSData(locale: Locale) {
+    let lastUpdate: any = localStorage.getItem(
+      ContentfulConstant.LAST_UPDATE + '_' + locale
+    );
     let works: Item = JSON.parse(
       localStorage.getItem(ContentfulConstant.WORKS_DATA + '_' + locale)!
     );
@@ -106,81 +142,42 @@ export class HeaderComponent implements OnInit {
     let projects: Item = JSON.parse(
       localStorage.getItem(ContentfulConstant.PROJECTS_DATA + '_' + locale)!
     );
-    let today = new Date();
-    let workUpdatedAt = new Date(
-      works != null && works.updatedAt != null
-        ? works.updatedAt!.toString()
-        : ''
+    let profile: Item = JSON.parse(
+      localStorage.getItem(ContentfulConstant.PROFILE_DATA + '_' + locale)!
     );
-    let courseUpdatedAt = new Date(
-      course != null && course.updatedAt != null
-        ? course.updatedAt!.toString()
-        : ''
-    );
-    let projectUpdatedAt = new Date(
-      projects != null && projects.updatedAt != null
-        ? projects.updatedAt!.toString()
-        : ''
-    );
-    let isWorkUpdate =
-      workUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
-    let isCourseUpdate =
-      courseUpdatedAt?.getMilliseconds()! + 604800000 > today.getMilliseconds();
-    let isProjectUpdate =
-      projectUpdatedAt?.getMilliseconds()! + 604800000 >
-      today.getMilliseconds();
 
-    if (
-      works == null ||
-      works == undefined ||
-      course == null ||
-      course == undefined ||
-      isWorkUpdate ||
-      isCourseUpdate ||
-      isProjectUpdate
-    ) {
-      this.contentService.getCMSData(locale).subscribe({
+    let today = new Date();
+
+    let isUpdate =
+      new Date(lastUpdate) != undefined
+        ? new Date(lastUpdate)?.getMilliseconds()! + 604800000 >
+          today.getMilliseconds()
+        : false;
+
+    if (!isUpdate) {
+      this.cmsService.getContentfulData(locale).subscribe({
         next: (data) => {
-          this.worksData = this.buildWorks(data, 'jobs');
-          this.coursesData = this.buildWorks(data, 'courses');
-          this.projectsData = this.buildWorks(data, 'projects');
-          let work: Item = new Item();
-          work.cmsData = this.worksData;
-          work.updatedAt = new Date();
-          let course: Item = new Item();
-          course.cmsData = this.coursesData;
-          course.updatedAt = new Date();
-          let project: Item = new Item();
-          project.projectCmsData = this.projectsData;
-          project.updatedAt = new Date();
-          localStorage.setItem(
-            ContentfulConstant.WORKS_DATA + '_' + locale,
-            JSON.stringify(work)
-          );
-          localStorage.setItem(
-            ContentfulConstant.COURSE_DATA + '_' + locale,
-            JSON.stringify(course)
-          );
-          localStorage.setItem(
-            ContentfulConstant.PROJECTS_DATA + '_' + locale,
-            JSON.stringify(project)
-          );
-          this.contentService.worksData = work.cmsData!;
-          this.contentService.courseData = course.cmsData!;
-          this.contentService.projectData = project.cmsData!;
-          this.changeLanguagesWork.emit(this.worksData);
-          this.changeLanguagesCourse.emit(this.coursesData);
-          this.changeLanguagesProject.emit(this.projectsData);
+          this.logger.LOG('Successfully response', 'Contentful Service');
+          this.worksData = this.buildWorks(data, ContentType.WORKS);
+          this.coursesData = this.buildWorks(data, ContentType.COURSE);
+          this.projectsData = this.buildWorks(data, ContentType.PROJECTS);
+          this.profileData = this.buildWorks(data, ContentType.PROFILE)[0];
+          this.setDataAndEmit(locale);
         },
       });
     } else {
       this.changeLanguagesWork.emit(this.worksData);
       this.changeLanguagesCourse.emit(this.coursesData);
       this.changeLanguagesProject.emit(this.projectsData);
+      this.changeLanguagesProfile.emit(this.profileData);
       this.worksData = works.cmsData!;
-      this.contentService.worksData = works.cmsData!;
+      this.cmsService.worksData = works.cmsData!;
       this.coursesData = course.cmsData!;
-      this.contentService.courseData = course.cmsData!;
+      this.cmsService.courseData = course.cmsData!;
+      this.projectsData = projects.cmsData!;
+      this.cmsService.projectData = projects.cmsData!;
+      this.profileData = profile.fields!;
+      this.cmsService.profileData = profile.fields!;
     }
   }
 
@@ -215,9 +212,64 @@ export class HeaderComponent implements OnInit {
         cmsData.btn_text = item.fields?.btn_text;
         cmsData.descriptionSecondPage = item.fields?.descriptionSecondPage;
         cmsData.img = item.fields?.img;
+        // Profile
+        cmsData.curriculumUrl = item.fields?.curriculumUrl;
+        cmsData.city = item.fields?.city;
+        cmsData.profilePhotoUrl = item.fields?.profilePhotoUrl;
+        cmsData.biography = item.fields?.biography;
+        cmsData.workProjects = item.fields?.workProjects;
+        cmsData.personalProject = item.fields?.personalProject;
+        cmsData.course = item.fields?.course;
         works.push(cmsData);
       });
     return works;
+  }
+
+  setDataAndEmit(locale: Locale) {
+    let works: Item = new Item();
+    works.cmsData = this.worksData;
+    works.updatedAt = new Date();
+    let course: Item = new Item();
+    course.cmsData = this.coursesData;
+    course.updatedAt = new Date();
+    let projects: Item = new Item();
+    projects.projectCmsData = this.projectsData;
+    projects.updatedAt = new Date();
+    let profile: Item = new Item();
+    profile.fields = this.profileData;
+    profile.updatedAt = new Date();
+    localStorage.setItem(
+      ContentfulConstant.LAST_UPDATE + '_' + locale,
+      new Date().toISOString()
+    );
+    localStorage.setItem(
+      ContentfulConstant.WORKS_DATA + '_' + locale,
+      JSON.stringify(works)
+    );
+    localStorage.setItem(
+      ContentfulConstant.COURSE_DATA + '_' + locale,
+      JSON.stringify(course)
+    );
+    localStorage.setItem(
+      ContentfulConstant.PROJECTS_DATA + '_' + locale,
+      JSON.stringify(projects)
+    );
+    localStorage.setItem(
+      ContentfulConstant.PROFILE_DATA + '_' + locale,
+      JSON.stringify(profile)
+    );
+    this.changeLanguagesWork.emit(this.worksData);
+    this.changeLanguagesCourse.emit(this.coursesData);
+    this.changeLanguagesProject.emit(this.projectsData);
+    this.changeLanguagesProfile.emit(this.profileData);
+    this.worksData = works.cmsData!;
+    this.cmsService.worksData = works.cmsData!;
+    this.coursesData = course.cmsData!;
+    this.cmsService.courseData = course.cmsData!;
+    this.projectsData = projects.cmsData!;
+    this.cmsService.projectData = projects.cmsData!;
+    this.profileData = profile.fields!;
+    this.cmsService.profileData = profile.fields!;
   }
 
   @HostListener('window:scroll', ['$event'])

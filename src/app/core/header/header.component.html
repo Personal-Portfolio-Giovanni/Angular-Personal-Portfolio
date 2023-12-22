@@ -11,7 +11,11 @@
     <a
       *ngIf="downloadCV"
       [@inOutAnimation]
-      href="{{ environment.downloadResumeUrl }}"
+      href="{{
+        profileData.curriculumUrl != undefined
+          ? profileData.curriculumUrl
+          : environment.downloadResumeUrl
+      }}"
       target="_blank"
       id="cv"
       >Download <span style="color: #777">CV</span></a

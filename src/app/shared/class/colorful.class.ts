@@ -12,7 +12,17 @@ export class Item {
   projectCmsData?: ProjectCMSData[];
 }
 
-export class ProjectCMSData implements WorkInterface {
+export class ProfileCMSData {
+  curriculumUrl?: string;
+  city?: string;
+  profilePhotoUrl?: string;
+  biography?: string;
+  workProjects?: number;
+  personalProject?: number;
+  course?: number;
+}
+
+export class ProjectCMSData extends ProfileCMSData implements WorkInterface {
   id?: number;
   img?: string;
   titleSecondPage?: string;
@@ -46,12 +56,21 @@ export class Content {
 }
 
 export enum ContentfulConstant {
+  LAST_UPDATE = 'last_update',
   WORKS_DATA = 'works_data',
   COURSE_DATA = 'course_data',
   PROJECTS_DATA = 'projects',
+  PROFILE_DATA = 'profile_data',
 }
 
 export enum Locale {
   ITALIAN = 'it-IT',
   ENGLISH = 'en-GB',
+}
+
+export enum ContentType {
+  WORKS = 'jobs',
+  COURSE = 'courses',
+  PROJECTS = 'projects',
+  PROFILE = 'profile',
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SwalIcon } from 'src/app/shared/class/accordion-constant.class';
+import { CMSData } from 'src/app/shared/class/colorful.class';
 import {
   EmailResponseModel,
   EmailSenderModel,
@@ -19,6 +20,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
+  @Input('profile') profile?: CMSData;
+  
   env = environment;
   name!: string;
   email!: string;
@@ -26,6 +29,9 @@ export class ContactComponent implements OnInit {
   emailTemplate?: EmailTemplateModel;
   emailResponse?: EmailResponseModel;
   errorResponse?: ErrorResponse;
+
+  yearExperience?: number;
+
   constructor(
     private sender: EmailSenderService,
     private translate: TranslateService,
@@ -161,5 +167,28 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.sender.getEmailTemplate();
+    this.yearExperience = this.calculateYearsElapsed();
+  }
+
+  calculateYearsElapsed(): number {
+    // Reference date (June 11, 2021)
+    const referenceDate: Date = new Date('2021-06-11T00:00:00');
+
+    // Current date
+    const currentDate: Date = new Date();
+
+    // Calculate the difference in milliseconds between the two dates
+    const timeDifferenceInMillis: number =
+      currentDate.getTime() - referenceDate.getTime();
+
+    // Calculate the number of milliseconds in a year (approximate)
+    const millisecondsInYear: number = 365.25 * 24 * 60 * 60 * 1000;
+
+    // Calculate the number of elapsed years rounding down
+    const yearsElapsed: number = Math.floor(
+      timeDifferenceInMillis / millisecondsInYear
+    );
+
+    return yearsElapsed;
   }
 }
