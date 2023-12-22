@@ -1,18 +1,10 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import {
   ClassType,
   WorkType,
 } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { ContentfulService } from 'src/app/shared/services/contentful.service';
+import { CMSService } from 'src/app/shared/services/cms.service';
 
 @Component({
   selector: 'app-works-section',
@@ -27,7 +19,7 @@ export class WorkSectionComponent implements OnInit {
   public get classType(): typeof ClassType {
     return ClassType;
   }
-  constructor(private contentService: ContentfulService) {}
+  constructor(private contentService: CMSService) {}
 
   ngOnInit(): void {
     setTimeout(() => {

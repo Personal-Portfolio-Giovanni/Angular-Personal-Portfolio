@@ -1,32 +1,22 @@
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import Swal from 'sweetalert2';
-import { CMSData, Contentful } from '../class/colorful.class';
-import {
-  EmailResponseModel,
-  EmailSenderModel,
-  EmailTemplateModel,
-} from '../class/emailSender.class';
-import { ErrorResponse } from '../class/error.class';
+import { CMSData } from '../class/colorful.class';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ContentfulService {
+export class CMSService {
   environment = environment;
   public worksData: CMSData[] = [];
   public courseData: CMSData[] = [];
   public projectData: CMSData[] = [];
+  public profileData: CMSData = new CMSData();
 
   constructor(private http: HttpClient) {}
 
-  getCMSData(locale: string): Observable<any> {
+  getContentfulData(locale: string): Observable<any> {
     let headers = new HttpHeaders({
       Authorization: 'Bearer _CF0iFOve3oKWY63R9EhELmLrLsPGSzMBCz9X9EISe4',
     });
@@ -36,6 +26,15 @@ export class ContentfulService {
       environment.worksUrl +
       '?locale=' +
       locale;
+    return this.http.get(url, { headers: headers });
+  }
+
+  getCMSData(locale: string): Observable<any> {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    const url = environment.portfolioCMSData + '?locale=' + locale;
     return this.http.get(url, { headers: headers });
   }
 }

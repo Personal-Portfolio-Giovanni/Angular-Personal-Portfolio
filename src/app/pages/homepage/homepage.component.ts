@@ -16,6 +16,7 @@ declare let gtag: Function;
 export class HomepageComponent {
   @Output('works') works: Array<CMSData> = [];
   @Output('courses') courses: Array<CMSData> = [];
+  @Output('courses') profile?: CMSData;
   constructor(
     private router: Router,
     private animationService: AnimationsService,
@@ -37,6 +38,11 @@ export class HomepageComponent {
   changeLanguagesCourse(courses: Array<CMSData>) {
     this.courses = courses;
   }
+
+  changeLanguagesProfile(profile: CMSData) {
+    this.profile = profile;
+  }
+
   setUpAnalytics() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))

@@ -3,10 +3,15 @@
   <app-header
     (changeLanguagesWork)="changeLanguagesWork($event)"
     (changeLanguagesCourse)="changeLanguagesCourse($event)"
+    (changeLanguagesProfile)="changeLanguagesProfile($event)"
   ></app-header>
   <div class="image-cropper shape">
     <img
-      src="{{ environment.profileImageUrl }}"
+      src="{{
+        profile?.profilePhotoUrl != undefined
+          ? profile?.profilePhotoUrl
+          : environment.profileImageUrl
+      }}"
       class="profile"
       alt="Giovanni Lamarmora"
       name="Giovanni Lamarmora"
@@ -22,7 +27,13 @@
       <div class="console-underscore" id="console">
         <!--&#95;-->
       </div>
-      {{ "profile.description.pt2" | translate }}
+      {{
+        profile?.city != undefined
+          ? ("profile.description.pt2" | translate)
+              .replace("Milan.", profile?.city + ".")
+              .replace("Milano.", profile?.city + ".")
+          : ("profile.description.pt2" | translate)
+      }}
     </h3>
   </div>
   <div class="scroll">

@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/shared/services/animation.service';
 import { LoggerService } from 'src/app/shared/services/log.service';
 import { environment } from 'src/environments/environment';
+import { LoaderInterceptor } from '../loader.interceptor';
 
 @Component({
   selector: 'app-loading',
@@ -11,7 +12,10 @@ import { environment } from 'src/environments/environment';
 export class LoadingComponent implements OnInit {
   isAppleDevice: boolean = false;
   environment = environment;
-  constructor(private logger: LoggerService) {}
+  constructor(
+    private logger: LoggerService,
+    private animation: AnimationsService
+  ) {}
 
   removeLoader(): void {
     document.removeEventListener('DOMContentLoaded', () => {
@@ -21,7 +25,7 @@ export class LoadingComponent implements OnInit {
 
   ngOnInit(): void {
     this.detectIOS();
-    if (!this.isAppleDevice)
+    if (!this.isAppleDevice && this.animation.isLoading)
       document.addEventListener('DOMContentLoaded', () => {
         this.eventListener();
       });
