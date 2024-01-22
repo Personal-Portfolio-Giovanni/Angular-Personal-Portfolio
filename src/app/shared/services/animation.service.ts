@@ -12,6 +12,7 @@ declare function reveal(): any;
 })
 export class AnimationsService {
   environment = environment;
+  isLoading = true;
   animation_title: string = '';
   constructor(
     public revealUp: RevealUpAnimations,

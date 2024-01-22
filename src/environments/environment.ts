@@ -29,6 +29,9 @@ export const environment = {
   contentfulBaseUrl: 'https://cdn.contentful.com',
   worksUrl: '/spaces/uptyiu46x1l9/environments/master/entries',
 
+  /* Portfolio */
+  portfolioCMSData: 'http://localhost:8080/v1/app/CMS/data',
+
   /*
    * Animation Variables
    * ============================

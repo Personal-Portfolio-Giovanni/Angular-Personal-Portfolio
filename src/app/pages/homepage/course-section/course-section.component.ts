@@ -4,8 +4,7 @@ import {
   CourseType,
 } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { CourseInterface } from 'src/app/shared/interfaces/course.interface';
-import { ContentfulService } from 'src/app/shared/services/contentful.service';
+import { CMSService } from 'src/app/shared/services/cms.service';
 
 @Component({
   selector: 'app-course-section',
@@ -17,7 +16,7 @@ export class CourseSectionComponent implements OnInit {
   @Output('parentID') parentID: string = CourseType.PARENTID;
   @Output('code') code: string = CourseType.CODE;
 
-  constructor(private contentService: ContentfulService) {}
+  constructor(private contentService: CMSService) {}
 
   public get classType(): typeof ClassType {
     return ClassType;

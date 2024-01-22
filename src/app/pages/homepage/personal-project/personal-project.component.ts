@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { ClassType, CourseType } from 'src/app/shared/class/accordion-constant.class';
+import { Component, Output } from '@angular/core';
+import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 
 @Component({
   selector: 'app-personal-project',

@@ -44,6 +44,9 @@ export class AccordionContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.content.descriptionValue != undefined)
+      this.content.description = this.content.descriptionValue;
+
     this.aria_label = this.aria_label + this.code + this.content.identifier;
     this.aria_control = this.aria_control + this.code + this.content.identifier;
   }

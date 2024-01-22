@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
+import { CMSService } from 'src/app/shared/services/cms.service';
 
 @Component({
   selector: 'app-project',
@@ -10,11 +11,13 @@ import { CMSData } from 'src/app/shared/class/colorful.class';
 })
 export class ProjectComponent implements OnInit {
   @Output('projects') projects: Array<CMSData> = [];
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private cmsService: CMSService) {
     this.titleService.setTitle('Giovanni Lamarmora - Project');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.projects = this.cmsService.projectData;
+  }
 
   public get classType(): typeof ClassType {
     return ClassType;
