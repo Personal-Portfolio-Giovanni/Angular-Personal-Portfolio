@@ -4,7 +4,7 @@ import {
   WorkType,
 } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { CMSService } from 'src/app/shared/services/cms.service';
+import { CMSService } from 'src/app/shared/services/api/cms.service';
 
 @Component({
   selector: 'app-works-section',

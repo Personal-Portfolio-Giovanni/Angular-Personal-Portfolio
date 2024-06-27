@@ -11,7 +11,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/homepage/description/description.component';
 import { HeaderComponent } from './core/header/header.component';
-import { RouterModule } from '@angular/router';
 import { WorkSectionComponent } from './pages/homepage/works-section/works-section.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LanguagesComponent } from './pages/homepage/languages/languages.component';

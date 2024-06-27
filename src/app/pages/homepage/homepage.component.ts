@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { AnimationsService } from 'src/app/shared/services/animation.service';
+import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 import { environment } from 'src/environments/environment';
 
 declare let gtag: Function;

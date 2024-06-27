@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimationsService } from 'src/app/shared/services/animation.service';
-import { LoggerService } from 'src/app/shared/services/log.service';
+import { AnimationsService } from 'src/app/shared/services/config/animation.service';
+import { LoggerService } from 'src/app/shared/services/config/log.service';
 import { environment } from 'src/environments/environment';
 
 @Component({

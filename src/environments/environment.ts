@@ -31,6 +31,11 @@ export const environment = {
 
   /* Portfolio */
   portfolioCMSData: 'http://localhost:8080/v1/app/CMS/data',
+  portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
+
+  // Cache
+  cacheEnable: false,
+  cacheTimeout: 180000,
 
   /*
    * Animation Variables
