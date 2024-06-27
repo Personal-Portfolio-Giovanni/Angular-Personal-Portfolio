@@ -58,8 +58,9 @@ export class CacheService {
   }
 
   cachePortfolioData(portfolio: PortfolioData, locale: string) {
-    if (environment.cacheEnable) {
+    if (environment.cacheEnable && !portfolio.cached) {
       LOG.info('Caching data for locale ' + locale, 'Cache Service');
+      portfolio.cached = true;
       this.portfolioCache = Utils.copyObject(portfolio);
       localStorage.setItem(
         PortfolioConstant.LAST_UPDATE + '_' + locale,

@@ -15,7 +15,7 @@ export const environment = {
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
   //serverEmailSenderUrl:'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
   serverEmailSenderUrl:
-    'https://email-sender.hostwebserver.site/email-sender/v1/send-email',
+    'https://email-sender.giovannilamarmora.com/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
 
   /* Social Url */

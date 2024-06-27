@@ -7,7 +7,11 @@
   </app-title-section>
   <div class="accordion accordion-flush" id="{{ parentID }}">
     <div
-      *ngFor="let work of works && works.length ? works : ('works' | translate)"
+      *ngFor="
+        let work of portfolioWorks && portfolioWorks.length
+          ? portfolioWorks
+          : ('works' | translate)
+      "
     >
       <!--<div *ngFor="let work of works">-->
       <app-accordion-content

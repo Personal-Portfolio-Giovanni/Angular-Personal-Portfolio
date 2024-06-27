@@ -10,7 +10,7 @@ import { CacheService } from '../config/cache.service';
 export class PortfolioService {
   environment = environment;
 
-  constructor(private http: HttpClient, private cache: CacheService) {}
+  constructor(private http: HttpClient, public cache: CacheService) {}
 
   getPortfolioData(locale: string): Observable<any> {
     if (this.cache.getPortfolioDataCache(locale))

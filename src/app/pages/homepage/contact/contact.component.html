@@ -32,8 +32,8 @@
         </ul>
         <a
           href="{{
-            profile?.curriculumUrl != undefined
-              ? profile?.curriculumUrl
+            portfolio?.curriculum_url != undefined
+              ? portfolio?.curriculum_url
               : env.downloadResumeUrl
           }}"
           target="_blank"
@@ -170,8 +170,8 @@
                 data-from="0"
                 attr.data-to="{{ 'contact.work_project' | translate }}"
                 >{{
-                  profile?.workProjects != undefined
-                    ? profile?.workProjects
+                  portfolio?.work_projects != undefined
+                    ? portfolio?.work_projects
                     : ("contact.work_project" | translate)
                 }}</span
               >+
@@ -190,8 +190,8 @@
                 data-from="0"
                 attr.data-to="{{ 'contact.project' | translate }}"
                 >{{
-                  profile?.personalProject != undefined
-                    ? profile?.personalProject
+                  portfolio?.personal_projects != undefined
+                    ? portfolio?.personal_projects
                     : ("contact.project" | translate)
                 }}</span
               >+
@@ -209,8 +209,8 @@
                 data-from="0"
                 attr.data-to="{{ 'contact.course' | translate }}"
                 >{{
-                  profile?.course != undefined
-                    ? profile?.course
+                  portfolio?.number_courses != undefined
+                    ? portfolio?.number_courses
                     : ("contact.course" | translate)
                 }}</span
               >+

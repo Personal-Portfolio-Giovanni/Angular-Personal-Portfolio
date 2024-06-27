@@ -22,6 +22,7 @@ import { PortfolioService } from 'src/app/shared/services/api/portfolio.service'
 import { Subscription } from 'rxjs';
 import { LOG } from 'src/app/shared/services/config/logger.service';
 import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 
 @Component({
   selector: 'app-header',
@@ -48,6 +49,10 @@ import { LoggerService } from 'src/app/shared/services/config/log.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   private portfolioSubscribe: Subscription = new Subscription();
+  portfolioData?: PortfolioData;
+  @Output('changeLanguages') changeLanguages =
+    new EventEmitter<PortfolioData>();
+
   @Output('changeLanguagesWork') changeLanguagesWork = new EventEmitter<
     Array<CMSData>
   >();
@@ -105,6 +110,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       languageEN.classList.remove('active');
       languageIT.classList.add('active');
       this.checkAndGetCMSData(Locale.ITALIAN);
+      this.checkAndGetPortfolioData(Locale.ITALIAN);
     }
   }
 
@@ -293,7 +299,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.portfolioSubscribe = this.portfolioService
       .getPortfolioData(locale)
       .subscribe((res) => {
+        this.portfolioService.cache.cachePortfolioData(res.data, locale);
         LOG.info(res.message!, 'HeaderComponent');
+        this.portfolioData = res.data;
+        this.changeLanguages.emit(res.data);
       });
   }
 

@@ -1,6 +1,7 @@
 <div class="bgimg-1" id="particles"></div>
 <div class="caption">
   <app-header
+    (changeLanguages)="changeLanguages($event)"
     (changeLanguagesWork)="changeLanguagesWork($event)"
     (changeLanguagesCourse)="changeLanguagesCourse($event)"
     (changeLanguagesProfile)="changeLanguagesProfile($event)"
@@ -8,8 +9,8 @@
   <div class="image-cropper shape">
     <img
       src="{{
-        profile?.profilePhotoUrl != undefined
-          ? profile?.profilePhotoUrl
+        portfolio?.profilePhoto_url != undefined
+          ? portfolio?.profilePhoto_url
           : environment.profileImageUrl
       }}"
       class="profile"
@@ -27,13 +28,7 @@
       <div class="console-underscore" id="console">
         <!--&#95;-->
       </div>
-      {{
-        profile?.city != undefined
-          ? ("profile.description.pt2" | translate)
-              .replace("Milan.", profile?.city + ".")
-              .replace("Milano.", profile?.city + ".")
-          : ("profile.description.pt2" | translate)
-      }}
+      {{ "profile.description.pt2" | translate }}
     </h3>
   </div>
   <div class="scroll">
