@@ -97,6 +97,12 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
+      - name: 📂 Build
+        run: |
+          npm install -g @angular/cli
+          npm install
+          ng build --configuration=production --output-hashing=none --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
+
       - name: 🚀 Pushes to GitHub Pages
         uses: cpina/github-action-push-to-another-repository@main
         env:
