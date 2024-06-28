@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "☁️ Checkout Repository"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
       - name: 🔧 Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4.0.2
         with:
           node-version: "${{ env.NODE_VERSION }}"
 
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: checkout-and-setup
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: 📦 Dependency Injection
         run: |
           npm install -g @angular/cli
@@ -50,38 +50,6 @@ jobs:
           username: ${{ env.DOCKER_USERNAME }}
           password: ${{ env.DOCKER_PASSWORD }}
 
-  deploy:
-    name: 🚀 Deploy
-    runs-on: ubuntu-latest
-    needs:
-      - dependency-and-build
-      - docker-login
-    environment:
-      name: porfolio-deploy
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: 🗝️ Grant execute permission to script
-        run: chmod +x ./rename.sh
-
-      - name: ✅ Get current package version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
-
-      - name: 🚀 Pushes to GitHub Pages
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          name: giovannilamarmora-portfolio
-          url: https://giovannilamarmoraproject.github.io/Portfolio/
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
-        with:
-          commit-message: Portfolio V${{ steps.package-version.outputs.current-version }}
-          source-directory: "dist/angular-personal-portfolio"
-          destination-github-username: "${{ secrets.ORGANIZATION_USERNAME }}"
-          destination-repository-name: "${{ secrets.DESTINATION_REPOSITORY }}"
-          user-email: ${{ secrets.EMAIL }}
-          target-branch: main
-
   deploy-on-profile:
     name: 🚀 Deploy On Profile
     runs-on: ubuntu-latest
@@ -91,7 +59,7 @@ jobs:
     environment:
       name: profile-deploy
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
 
       - name: ✅ Get current package version
         id: package-version
