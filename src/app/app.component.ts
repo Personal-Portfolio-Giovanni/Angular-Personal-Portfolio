@@ -9,7 +9,7 @@ declare let gtag: Function;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular-Personal-Portfolio';
+  title = 'Personal-Portfolio';
 
   constructor(private readonly updates: SwUpdate) {
     this.updates.versionUpdates.subscribe((event) => {

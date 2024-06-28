@@ -3,6 +3,7 @@ import {
   Component,
   EventEmitter,
   HostListener,
+  OnDestroy,
   OnInit,
   Output,
 } from '@angular/core';
@@ -15,9 +16,13 @@ import {
   Item,
   Locale,
 } from 'src/app/shared/class/colorful.class';
-import { CMSService } from 'src/app/shared/services/cms.service';
+import { CMSService } from 'src/app/shared/services/api/cms.service';
 import { environment } from '../../../environments/environment';
-import { LoggerService } from 'src/app/shared/services/log.service';
+import { PortfolioService } from 'src/app/shared/services/api/portfolio.service';
+import { Subscription } from 'rxjs';
+import { LOG } from 'src/app/shared/services/config/logger.service';
+import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 
 @Component({
   selector: 'app-header',
@@ -42,7 +47,12 @@ import { LoggerService } from 'src/app/shared/services/log.service';
     ]),
   ],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+  private portfolioSubscribe: Subscription = new Subscription();
+  portfolioData?: PortfolioData;
+  @Output('changeLanguages') changeLanguages =
+    new EventEmitter<PortfolioData>();
+
   @Output('changeLanguagesWork') changeLanguagesWork = new EventEmitter<
     Array<CMSData>
   >();
@@ -70,6 +80,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translate: TranslateService,
     private cmsService: CMSService,
+    private portfolioService: PortfolioService,
     private logger: LoggerService
   ) {
     //translate.setDefaultLang('en');
@@ -94,10 +105,12 @@ export class HeaderComponent implements OnInit {
       languageIT.classList.remove('active');
       languageEN.classList.add('active');
       this.checkAndGetCMSData(Locale.ENGLISH);
+      this.checkAndGetPortfolioData(Locale.ENGLISH);
     } else {
       languageEN.classList.remove('active');
       languageIT.classList.add('active');
       this.checkAndGetCMSData(Locale.ITALIAN);
+      this.checkAndGetPortfolioData(Locale.ITALIAN);
     }
   }
 
@@ -280,5 +293,22 @@ export class HeaderComponent implements OnInit {
     } else {
       element.classList.remove('navbar-inverse');
     }
+  }
+
+  checkAndGetPortfolioData(locale: Locale) {
+    this.portfolioSubscribe = this.portfolioService
+      .getPortfolioData(locale)
+      .subscribe((res) => {
+        this.portfolioService.cache.cachePortfolioData(res.data, locale);
+        PortfolioService.portfolioProjects = res.data.projects;
+        this.portfolioService.portfolioProjects = res.data.projects;
+        LOG.info(res.message!, 'HeaderComponent');
+        this.portfolioData = res.data;
+        this.changeLanguages.emit(res.data);
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.portfolioSubscribe.unsubscribe();
   }
 }

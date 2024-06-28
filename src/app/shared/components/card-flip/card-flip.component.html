@@ -1,8 +1,5 @@
 <div class="card">
-  <div
-    class="card-side front"
-    style="background-image: url({{project.img}}); align-items: cover;"
-  >
+  <div class="card-side front" attr.style="{{ style }}">
     <!-- <div class="featured-box text-center" style="padding-top: 30%;">
             <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0"
                     data-to="250">{{project.number}}</span>+
@@ -13,23 +10,23 @@
   <div class="card-side back">
     <div class="">
       <h4 class="text-center text-white fw-bolder text-uppercase">
-        {{ project.titleSecondPage }}
+        {{ project?.title }}
       </h4>
       <hr />
       <h5
-        *ngFor="let item of project.descriptionSecondPage"
+        *ngFor="let item of project?.description"
         class="text-start text-white fs-6"
       >
         &bull; {{ item }}
       </h5>
       <div align="center" class="mt-3">
-        <div *ngIf="!project.descriptionSecondPage" class="mt-5"></div>
+        <div *ngIf="!project?.description" class="mt-5"></div>
         <a
-          href="{{ project.btn_href }}"
+          href="{{ project?.button_link }}"
           target="_blank"
           class="btn btn-primary rounded-pill"
           style="width: 180px; height: 50px; padding-top: 12px"
-          >{{ project.btn_text }}</a
+          >{{ project?.button_text }}</a
         >
       </div>
     </div>

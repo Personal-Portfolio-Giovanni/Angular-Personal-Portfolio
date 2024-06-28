@@ -3,7 +3,8 @@ import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { AnimationsService } from 'src/app/shared/services/animation.service';
+import { PortfolioData } from 'src/app/shared/class/portfolio.class';
+import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 import { environment } from 'src/environments/environment';
 
 declare let gtag: Function;
@@ -14,6 +15,7 @@ declare let gtag: Function;
   styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent {
+  @Output('portfolio') portfolio?: PortfolioData;
   @Output('works') works: Array<CMSData> = [];
   @Output('courses') courses: Array<CMSData> = [];
   @Output('courses') profile?: CMSData;
@@ -29,6 +31,10 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.setUpAnalytics();
     this.animationService.initAnimations();
+  }
+
+  changeLanguages(portfolio: PortfolioData) {
+    this.portfolio = portfolio;
   }
 
   changeLanguagesWork(works: Array<CMSData>) {

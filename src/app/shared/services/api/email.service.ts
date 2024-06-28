@@ -4,15 +4,15 @@ import {
   HttpHeaders,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 import {
   EmailResponseModel,
   EmailSenderModel,
   EmailTemplateModel,
-} from '../class/emailSender.class';
-import { ErrorResponse } from '../class/error.class';
+} from '../../class/emailSender.class';
+import { ErrorResponse } from '../../class/error.class';
 
 @Injectable({
   providedIn: 'root',

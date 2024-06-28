@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AnimationsService } from '../../services/animation.service';
+import { AnimationsService } from '../../services/config/animation.service';
 
 @Component({
   selector: 'app-title-section',

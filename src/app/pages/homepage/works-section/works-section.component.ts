@@ -4,14 +4,20 @@ import {
   WorkType,
 } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { CMSService } from 'src/app/shared/services/cms.service';
+import {
+  PortfolioData,
+  PortfolioWork,
+} from 'src/app/shared/class/portfolio.class';
+import { CMSService } from 'src/app/shared/services/api/cms.service';
 
 @Component({
   selector: 'app-works-section',
   templateUrl: './works-section.component.html',
   styleUrls: ['./works-section.component.css'],
 })
-export class WorkSectionComponent implements OnInit {
+export class WorkSectionComponent {
+  @Input('portfolioWorks') portfolioWorks?: Array<PortfolioWork>;
+  
   @Input('works') works: Array<CMSData> = [];
   @Output('code') code: string = WorkType.CODE;
   @Output('parentID') parentID: string = WorkType.PARENTID;

@@ -15,7 +15,7 @@ export const environment = {
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
   //serverEmailSenderUrl:'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
   serverEmailSenderUrl:
-    'https://email-sender.hostwebserver.site/email-sender/v1/send-email',
+    'https://email-sender.giovannilamarmora.com/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
 
   /* Social Url */
@@ -31,7 +31,13 @@ export const environment = {
 
   /* Portfolio */
   portfolioCMSData:
-    'https://portfolio.service.hostwebserver.site/v1/app/CMS/data',
+    'https://portfolio.service.giovannilamarmora.com/v1/app/CMS/data',
+  portfolioData:
+    'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
+
+  // Cache
+  cacheEnable: false,
+  cacheTimeout: 180000,
 
   /*
    * Animation Variables

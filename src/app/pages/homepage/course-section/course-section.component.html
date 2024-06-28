@@ -8,8 +8,8 @@
   <div class="accordion accordion-flush" id="{{ parentID }}">
     <div
       *ngFor="
-        let course of courses && courses.length
-          ? courses
+        let course of portfolioCourses && portfolioCourses.length
+          ? portfolioCourses
           : ('course-section.courses' | translate)
       "
     >

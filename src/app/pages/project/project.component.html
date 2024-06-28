@@ -1,5 +1,6 @@
 <app-header
   (changeLanguagesProject)="changeLanguagesProject($event)"
+  (changeLanguages)="changeLanguages($event)"
 ></app-header>
 <section class="project">
   <a routerLink="" class="link"
@@ -38,8 +39,8 @@
       class="col-md-4 mx-auto my-5 mt-1"
       [project]="project"
       *ngFor="
-        let project of projects && projects.length
-          ? projects
+        let project of portfolioProjects && portfolioProjects.length
+          ? portfolioProjects
           : ('project-section.projects' | translate)
       "
     >

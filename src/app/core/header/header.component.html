@@ -12,8 +12,8 @@
       *ngIf="downloadCV"
       [@inOutAnimation]
       href="{{
-        profileData.curriculumUrl != undefined
-          ? profileData.curriculumUrl
+        portfolioData?.curriculum_url != undefined
+          ? portfolioData?.curriculum_url
           : environment.downloadResumeUrl
       }}"
       target="_blank"

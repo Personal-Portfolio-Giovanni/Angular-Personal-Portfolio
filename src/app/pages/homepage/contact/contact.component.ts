@@ -9,9 +9,10 @@ import {
   TemplateConstant,
 } from 'src/app/shared/class/emailSender.class';
 import { ErrorResponse } from 'src/app/shared/class/error.class';
-import { EmailSenderService } from 'src/app/shared/services/email.service';
-import { LoggerService } from 'src/app/shared/services/log.service';
-import { SwalService } from 'src/app/shared/services/swal.service';
+import { PortfolioData } from 'src/app/shared/class/portfolio.class';
+import { EmailSenderService } from 'src/app/shared/services/api/email.service';
+import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { SwalService } from 'src/app/shared/services/config/swal.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -20,8 +21,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
+  @Input('portfolio') portfolio?: PortfolioData;
+
   @Input('profile') profile?: CMSData;
-  
+
   env = environment;
   name!: string;
   email!: string;
@@ -98,7 +101,7 @@ export class ContactComponent implements OnInit {
     let sub_title: string = this.translate.instant('email_content.sub-title');
     let important: string = this.translate.instant('email_content.important');
     let thanks: string = this.translate.instant('email_content.thanks');
-    let content = this.emailTemplate.content
+    let content = this.emailTemplate?.content
       ?.replace(
         TemplateConstant.TITLE,
         title.replace(TemplateConstant.NAME, this.name)
