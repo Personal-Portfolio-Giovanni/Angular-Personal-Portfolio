@@ -14,6 +14,7 @@ export class PortfolioData implements PortfolioDataInterface {
   number_courses: number;
   works: Array<PortfolioWork>;
   courses: Array<PortfolioCourse>;
+  projects: Array<PortfolioProject>;
   cached: boolean = false;
 
   constructor(
@@ -24,7 +25,8 @@ export class PortfolioData implements PortfolioDataInterface {
     personal_projects: number,
     number_courses: number,
     works: Array<PortfolioWork>,
-    courses: Array<PortfolioCourse>
+    courses: Array<PortfolioCourse>,
+    projects: Array<PortfolioProject>
   ) {
     this.curriculum_url = curriculum_url;
     this.profilePhoto_url = profilePhoto_url;
@@ -34,6 +36,7 @@ export class PortfolioData implements PortfolioDataInterface {
     this.number_courses = number_courses;
     this.works = works;
     this.courses = courses;
+    this.projects = projects;
   }
 }
 

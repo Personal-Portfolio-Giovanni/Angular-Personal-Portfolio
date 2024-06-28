@@ -300,6 +300,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .getPortfolioData(locale)
       .subscribe((res) => {
         this.portfolioService.cache.cachePortfolioData(res.data, locale);
+        PortfolioService.portfolioProjects = res.data.projects;
+        this.portfolioService.portfolioProjects = res.data.projects;
         LOG.info(res.message!, 'HeaderComponent');
         this.portfolioData = res.data;
         this.changeLanguages.emit(res.data);
