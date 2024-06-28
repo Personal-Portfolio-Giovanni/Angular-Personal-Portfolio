@@ -8,7 +8,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { AnimationsService } from '../shared/services/animation.service';
+import { AnimationsService } from '../shared/services/config/animation.service';
 
 @Injectable()
 export class LoaderInterceptor implements HttpInterceptor {

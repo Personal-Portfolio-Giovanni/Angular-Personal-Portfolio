@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import Swal, { SweetAlertResult } from 'sweetalert2';
-import { SwalIcon } from '../class/accordion-constant.class';
+import { SwalIcon } from '../../class/accordion-constant.class';
 
 @Injectable({
   providedIn: 'root',

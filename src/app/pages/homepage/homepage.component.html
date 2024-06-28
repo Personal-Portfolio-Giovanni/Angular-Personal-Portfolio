@@ -2,13 +2,21 @@
   (changeLanguagesWorkSection)="changeLanguagesWork($event)"
   (changeLanguagesCourseSection)="changeLanguagesCourse($event)"
   (changeLanguagesProfileSection)="changeLanguagesProfile($event)"
+  (changeLanguagesSection)="changeLanguages($event)"
   [profile]="profile"
+  [portfolio]="portfolio"
 ></app-profile>
-<app-description></app-description>
-<app-works-section [works]="works"></app-works-section>
+<app-description [portfolio]="portfolio"></app-description>
+<app-works-section
+  [works]="works"
+  [portfolioWorks]="portfolio?.works"
+></app-works-section>
 <app-languages></app-languages>
-<app-course-section [courses]="courses!"></app-course-section>
+<app-course-section
+  [courses]="courses!"
+  [portfolioCourses]="portfolio?.courses"
+></app-course-section>
 <app-personal-project></app-personal-project>
-<app-contact></app-contact>
+<app-contact [portfolio]="portfolio"></app-contact>
 <!--<app-info-section></app-info-section>-->
 <app-footer></app-footer>

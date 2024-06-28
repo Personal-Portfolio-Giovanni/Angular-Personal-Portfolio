@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RevealUpAnimations } from 'src/assets/animation/reveal-up/reveal_up';
 import { environment } from 'src/environments/environment';
 import { AccordionConstants } from '../../class/accordion-constant.class';
-import { AnimationsService } from '../../services/animation.service';
-import { LoggerService } from '../../services/log.service';
+import { AnimationsService } from '../../services/config/animation.service';
+import { LoggerService } from '../../services/config/log.service';
 import { TitleSectionComponent } from '../title-section/title-section.component';
 
 @Component({

@@ -4,7 +4,8 @@ import {
   CourseType,
 } from 'src/app/shared/class/accordion-constant.class';
 import { CMSData } from 'src/app/shared/class/colorful.class';
-import { CMSService } from 'src/app/shared/services/cms.service';
+import { PortfolioCourse } from 'src/app/shared/class/portfolio.class';
+import { CMSService } from 'src/app/shared/services/api/cms.service';
 
 @Component({
   selector: 'app-course-section',
@@ -12,6 +13,8 @@ import { CMSService } from 'src/app/shared/services/cms.service';
   styleUrls: ['./course-section.component.css'],
 })
 export class CourseSectionComponent implements OnInit {
+  @Input('portfolioCourses') portfolioCourses?: Array<PortfolioCourse>;
+
   @Input('courses') courses: Array<CMSData> = [];
   @Output('parentID') parentID: string = CourseType.PARENTID;
   @Output('code') code: string = CourseType.CODE;

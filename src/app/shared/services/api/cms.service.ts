@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { CMSData } from '../class/colorful.class';
+import { CMSData } from '../../class/colorful.class';
 
 @Injectable({
   providedIn: 'root',
