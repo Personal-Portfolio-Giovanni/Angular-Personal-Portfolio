@@ -31,7 +31,13 @@ export const environment = {
 
   /* Portfolio */
   portfolioCMSData:
-    'https://portfolio.service.hostwebserver.site/v1/app/CMS/data',
+    'https://portfolio.service.giovannilamarmora.com/v1/app/CMS/data',
+  portfolioData:
+    'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
+
+  // Cache
+  cacheEnable: false,
+  cacheTimeout: 180000,
 
   /*
    * Animation Variables
