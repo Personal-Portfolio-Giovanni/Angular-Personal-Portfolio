@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/shared/services/config/animation.service';
-import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { LOG } from 'src/app/shared/services/config/logger.service';
 import { environment } from 'src/environments/environment';
-import { LoaderInterceptor } from '../loader.interceptor';
 
 @Component({
   selector: 'app-loading',
@@ -12,10 +11,7 @@ import { LoaderInterceptor } from '../loader.interceptor';
 export class LoadingComponent implements OnInit {
   isAppleDevice: boolean = false;
   environment = environment;
-  constructor(
-    private logger: LoggerService,
-    private animation: AnimationsService
-  ) {}
+  constructor(private animation: AnimationsService) {}
 
   removeLoader(): void {
     document.removeEventListener('DOMContentLoaded', () => {
@@ -59,7 +55,7 @@ export class LoadingComponent implements OnInit {
         ' is Apple Device: ' +
         isIOS ||
       (isAppleDevice && isTouchScreen);
-    this.logger.LOG(message.toString(), 'Detecting OS');
+    LOG.info(message.toString(), 'Detecting OS');
 
     this.isAppleDevice = isIOS || (isAppleDevice && isTouchScreen);
   }

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { SwalIcon } from 'src/app/shared/class/accordion-constant.class';
-import { CMSData } from 'src/app/shared/class/colorful.class';
 import {
   EmailResponseModel,
   EmailSenderModel,
@@ -11,7 +10,7 @@ import {
 import { ErrorResponse } from 'src/app/shared/class/error.class';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 import { EmailSenderService } from 'src/app/shared/services/api/email.service';
-import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { LOG } from 'src/app/shared/services/config/logger.service';
 import { SwalService } from 'src/app/shared/services/config/swal.service';
 import { environment } from 'src/environments/environment';
 
@@ -22,8 +21,6 @@ import { environment } from 'src/environments/environment';
 })
 export class ContactComponent implements OnInit {
   @Input('portfolio') portfolio?: PortfolioData;
-
-  @Input('profile') profile?: CMSData;
 
   env = environment;
   name!: string;
@@ -38,7 +35,6 @@ export class ContactComponent implements OnInit {
   constructor(
     private sender: EmailSenderService,
     private translate: TranslateService,
-    private logger: LoggerService,
     private swalService: SwalService
   ) {}
 
@@ -74,7 +70,7 @@ export class ContactComponent implements OnInit {
           this.translate.instant('contact.send_email.send_success'),
           ''
         );
-        this.logger.LOG(
+        LOG.info(
           'Email to ' + this.email + ' is sucessfully send!',
           'Formspree Email Sender'
         );
@@ -85,7 +81,7 @@ export class ContactComponent implements OnInit {
           this.translate.instant('contact.send_email.not_send_error'),
           ''
         );
-        this.logger.LOG(
+        LOG.info(
           'Error on sending Email to ' + this.email + '!',
           'Formspree Email Sender'
         );
@@ -110,7 +106,7 @@ export class ContactComponent implements OnInit {
       .replace(TemplateConstant.EMAIL_TEXT, this.message)
       .replace(TemplateConstant.IMPORTANT_TEXT, important)
       .replace(TemplateConstant.THANKS, thanks);
-    this.logger.LOG('Building content for email sender', 'ContactComponent');
+    LOG.info('Building content for email sender', 'ContactComponent');
 
     let emailSender: EmailSenderModel = new EmailSenderModel();
     emailSender.to = this.email;
@@ -120,7 +116,7 @@ export class ContactComponent implements OnInit {
     emailSender.subject = 'Contact Me [giovannilamarmora]';
     emailSender.text = content;
 
-    this.logger.LOG(content!, 'ContactComponent');
+    LOG.info(content!, 'ContactComponent');
 
     let response: any;
 

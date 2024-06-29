@@ -13,7 +13,6 @@ export const environment = {
 
   /* Email Sender */
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
-  //serverEmailSenderUrl:'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
   serverEmailSenderUrl:
     'https://email-sender.giovannilamarmora.com/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
@@ -25,13 +24,6 @@ export const environment = {
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
 
-  /* Contentful */
-  contentfulBaseUrl: 'https://cdn.contentful.com',
-  worksUrl: '/spaces/uptyiu46x1l9/environments/master/entries',
-
-  /* Portfolio */
-  portfolioCMSData:
-    'https://portfolio.service.giovannilamarmora.com/v1/app/CMS/data',
   portfolioData:
     'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
 
