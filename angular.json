@@ -64,27 +64,6 @@
               ],
               "outputHashing": "all"
             },
-            "production-old": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2mb",
-                  "maximumError": "4mb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.old.ts"
-                }
-              ],
-              "outputHashing": "all"
-            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -101,9 +80,6 @@
           "configurations": {
             "production": {
               "browserTarget": "Angular-Personal-Portfolio:build:production"
-            },
-            "production-old": {
-              "browserTarget": "Angular-Personal-Portfolio:build:production-old"
             },
             "development": {
               "browserTarget": "Angular-Personal-Portfolio:build:development"
