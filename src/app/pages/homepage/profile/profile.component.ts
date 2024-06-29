@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CMSData } from 'src/app/shared/class/colorful.class';
 import { environment } from '../../../../environments/environment';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 
@@ -11,14 +10,7 @@ import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 export class ProfileComponent implements OnInit {
   @Output('changeLanguagesSection') changeLanguagesSection =
     new EventEmitter<PortfolioData>();
-  @Output('changeLanguagesWorkSection') changeLanguagesWorkSection =
-    new EventEmitter<Array<CMSData>>();
-  @Output('changeLanguagesCourseSection') changeLanguagesCourseSection =
-    new EventEmitter<Array<CMSData>>();
-  @Output('changeLanguagesProfileSection') changeLanguagesProfileSection =
-    new EventEmitter<CMSData>();
 
-  @Input('profile') profile?: CMSData;
   @Input('portfolio') portfolio?: PortfolioData;
 
   environment = environment;
@@ -44,18 +36,6 @@ export class ProfileComponent implements OnInit {
 
   changeLanguages(portfolio: PortfolioData) {
     this.changeLanguagesSection.emit(portfolio);
-  }
-
-  changeLanguagesWork(works: Array<CMSData>) {
-    this.changeLanguagesWorkSection.emit(works);
-  }
-
-  changeLanguagesCourse(courses: Array<CMSData>) {
-    this.changeLanguagesCourseSection.emit(courses);
-  }
-
-  changeLanguagesProfile(profile: CMSData) {
-    this.changeLanguagesProfileSection.emit(profile);
   }
 
   consoleText(words: Array<string>, id: string, colors: Array<string>) {

@@ -122,3 +122,8 @@ export enum PortfolioConstant {
   LAST_UPDATE = 'last_update',
   PORTFOLIO_DATA = 'portfolio_data',
 }
+
+export enum Locale {
+  ITALIAN = 'it-IT',
+  ENGLISH = 'en-GB',
+}

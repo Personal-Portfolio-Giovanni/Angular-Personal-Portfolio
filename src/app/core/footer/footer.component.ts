@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimationsService } from 'src/app/shared/services/config/animation.service';
-import { LoggerService } from 'src/app/shared/services/config/log.service';
+import { LOG } from 'src/app/shared/services/config/logger.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -14,13 +14,10 @@ export class FooterComponent implements OnInit {
   SLIDE_RIGHT: string = 'slide-right';
   SLIDE_LEFT: string = 'slide-left';
 
-  constructor(
-    private animationService: AnimationsService,
-    private logger: LoggerService
-  ) {}
+  constructor(private animationService: AnimationsService) {}
 
   ngOnInit(): void {
-    this.logger.LOG(navigator.userAgent, 'Current Device');
+    LOG.info(navigator.userAgent, 'Current Device');
     let isMobileDevice: boolean = false;
     this.mobileDevice.forEach((device) => {
       const isMobile = navigator.userAgent.includes(device);

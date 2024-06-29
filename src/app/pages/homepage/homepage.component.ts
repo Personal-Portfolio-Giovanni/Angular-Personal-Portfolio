@@ -2,7 +2,6 @@ import { Component, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { CMSData } from 'src/app/shared/class/colorful.class';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 import { environment } from 'src/environments/environment';
@@ -16,9 +15,7 @@ declare let gtag: Function;
 })
 export class HomepageComponent {
   @Output('portfolio') portfolio?: PortfolioData;
-  @Output('works') works: Array<CMSData> = [];
-  @Output('courses') courses: Array<CMSData> = [];
-  @Output('courses') profile?: CMSData;
+
   constructor(
     private router: Router,
     private animationService: AnimationsService,
@@ -35,18 +32,6 @@ export class HomepageComponent {
 
   changeLanguages(portfolio: PortfolioData) {
     this.portfolio = portfolio;
-  }
-
-  changeLanguagesWork(works: Array<CMSData>) {
-    this.works = works;
-  }
-
-  changeLanguagesCourse(courses: Array<CMSData>) {
-    this.courses = courses;
-  }
-
-  changeLanguagesProfile(profile: CMSData) {
-    this.profile = profile;
   }
 
   setUpAnalytics() {

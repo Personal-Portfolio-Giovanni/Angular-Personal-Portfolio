@@ -14,7 +14,6 @@ export const environment = {
   downloadResumeUrl:
     'https://drive.google.com/file/d/1m77_ACz4PVWFuFkbw69b1mijjL2HlgP_/view?usp=sharing',
   emailSenderUrl: 'https://formspree.io/f/mqknjoak',
-  //serverEmailSenderUrl:'https://oraclewebserver.ddns.net/email-sender/v1/send-email',
   serverEmailSenderUrl:
     'https://email-sender.giovannilamarmora.com/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
@@ -25,12 +24,7 @@ export const environment = {
   githubUrl: 'https://github.com/giovannilamarmora',
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
 
-  /* Contentful */
-  contentfulBaseUrl: 'https://cdn.contentful.com',
-  worksUrl: '/spaces/uptyiu46x1l9/environments/master/entries',
-
   /* Portfolio */
-  portfolioCMSData: 'http://localhost:8080/v1/app/CMS/data',
   portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
 
   // Cache
