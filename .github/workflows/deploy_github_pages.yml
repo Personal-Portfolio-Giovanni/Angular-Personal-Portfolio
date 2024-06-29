@@ -59,7 +59,7 @@ jobs:
     environment:
       name: profile-deploy
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4.0.2
 
       - name: ✅ Get current package version
         id: package-version
