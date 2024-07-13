@@ -32,7 +32,7 @@
   <!-- Heading end-->
 
   <div align="center" class="row">
-    <app-card-flip
+    <!--<app-card-flip
       class="col-md-4 mx-auto my-5 mt-1"
       [project]="project"
       *ngFor="
@@ -41,6 +41,16 @@
           : ('project-section.projects' | translate)
       "
     >
-    </app-card-flip>
+    </app-card-flip>-->
+    <app-card-flip-elegant
+      class="col-md-3 mx-auto my-5 mt-1"
+      [project]="project"
+      *ngFor="
+        let project of portfolioProjects && portfolioProjects.length
+          ? portfolioProjects
+          : ('project-section.projects' | translate)
+      "
+    >
+    </app-card-flip-elegant>
   </div>
 </section>

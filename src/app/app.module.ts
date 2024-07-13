@@ -28,6 +28,7 @@ import { ProjectComponent } from './pages/project/project.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
+import { CardFlipElegantComponent } from './shared/components/card-flip-elegant/card-flip-elegant.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
     LoadingComponent,
     ProjectComponent,
     HomepageComponent,
+    CardFlipElegantComponent,
   ],
   imports: [
     BrowserModule,
