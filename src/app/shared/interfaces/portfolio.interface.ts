@@ -29,6 +29,7 @@ export interface PortfolioCourseInterface {
 
 export interface PortfolioProjectInterface {
   title: string;
+  subtitle: string;
   image: string;
   description: string;
   button_text: string;

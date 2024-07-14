@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import "./assets/animation/sliding-animations.css";
 @import "./assets/animation/particle-animation/style.css";
+@import "./assets/style/star-button.scss";
 
 body,
 html {
@@ -36,6 +37,6 @@ html {
   }
 }
 
-.border_round{
+.border_round {
   border-radius: 20px !important;
 }

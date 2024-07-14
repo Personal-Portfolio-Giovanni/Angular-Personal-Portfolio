@@ -98,6 +98,7 @@ export class PortfolioCourse implements PortfolioCourseInterface {
 
 export class PortfolioProject implements PortfolioProjectInterface {
   title: string;
+  subtitle: string;
   image: string;
   description: string;
   button_text: string;
@@ -105,12 +106,14 @@ export class PortfolioProject implements PortfolioProjectInterface {
 
   constructor(
     title: string,
+    subtitle: string,
     image: string,
     description: string,
     button_text: string,
     button_link: string
   ) {
     this.title = title;
+    this.subtitle = subtitle;
     this.image = image;
     this.description = description;
     this.button_text = button_text;
