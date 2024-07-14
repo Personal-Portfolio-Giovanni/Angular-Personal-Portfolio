@@ -11,10 +11,6 @@
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
 }
 
-.row {
-  --bs-gutter-x: 0px !important;
-}
-
 @media screen and (min-width: 780px) {
   .project {
     height: 100vh !important;
