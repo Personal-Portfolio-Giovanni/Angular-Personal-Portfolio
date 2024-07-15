@@ -4,32 +4,10 @@
     ><i class="fa fa-arrow-left" style="padding-right: 10px"></i>
     {{ "project-section.go_back" | translate }}</a
   >
-
-  <!-- Heading -->
-  <div>
-    <div
-      align="center"
-      class="position-relative d-flex text-center mb-5 container-title revealUp"
-      id="title_section"
-      data-inviewport=""
-    >
-      <h2
-        class="text-24 text-muted opacity-1 text-uppercase fw-600 w-100 mb-0 t"
-      >
-        Developing
-      </h2>
-      <p
-        class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0 text-center"
-        style="text-transform: uppercase"
-      >
-        {{ "project-section.title" | translate
-        }}<span
-          class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"
-        ></span>
-      </p>
-    </div>
-  </div>
-  <!-- Heading end-->
+  <app-title-section
+    [title]="'project-section.title' | translate"
+    [sub_title]="'Developing'"
+  ></app-title-section>
 
   <div align="center" class="row">
     <!--<app-card-flip

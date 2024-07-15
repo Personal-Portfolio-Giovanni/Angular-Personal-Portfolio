@@ -1,10 +1,219 @@
-<div class="footer">
-    <p class='p footer-text' id="footer-text" data-inviewport="">{{"footer.title_1" | translate}} <a
-            class="fw-lighter hidden_mobile no-link">{{"footer.title_2" |
-            translate}}</a>
-        <a class='source-code hidden_mobile' target='_blank' href='{{environment.githubProjectUrl}}'>Github
-            Source-Code</a>
-        <!--<a class='source-code hidden_desktop' target='_blank' href='{{environment.githubProjectUrl}}'>Source-Code</a>-->
-    </p>
-
-</div>
+<!--<div class="footer">
+  <p class="p footer-text" id="footer-text" data-inviewport="">
+    {{ "footer.title_1" | translate }}
+    <a class="fw-lighter hidden_mobile no-link">{{
+      "footer.title_2" | translate
+    }}</a>
+    <a
+      class="source-code hidden_mobile"
+      target="_blank"
+      href="{{ environment.githubProjectUrl }}"
+      >Github Source-Code</a
+    >
+  </p>
+</div>-->
+<footer class="footer-section">
+  <div class="container">
+    <div class="footer-cta pt-5 pb-5">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-30 text-center">
+          <div class="single-cta">
+            <div class="cta-text text-center">
+              <h4>{{ yearExperience }}+</h4>
+              <span>{{ "contact.experience_title" | translate }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="separator col-6 col-md-3 mb-30 text-center">
+          <div class="single-cta">
+            <div class="cta-text text-center">
+              <h4>
+                {{
+                  portfolio?.work_projects != undefined
+                    ? portfolio?.work_projects
+                    : ("contact.work_project" | translate)
+                }}+
+              </h4>
+              <span
+                [innerHTML]="'contact.work_project_title' | translate"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="separator separator-h col-6 col-md-3 mb-30 text-center">
+          <div class="single-cta">
+            <div class="cta-text text-center">
+              <h4>
+                {{
+                  portfolio?.personal_projects != undefined
+                    ? portfolio?.personal_projects
+                    : ("contact.project" | translate)
+                }}
+                +
+              </h4>
+              <span>{{ "contact.project_title" | translate }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="separator col-6 col-md-3 mb-30 text-center">
+          <div class="single-cta">
+            <div class="cta-text text-center">
+              <h4>
+                {{
+                  portfolio?.number_courses != undefined
+                    ? portfolio?.number_courses
+                    : ("contact.course" | translate)
+                }}
+                +
+              </h4>
+              <span>{{ "contact.course_title" | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-content pt-5 pb-3">
+      <div class="row" data-inviewport="slide-up">
+        <div class="col-xl-4 col-lg-4 mb-3 mx-auto-mobile">
+          <div class="footer-widget">
+            <div class="footer-logo">
+              <a href="index.html"
+                ><img
+                  src="../../../assets/icons/svg/rounded_white.svg"
+                  class="img-fluid"
+                  width="100"
+                  alt="logo"
+              /></a>
+            </div>
+            <div class="footer-text">
+              <p>
+                {{ "footer.title" | translate }}
+                <a
+                  class="source-code hidden_mobile"
+                  target="_blank"
+                  href="{{ environment.githubProjectUrl }}"
+                  >Github Source-Code</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+          <div class="footer-widget">
+            <div class="footer-widget-heading text-center">
+              <h3>{{ "footer.link" | translate }}</h3>
+            </div>
+            <ul class="text-center">
+              <li>
+                <a href="#homepage">{{ "footer.home" | translate }}</a>
+              </li>
+              <li>
+                <a href="#biography">{{ "footer.biography" | translate }}</a>
+              </li>
+              <li>
+                <a href="#works">{{ "footer.works" | translate }}</a>
+              </li>
+              <li>
+                <a href="#courses">{{ "footer.courses" | translate }}</a>
+              </li>
+              <li>
+                <a href="/Project">{{ "footer.projects" | translate }}</a>
+              </li>
+              <li>
+                <a href="#contact">{{ "footer.contact" | translate }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-social-icon">
+            <div class="footer-widget-heading text-center">
+              <h3>{{ "footer.follow" | translate }}</h3>
+            </div>
+            <ul
+              class="social-icons icon-circle icon-zoom list-unstyled list-inline text-center"
+            >
+              <li>
+                <a
+                  class="mx-auto"
+                  href="{{ environment.facebookUrl }}"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="mx-auto"
+                  href="https://linktr.ee/giovannilamarmora"
+                  target="_blank"
+                  ><i class="fab fa-pagelines"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="mx-auto"
+                  href="{{ environment.instagramUrl }}"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="mx-auto"
+                  href="{{ environment.linkedinUrl }}"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="mx-auto"
+                  href="{{ environment.githubUrl }}"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-8 col-lg-8 text-left text-lg-left">
+          <div class="copyright-text">
+            <p
+              id="footer-text"
+              data-inviewport=""
+              [innerHTML]="
+                ('footer.subtitle' | translate).replace('#YEAR#', year)
+              "
+            ></p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 d-none d-lg-block text-right">
+          <div
+            id="footer-text"
+            data-inviewport=""
+            class="footer-menu"
+            style="text-align: end"
+          >
+            <ul>
+              <li>
+                <a href="#homepage">{{ "footer.home" | translate }}</a>
+              </li>
+              <li>
+                <a href="/Project">{{ "footer.projects" | translate }}</a>
+              </li>
+              <li>
+                <a href="#contact">{{ "footer.contact" | translate }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
