@@ -1,36 +1,36 @@
 .h3 {
-    letter-spacing: 5px !important;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif !important;
-    color: azure;
-    text-align: center;
+  letter-spacing: 5px !important;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif !important;
+  color: azure;
+  text-align: center;
 }
 
 p,
 a {
-    color: aliceblue;
-    text-align: left;
+  color: aliceblue;
+  text-align: left;
 }
 
 .from {
-    position: absolute;
-    right: 60px;
-    font-size: small;
-    text-align: end;
-    float: right;
+  position: absolute;
+  right: 60px;
+  font-size: small;
+  text-align: end;
+  float: right;
 }
 
 .title {
-    background-color: #111 !important;
-    color: aliceblue !important;
+  background-color: #111 !important;
+  color: aliceblue !important;
 }
 
 .accordion_color {
-    background-color: #282e34 !important;
+  background-color: #282e34 !important;
 }
 
 .logo-develop {
-    height: 100px;
-    margin-left: 20px;
-    border-radius: 30px;
+  height: 100px;
+  margin-left: 20px;
+  border-radius: 30px;
 }
