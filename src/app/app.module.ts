@@ -29,6 +29,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { CardFlipElegantComponent } from './shared/components/card-flip-elegant/card-flip-elegant.component';
+import { SkillCardComponent } from './shared/components/skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CardFlipElegantComponent } from './shared/components/card-flip-elegant/
     ProjectComponent,
     HomepageComponent,
     CardFlipElegantComponent,
+    SkillCardComponent,
   ],
   imports: [
     BrowserModule,

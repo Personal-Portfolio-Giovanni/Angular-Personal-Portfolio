@@ -39,4 +39,14 @@ export class Utils {
     var db = JSON.stringify(obj);
     return JSON.parse(db);
   }
+
+  public static containsEnumValue(str: string, enumObj: any): boolean {
+    let value: any;
+    for (value of Object.values(enumObj)) {
+      if (str.toLowerCase().includes(value.toLowerCase())) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

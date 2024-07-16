@@ -2,6 +2,7 @@ export enum AccordionConstants {
   SPRING = 'spring',
   QUARKUS = 'quarkus',
   ANGULAR = 'angular',
+  ANDROID = 'android',
   JAVA = 'java ee',
   JEE = 'jee',
   HIBERNATE = 'hibernate',
@@ -17,6 +18,13 @@ export enum AccordionConstants {
   KALI = 'kali',
   CEH = 'ceh',
   COLLEGE = 'college',
+  APPLE = 'apple',
+  APPLE_IOS = 'ios',
+  CHROME = 'chrome',
+  DOCKER = 'docker',
+  NODE = 'node',
+  WINDOWS = 'windows',
+  LINUX = 'linux',
 }
 
 export enum CourseType {
