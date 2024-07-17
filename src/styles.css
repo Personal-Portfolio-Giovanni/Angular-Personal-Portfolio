@@ -40,3 +40,7 @@ html {
 .border_round {
   border-radius: 20px !important;
 }
+
+code {
+  color: #007fff;
+}

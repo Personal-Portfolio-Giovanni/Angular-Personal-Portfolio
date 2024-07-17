@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 import {
   PortfolioData,
   PortfolioProject,
@@ -24,10 +23,6 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.portfolioProjects = this.portfolioService.portfolioProjects;
-  }
-
-  public get classType(): typeof ClassType {
-    return ClassType;
   }
 
   changeLanguages(portfolio: PortfolioData) {

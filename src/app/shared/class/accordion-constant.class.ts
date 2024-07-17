@@ -3,7 +3,7 @@ export enum AccordionConstants {
   QUARKUS = 'quarkus',
   ANGULAR = 'angular',
   ANDROID = 'android',
-  JAVA = 'java ee',
+  JAVA = 'java',
   JEE = 'jee',
   HIBERNATE = 'hibernate',
   MYSQL = 'mysql',
@@ -35,15 +35,6 @@ export enum CourseType {
 export enum WorkType {
   CODE = 'Work',
   PARENTID = 'work-accordion',
-}
-
-export enum ClassType {
-  BIOGRAPHY = 'biography-title-section',
-  WORK = 'work-title-section',
-  LANGUAGES = 'languages-title-section',
-  COURSE = 'course-title-section',
-  INFO = 'info-title-section',
-  PROJECT = 'project-title-section',
 }
 
 export enum SwalIcon {

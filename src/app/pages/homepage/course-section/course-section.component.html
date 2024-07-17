@@ -1,11 +1,10 @@
 <section id="courses" class="course-section">
   <app-title-section
-    [class]="classType.COURSE"
     [title]="'course-section.title' | translate"
     [sub_title]="'Summary'"
   >
   </app-title-section>
-  <div class="accordion accordion-flush" id="{{ parentID }}">
+  <div class="mx-auto accordion accordion-flush" id="{{ parentID }}">
     <div
       *ngFor="
         let course of portfolioCourses && portfolioCourses.length

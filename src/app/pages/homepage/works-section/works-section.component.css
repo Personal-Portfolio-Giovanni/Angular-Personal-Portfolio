@@ -2,15 +2,14 @@
   color: #777;
   background-color: #111;
   text-align: center;
-  padding: 80px 100px;
+  padding: 80px 50px;
   text-align: justify;
 }
 
 #work-accordion {
   margin-top: 0px;
-  margin-left: calc(50% - (1500px / 2));
   max-width: 1500px;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 .hidden_mobile {
@@ -18,18 +17,6 @@
 }
 .hidden_desktop {
   display: none;
-}
-
-
-@media screen and (max-width: 1650px) {
-  #work-accordion {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media screen and (max-width: 1024px) {
 }
 
 @media screen and (max-width: 780px) {
@@ -40,25 +27,20 @@
     display: block;
   }
 
+  .work-section {
+    padding: 80px 15px;
+  }
+
   #work-accordion {
     margin-top: 50px;
-    margin-left: -10%;
-    margin-right: -10%;
   }
 }
 
 @media screen and (max-width: 560px) {
-  #work-accordion {
-    margin-top: 70px;
-    margin-left: -20%;
-    margin-right: -20%;
+  .work-section {
+    padding: 80px 10px;
   }
-}
-
-@media screen and (max-width: 500px) {
   #work-accordion {
     margin-top: 70px;
-    margin-left: -45%;
-    margin-right: -45%;
   }
 }
