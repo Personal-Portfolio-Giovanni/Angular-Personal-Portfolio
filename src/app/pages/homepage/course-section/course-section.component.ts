@@ -1,8 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
-import {
-  ClassType,
-  CourseType,
-} from 'src/app/shared/class/accordion-constant.class';
+import { CourseType } from 'src/app/shared/class/accordion-constant.class';
 import { PortfolioCourse } from 'src/app/shared/class/portfolio.class';
 
 @Component({
@@ -14,8 +11,4 @@ export class CourseSectionComponent {
   @Input('portfolioCourses') portfolioCourses?: Array<PortfolioCourse>;
   @Output('parentID') parentID: string = CourseType.PARENTID;
   @Output('code') code: string = CourseType.CODE;
-
-  public get classType(): typeof ClassType {
-    return ClassType;
-  }
 }

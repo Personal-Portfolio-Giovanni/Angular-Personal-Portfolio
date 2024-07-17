@@ -34,3 +34,12 @@ a {
   margin-left: 20px;
   border-radius: 30px;
 }
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: transparent !important;
+  outline: 0 !important;
+  /* I changed the color on this line */
+  /* If you do not want any color, just delete */
+  box-shadow: 0 0 0 0.25rem rgba(105, 105, 105, 0.1);
+}

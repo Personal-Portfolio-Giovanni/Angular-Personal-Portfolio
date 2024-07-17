@@ -1,9 +1,12 @@
 <div class="boxer-bio">
-    <!-- Heading -->
-    <app-title-section [class]="classType.INFO" [title]="'info.title' | translate" [sub_title]="'Info Point'">
-    </app-title-section>
-    <!-- Heading end-->
-    <h3 class="info">
-        {{"info.text" | translate}}
-    </h3>
+  <!-- Heading -->
+  <app-title-section
+    [title]="'info.title' | translate"
+    [sub_title]="'Info Point'"
+  >
+  </app-title-section>
+  <!-- Heading end-->
+  <h3 class="info">
+    {{ "info.text" | translate }}
+  </h3>
 </div>

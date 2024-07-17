@@ -1,5 +1,4 @@
 import { Component, Output } from '@angular/core';
-import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 
 @Component({
   selector: 'app-personal-project',
@@ -8,8 +7,4 @@ import { ClassType } from 'src/app/shared/class/accordion-constant.class';
 })
 export class PersonalProjectComponent {
   @Output('project') project: any;
-
-  public get classType(): typeof ClassType {
-    return ClassType;
-  }
 }
