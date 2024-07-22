@@ -4,9 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ProfileComponent } from './pages/homepage/profile/profile.component';
+import { ProfileComponent } from './pages/homepage/profiles/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/homepage/description/description.component';
@@ -30,6 +34,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { CardFlipElegantComponent } from './shared/components/card-flip-elegant/card-flip-elegant.component';
 import { SkillCardComponent } from './shared/components/skill-card/skill-card.component';
+import { ProfileMinimalComponent } from './pages/homepage/profiles/profile-minimal/profile-minimal.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +58,7 @@ import { SkillCardComponent } from './shared/components/skill-card/skill-card.co
     HomepageComponent,
     CardFlipElegantComponent,
     SkillCardComponent,
+    ProfileMinimalComponent,
   ],
   imports: [
     BrowserModule,
