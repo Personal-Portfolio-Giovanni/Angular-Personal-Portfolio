@@ -1,0 +1,106 @@
+<div id="homepage" class="bgimg-1" id="particles"></div>
+<div class="caption">
+  <app-header (changeLanguages)="changeLanguages($event)"></app-header>
+  <div class="image-cropper shape">
+    <img
+      src="{{
+        portfolio?.profilePhoto_url != undefined
+          ? portfolio?.profilePhoto_url
+          : environment.profileImageUrl
+      }}"
+      class="profile"
+      alt="Giovanni Lamarmora"
+      name="Giovanni Lamarmora"
+    />
+  </div>
+  <div class="title" data-inviewport="slide-up">
+    <h3 class="h3 revealUp console-container">
+      {{ "profile.description.pt1" | translate }}
+      <span style="color: #007fff">{{ fullName }}</span
+      >,<br />
+      <!--cornflowerblue-->
+      <span style="color: cornflowerblue" id="text"></span>
+      <div class="console-underscore" id="console">
+        <!--&#95;-->
+      </div>
+      {{ "profile.description.pt2" | translate }}
+    </h3>
+  </div>
+  <div class="scroll">
+    <div class="icon-animation">
+      <a pageScroll href="#go-to-biography"
+        ><i class="fa-solid fa-arrow-down-long"></i
+      ></a>
+    </div>
+  </div>
+  <!--<div class="contact hidden_mobile">
+    <a href="mailto:{{email}}?subject=[Contact Me] Portfolio">
+      E-Mail: {{email}}
+    </a>
+  </div>-->
+  <p class="follow" data-inviewport="slide-right">
+    {{ "profile.follow" | translate }}
+    <a href="{{ environment.facebookUrl }}" target="_blank"
+      ><img
+        src="{{ environment.baseUrl }}assets/img/social/facebook.webp"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+    <a href="{{ environment.linkedinUrl }}" target="_blank"
+      ><img
+        src="{{ environment.baseUrl }}assets/img/social/linkedin.webp"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+    <a href="{{ environment.instagramUrl }}" target="_blank"
+      ><img
+        src="{{ environment.baseUrl }}assets/img/social/ig.webp"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+    <a href="{{ environment.githubUrl }}" target="_blank"
+      ><img
+        src="{{ environment.baseUrl }}assets/img/social/git.webp"
+        class="logo"
+        alt=""
+        srcset=""
+    /></a>
+  </p>
+  <ul class="intro-social" data-inviewport="slide-up">
+    <li>
+      <a href="{{ environment.facebookUrl }}" target="_blank"
+        ><i class="fab fa-facebook" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a href="https://linktr.ee/giovannilamarmora" target="_blank"
+        ><i class="fab fa-solid fa-link" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a href="{{ environment.instagramUrl }}" target="_blank"
+        ><i class="fab fa-instagram" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a href="{{ environment.linkedinUrl }}" target="_blank"
+        ><i class="fab fa-linkedin" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a href="{{ environment.githubUrl }}" target="_blank"
+        ><i class="fab fa-github" aria-hidden="true"></i
+      ></a>
+    </li>
+  </ul>
+  <!-- end intro social -->
+  <div class="intro-scroll">
+    <a href="#contact" class="scroll-link smoothscroll">
+      {{ "profile.contact" | translate }}
+    </a>
+  </div>
+  <!-- end intro scroll -->
+</div>

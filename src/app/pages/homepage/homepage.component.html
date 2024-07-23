@@ -1,7 +1,11 @@
-<app-profile
+<!--<app-profile
   (changeLanguagesSection)="changeLanguages($event)"
   [portfolio]="portfolio"
-></app-profile>
+></app-profile>-->
+<app-profile-minimal
+  (changeLanguagesSection)="changeLanguages($event)"
+  [portfolio]="portfolio"
+></app-profile-minimal>
 <app-description [portfolio]="portfolio"></app-description>
 <app-works-section [portfolioWorks]="portfolio?.works"></app-works-section>
 <app-languages></app-languages>
