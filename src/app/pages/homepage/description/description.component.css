@@ -1,3 +1,14 @@
+/*.boxer-bio {
+  background: linear-gradient(#1f2429, #0f1a27);*/
+/*background-image: url("../../../../assets/img/wallpaper.webp");
+  background-size: cover;
+  opacity: 0.1;*/
+/*text-align: center;
+  padding: 140px 100px 80px 100px;
+  text-align: justify;
+  height: calc(100%);
+}*/
+
 .boxer-bio {
   color: #777;
   background-color: #282e34;
@@ -56,7 +67,7 @@
   margin-left: calc(50% - (1500px / 2));
   max-width: 1500px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 p,
@@ -85,4 +96,20 @@ a {
     width: fit-content;
     margin-left: calc(50% - (236px / 2));
   }
+}
+
+/** Image */
+.image-cropper {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+  top: calc(50% - 250px);
+  left: 15%;
+}
+
+.profile {
+  width: 400px;
+  display: inline;
+  margin: 0% auto;
 }
