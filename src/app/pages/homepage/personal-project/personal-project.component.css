@@ -2,10 +2,16 @@
   color: #777;
   background-color: #282e34;
   text-align: center;
-  padding: 80px 100px;
+  padding: 140px 100px 100px 100px;
   text-align: justify;
   background-image: url("../../../../assets/img/project/personal-project.webp");
   background-position: center center;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 780px) {
+  .project-section {
+    padding: 80px 100px;
+  }
 }

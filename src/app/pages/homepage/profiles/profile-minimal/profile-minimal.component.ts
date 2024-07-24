@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
+import { Utils } from 'src/app/shared/services/config/utils.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -29,8 +30,39 @@ export class ProfileMinimalComponent implements OnInit {
     this.renderText();
   }
 
+  scrollTo(id: string) {
+    Utils.scrollTo(id);
+  }
+
   changeLanguages(portfolio: PortfolioData) {
     this.changeLanguagesSection.emit(portfolio);
+    this.title =
+      localStorage.getItem(this.ATTR_LANGUAGE) == 'it-IT'
+        ? 'Lavoro con '
+        : 'I work with ';
+    //this.createTextElement();
+    //this.renderText();
+  }
+
+  createTextElement(): void {
+    // Rimuovi l'elemento esistente se presente
+    let p = document.getElementById('text-animate');
+    if (p) {
+      p.remove();
+    }
+
+    // Crea un nuovo elemento <p> e aggiungilo al documento
+    p = document.createElement('p');
+    p.id = 'text-animate';
+    p.style.fontSize = '24';
+    p.style.display = 'block';
+    p.style.position = 'relative';
+    p.style.width = 'max-content';
+    p.style.marginLeft = 'calc(50% - 170px)';
+    p.style.color = 'aliceblue';
+    p.style.textAlign = 'left';
+    let sub = document.getElementById('subtitle');
+    sub?.appendChild(p);
   }
 
   renderText() {

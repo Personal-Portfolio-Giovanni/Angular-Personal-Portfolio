@@ -105,22 +105,34 @@
             </div>
             <ul class="text-center">
               <li>
-                <a href="#homepage">{{ "footer.home" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('homepage')">{{
+                  "footer.home" | translate
+                }}</a>
               </li>
               <li>
-                <a href="#biography">{{ "footer.biography" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('go-to-biograpy')">{{
+                  "footer.biography" | translate
+                }}</a>
               </li>
               <li>
-                <a href="#works">{{ "footer.works" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('works')">{{
+                  "footer.works" | translate
+                }}</a>
               </li>
               <li>
-                <a href="#courses">{{ "footer.courses" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('courses')">{{
+                  "footer.courses" | translate
+                }}</a>
               </li>
               <li>
-                <a href="/Project">{{ "footer.projects" | translate }}</a>
+                <a class="clickable" href="/Project">{{
+                  "footer.projects" | translate
+                }}</a>
               </li>
               <li>
-                <a href="#contact">{{ "footer.contact" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('contact')">{{
+                  "footer.contact" | translate
+                }}</a>
               </li>
             </ul>
           </div>
@@ -202,13 +214,17 @@
           >
             <ul>
               <li>
-                <a href="#homepage">{{ "footer.home" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('homepage')">{{
+                  "footer.home" | translate
+                }}</a>
               </li>
               <li>
                 <a href="/Project">{{ "footer.projects" | translate }}</a>
               </li>
               <li>
-                <a href="#contact">{{ "footer.contact" | translate }}</a>
+                <a class="clickable" (click)="scrollTo('contact')">{{
+                  "footer.contact" | translate
+                }}</a>
               </li>
             </ul>
           </div>

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 import { LOG } from 'src/app/shared/services/config/logger.service';
+import { Utils } from 'src/app/shared/services/config/utils.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -42,6 +43,10 @@ export class FooterComponent implements OnInit {
     this.yearExperience = this.calculateYearsElapsed();
   }
   environment = environment;
+
+  scrollTo(id: string) {
+    Utils.scrollTo(id);
+  }
 
   calculateYearsElapsed(): number {
     // Reference date (June 11, 2021)

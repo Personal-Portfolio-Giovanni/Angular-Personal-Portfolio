@@ -2,7 +2,7 @@
   color: #777;
   background-color: #282e34;
   text-align: center;
-  padding: 80px 100px;
+  padding: 140px 100px 100px 100px;
   text-align: justify;
 }
 
@@ -73,6 +73,10 @@ a {
   .container-title {
     width: fit-content;
     margin-left: calc(50% - (474px / 2));
+  }
+
+  .boxer-bio {
+    padding: 80px 100px;
   }
 }
 
