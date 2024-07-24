@@ -1,5 +1,12 @@
 #contact {
   /*height: 100vh;*/
+  padding: 140px 100px 100px 100px;
+}
+
+@media screen and (max-width: 780px) {
+  #contact {
+    padding: 80px 100px;
+  }
 }
 
 .section {

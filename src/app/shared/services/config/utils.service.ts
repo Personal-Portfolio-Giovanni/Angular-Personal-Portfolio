@@ -49,4 +49,9 @@ export class Utils {
     }
     return false;
   }
+
+  public static scrollTo(id: string) {
+    const element = document.querySelector('#' + id);
+    element!.scrollIntoView();
+  }
 }

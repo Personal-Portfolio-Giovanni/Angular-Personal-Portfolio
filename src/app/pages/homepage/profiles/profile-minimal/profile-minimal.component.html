@@ -1,19 +1,18 @@
 <app-header (changeLanguages)="changeLanguages($event)"></app-header>
-<section id="profile-minimal">
+<section id="homepage" class="profile-minimal">
   <div class="container" data-inviewport="slide-up">
     <div class="title">{{ fullName }}</div>
-    <div class="subtitle">
+    <div id="subtitle" class="subtitle">
       <p id="text-animate"></p>
     </div>
   </div>
   <div class="minimal">
-    <div
-      class="scroll clickable"
-      style="width: 20px"
-      routerLink="#go-to-biography"
-    >
-      <div class="icon-animation">
-        <a pageScroll href="#go-to-biography" style="height: max-content"
+    <div class="scroll clickable" style="width: 20px">
+      <div class="icon-animation clickable">
+        <a
+          pageScroll
+          (click)="scrollTo('go-to-biography')"
+          style="height: max-content"
           ><i class="fa-solid fa-arrow-down-long"></i
         ></a>
       </div>
@@ -83,7 +82,10 @@
     </ul>
     <!-- end intro social -->
     <div class="intro-scroll">
-      <a href="#contact" class="scroll-link smoothscroll">
+      <a
+        (click)="scrollTo('contact')"
+        class="scroll-link clickable smoothscroll"
+      >
         {{ "profile.contact" | translate }}
       </a>
     </div>
