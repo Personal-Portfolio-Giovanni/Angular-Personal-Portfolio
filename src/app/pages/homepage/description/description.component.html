@@ -4,13 +4,14 @@
     [sub_title]="'About Me'"
   >
   </app-title-section>
-  <p class="biografia revealUp">
-    {{
+  <div
+    class="biografia revealUp"
+    [innerHTML]="
       portfolio?.biography != undefined
         ? portfolio?.biography
-        : ("biography.text" | translate)
-    }}
-  </p>
+        : ('biography.text' | translate)
+    "
+  ></div>
   <!--<div class="row mx-auto biografia">
     <div class="col-12 col-md-4">
       <div class="image-cropper shape mx-auto">
