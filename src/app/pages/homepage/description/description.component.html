@@ -4,16 +4,16 @@
     [sub_title]="'About Me'"
   >
   </app-title-section>
-  <div
+  <!--<div
     class="biografia revealUp"
     [innerHTML]="
       portfolio?.biography != undefined
         ? portfolio?.biography
         : ('biography.text' | translate)
     "
-  ></div>
-  <!--<div class="row mx-auto biografia">
-    <div class="col-12 col-md-4">
+  ></div>-->
+  <div class="row mx-auto biografia">
+    <div class="col-12 col-lg-4 mb-5" style="align-content: center">
       <div class="image-cropper shape mx-auto">
         <img
           src="{{
@@ -27,14 +27,16 @@
         />
       </div>
     </div>
-    <div class="col-12 col-md-7">
-      <p class="mx-auto text-center revealUp">
-        {{
+    <div class="col-12 col-lg-8" style="align-content: center">
+      <div
+        style="text-align: justify !important"
+        class="mx-auto text-center revealUp"
+        [innerHTML]="
           portfolio?.biography != undefined
             ? portfolio?.biography
-            : ("biography.text" | translate)
-        }}
-      </p>
+            : ('biography.text' | translate)
+        "
+      ></div>
     </div>
-  </div>-->
+  </div>
 </div>

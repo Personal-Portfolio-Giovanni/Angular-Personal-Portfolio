@@ -1,21 +1,21 @@
-/*.boxer-bio {
-  background: linear-gradient(#1f2429, #0f1a27);*/
-/*background-image: url("../../../../assets/img/wallpaper.webp");
+.boxer-bio {
+  background: linear-gradient(#1f2429, #0f1a27);
+  /*background-image: url("../../../../assets/img/wallpaper.webp");
   background-size: cover;
   opacity: 0.1;*/
-/*text-align: center;
+  text-align: center;
   padding: 140px 100px 80px 100px;
   text-align: justify;
-  height: calc(100%);
-}*/
+  min-height: calc(100%);
+}
 
-.boxer-bio {
+/*.boxer-bio {
   color: #777;
   background-color: #282e34;
   text-align: center;
   padding: 140px 100px 100px 100px;
   text-align: justify;
-}
+}*/
 
 /* Title Section Description */
 .text-9 {
@@ -84,6 +84,12 @@ a {
   }
 }
 
+@media screen and (max-width: 986px) {
+  .biografia {
+    padding-top: 0px;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .biografia {
     font-size: small;
@@ -91,7 +97,11 @@ a {
     margin-right: -50px;
   }
   .boxer-bio {
-    padding: 80px 100px;
+    padding: 80px 25px 80px 25px;
+  }
+
+  .image-cropper {
+    width: 80%;
   }
 }
 
@@ -104,8 +114,8 @@ a {
 
 /** Image */
 .image-cropper {
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
   overflow: hidden;
   border-radius: 50%;
   top: calc(50% - 250px);
@@ -113,7 +123,47 @@ a {
 }
 
 .profile {
-  width: 400px;
+  max-width: -webkit-fill-available;
   display: inline;
   margin: 0% auto;
+  background-size: cover;
+}
+
+/* Image Border Animation */
+:root {
+  --background: #005;
+  --primary: #88d5bf;
+  --secondary: #5d6bf8;
+  --third: #e27fcb;
+}
+
+.shape {
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      var(--primary) 0%,
+      var(--secondary) 100%
+    );
+  }
 }
