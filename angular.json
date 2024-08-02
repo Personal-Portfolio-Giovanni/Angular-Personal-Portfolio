@@ -82,10 +82,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Angular-Personal-Portfolio:build:production"
+              "buildTarget": "Angular-Personal-Portfolio:build:production"
             },
             "development": {
-              "browserTarget": "Angular-Personal-Portfolio:build:development"
+              "buildTarget": "Angular-Personal-Portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
