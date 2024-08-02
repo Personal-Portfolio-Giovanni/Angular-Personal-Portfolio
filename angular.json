@@ -18,7 +18,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/angular-personal-portfolio",
             "index": "src/index.html",
@@ -40,7 +40,10 @@
               "src/assets/animation/particle-animation/script.js"
             ],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "customWebpackConfig": {
+              "path": "src/custom-webpack.config.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -76,13 +79,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Angular-Personal-Portfolio:build:production"
+              "buildTarget": "Angular-Personal-Portfolio:build:production"
             },
             "development": {
-              "browserTarget": "Angular-Personal-Portfolio:build:development"
+              "buildTarget": "Angular-Personal-Portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular-Personal-Portfolio:build"
+            "buildTarget": "Angular-Personal-Portfolio:build"
           }
         },
         "test": {
@@ -111,6 +114,5 @@
         }
       }
     }
-  },
-  "defaultProject": "Angular-Personal-Portfolio"
+  }
 }

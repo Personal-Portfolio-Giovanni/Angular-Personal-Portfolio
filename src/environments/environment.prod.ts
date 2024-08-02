@@ -1,4 +1,5 @@
-const baseUrlApp: string = 'https://giovannilamarmora.github.io/';
+const baseUrlApp: string =
+  process.env['BASE_URL'] || 'https://giovannilamarmora.github.io/';
 
 export const environment = {
   envType: 'PROD',
@@ -14,6 +15,7 @@ export const environment = {
   /* Email Sender */
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',
   serverEmailSenderUrl:
+    process.env['EMAIL_SENDER_URL'] ||
     'https://email-sender.giovannilamarmora.com/v1/send-email',
   templatePath: baseUrlApp + 'assets/template/email-template.json',
 
@@ -25,11 +27,12 @@ export const environment = {
   githubProjectUrl: 'https://github.com/giovannilamarmoraproject',
 
   portfolioData:
+    process.env['PORTFOLIO_DATA_URL'] ||
     'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
 
   // Cache
-  cacheEnable: false,
-  cacheTimeout: 180000,
+  cacheEnable: process.env['CACHE_ENABLE'] || false,
+  cacheTimeout: 3600 /** Un'Ora */,
 
   /*
    * Animation Variables
