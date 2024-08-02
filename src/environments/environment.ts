@@ -29,7 +29,7 @@ export const environment = {
 
   // Cache
   cacheEnable: false,
-  cacheTimeout: 180000,
+  cacheTimeout: 3600,
 
   /*
    * Animation Variables
