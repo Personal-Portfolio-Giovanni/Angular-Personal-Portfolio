@@ -28,7 +28,7 @@ export const environment = {
   portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
 
   // Cache
-  cacheEnable: true,
+  cacheEnable: false,
   cacheTimeout: 3600000,
 
   /*
