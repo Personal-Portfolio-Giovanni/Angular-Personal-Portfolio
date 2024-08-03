@@ -76,7 +76,7 @@ export class CacheService {
     ) {
       LOG.info('Caching data for locale ' + locale, 'Cache Service');
       portfolio.cached = true;
-      this.portfolioCache = Utils.copyObject(portfolio);
+      this.portfolioCache.set(locale, Utils.copyObject(portfolio));
       localStorage.setItem(
         PortfolioConstant.LAST_UPDATE + '_' + locale,
         new Date().toISOString()
