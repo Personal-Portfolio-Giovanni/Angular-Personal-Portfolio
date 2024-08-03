@@ -28,8 +28,8 @@ export const environment = {
   portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
 
   // Cache
-  cacheEnable: false,
-  cacheTimeout: 3600,
+  cacheEnable: true,
+  cacheTimeout: 3600000,
 
   /*
    * Animation Variables

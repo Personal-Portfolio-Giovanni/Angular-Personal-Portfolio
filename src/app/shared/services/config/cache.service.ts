@@ -50,16 +50,30 @@ export class CacheService {
           : false;
 
       if (isUpdate) {
-        return JSON.parse(
-          localStorage.getItem(PortfolioConstant.PORTFOLIO_DATA + '_' + locale)!
-        );
+        const response = {
+          data: JSON.parse(
+            localStorage.getItem(
+              PortfolioConstant.PORTFOLIO_DATA + '_' + locale
+            )!
+          ),
+        };
+        if (Utils.isNullOrEmpty(response.data)) return null;
+        return response;
       }
     }
-    return data;
+
+    const response = {
+      data: data,
+    };
+    return response;
   }
 
   cachePortfolioData(portfolio: PortfolioData, locale: string) {
-    if (environment.cacheEnable && !portfolio.cached) {
+    if (
+      environment.cacheEnable &&
+      !Utils.isNullOrEmpty(portfolio) &&
+      !portfolio.cached
+    ) {
       LOG.info('Caching data for locale ' + locale, 'Cache Service');
       portfolio.cached = true;
       this.portfolioCache = Utils.copyObject(portfolio);

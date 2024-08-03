@@ -32,7 +32,7 @@ export const environment = {
 
   // Cache
   cacheEnable: process.env['CACHE_ENABLE'] || false,
-  cacheTimeout: 3600 /** Un'Ora */,
+  cacheTimeout: 3600000 /** Un'Ora */,
 
   /*
    * Animation Variables

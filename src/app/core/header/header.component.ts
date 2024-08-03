@@ -1,5 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import {
+  AfterViewInit,
+  ChangeDetectorRef,
   Component,
   EventEmitter,
   HostListener,
@@ -10,7 +12,7 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../environments/environment';
 import { PortfolioService } from 'src/app/shared/services/api/portfolio.service';
-import { Subscription } from 'rxjs';
+import { Subscription, timer } from 'rxjs';
 import { LOG } from 'src/app/shared/services/config/logger.service';
 import { Locale, PortfolioData } from 'src/app/shared/class/portfolio.class';
 
@@ -59,7 +61,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.setLanguages();
+    Promise.resolve().then(() => this.setLanguages());
   }
 
   setLanguages() {
