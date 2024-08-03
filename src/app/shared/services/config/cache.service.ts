@@ -42,9 +42,10 @@ export class CacheService {
       );
       let today = new Date();
 
+      // Timer di 24 Ore
       let isUpdate =
         new Date(lastUpdate) != undefined
-          ? new Date(lastUpdate)?.getMilliseconds()! + 604800000 >
+          ? new Date(lastUpdate)?.getMilliseconds()! + 86400000 >
             today.getMilliseconds()
           : false;
 
