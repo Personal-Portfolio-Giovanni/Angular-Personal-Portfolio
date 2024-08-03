@@ -70,7 +70,7 @@ export class CacheService {
 
   cachePortfolioData(portfolio: PortfolioData, locale: string) {
     if (
-      environment.cacheEnable &&
+      this.isCacheEnabled() &&
       !Utils.isNullOrEmpty(portfolio) &&
       !portfolio.cached
     ) {
@@ -85,6 +85,14 @@ export class CacheService {
         PortfolioConstant.PORTFOLIO_DATA + '_' + locale,
         JSON.stringify(portfolio)
       );
+    }
+  }
+
+  isCacheEnabled() {
+    try {
+      return Boolean(JSON.parse(environment.cacheEnable.toString()));
+    } catch (e: any) {
+      return false;
     }
   }
 }
