@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { LOG } from './shared/services/config/logger.service';
 
 declare let gtag: Function;
 
@@ -13,6 +14,7 @@ export class AppComponent {
 
   constructor(private readonly updates: SwUpdate) {
     this.updates.versionUpdates.subscribe((event) => {
+      LOG.info('Updating app', 'AppComponent');
       this.doAppUpdate();
     });
   }
