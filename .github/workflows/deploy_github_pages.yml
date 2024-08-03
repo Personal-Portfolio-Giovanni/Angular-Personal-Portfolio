@@ -50,7 +50,7 @@ jobs:
           npm install -g @angular/cli
           npm install --force
       - name: 📂 Build
-        run: ng build --prod --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
+        run: ng build --configuration=production --base-href "https://${{ secrets.DESTINATION_REPOSITORY_PROFILE }}"
 
   docker-login:
     name: 🐳 Docker Login
