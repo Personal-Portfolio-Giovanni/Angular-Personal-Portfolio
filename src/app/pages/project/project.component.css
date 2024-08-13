@@ -31,13 +31,13 @@ app-header {
   width: 100%;
   /* Full width */
   z-index: 1;
-  [data-inviewport="slide-left"] {
+  /*[data-inviewport="slide-left"] {
     visibility: visible !important;
   }
 
   [data-inviewport="slide-right"] {
     visibility: visible !important;
-  }
+  }*/
 }
 
 .link {
@@ -62,8 +62,8 @@ app-header {
   }
 }
 
-app-title-section {
+/*app-title-section {
   [data-inviewport="slide-up"] {
     visibility: visible !important;
   }
-}
+}*/
