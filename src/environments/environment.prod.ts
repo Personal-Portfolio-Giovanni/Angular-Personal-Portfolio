@@ -2,6 +2,7 @@ const baseUrlApp: string =
   process.env['BASE_URL'] || 'https://giovannilamarmora.github.io/';
 
 export const environment = {
+  version: require('../../package.json').version,
   envType: 'PROD',
   production: true,
   baseUrl: baseUrlApp,

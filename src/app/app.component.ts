@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { LOG } from './shared/services/config/logger.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,13 @@ import { LOG } from './shared/services/config/logger.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  environment = environment;
   title = 'Personal-Portfolio';
 
   private isCheckingForUpdate = false;
 
   constructor(private readonly updates: SwUpdate) {
+    LOG.info(`V${environment.version}`, "App Version");
     this.updates.versionUpdates.subscribe((event) => {
       if (event.type === 'VERSION_READY' && !this.isCheckingForUpdate) {
         this.isCheckingForUpdate = true;
