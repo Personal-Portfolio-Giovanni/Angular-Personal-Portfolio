@@ -22,6 +22,9 @@ export class ProjectComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.querySelectorAll('[data-inviewport]').forEach(element => {
+      element.removeAttribute('data-inviewport');
+    });
     this.portfolioProjects = this.portfolioService.portfolioProjects;
   }
 
