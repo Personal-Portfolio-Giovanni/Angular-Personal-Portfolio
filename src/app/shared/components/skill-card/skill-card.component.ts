@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AccordionConstants } from '../../class/accordion-constant.class';
 import { environment } from 'src/environments/environment';
 import { Utils } from '../../services/config/utils.service';

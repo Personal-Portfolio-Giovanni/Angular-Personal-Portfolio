@@ -1,4 +1,5 @@
 import { Component, Output } from '@angular/core';
+import { Utils } from 'src/app/shared/services/config/utils.service';
 
 @Component({
   selector: 'app-personal-project',
@@ -7,4 +8,8 @@ import { Component, Output } from '@angular/core';
 })
 export class PersonalProjectComponent {
   @Output('project') project: any;
+
+  scrollTo(id: string) {
+    Utils.scrollTo(id);
+  }
 }

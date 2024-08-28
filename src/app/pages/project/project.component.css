@@ -60,7 +60,8 @@ app-header {
 /* Change Design For Responsive Mobile Content */
 @media screen and (max-width: 780px) {
   .link {
-    display: none;
+    letter-spacing: 1px;
+    left: -70px;
   }
 }
 

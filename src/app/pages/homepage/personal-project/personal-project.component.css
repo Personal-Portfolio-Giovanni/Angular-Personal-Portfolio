@@ -8,6 +8,11 @@
   background-position: center center;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
+  min-height: calc(100%);
+}
+
+.project-logo{
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 780px) {

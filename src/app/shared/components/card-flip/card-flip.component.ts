@@ -9,6 +9,9 @@ import { Utils } from '../../services/config/utils.service';
   styleUrls: ['./card-flip.component.css'],
 })
 export class CardFlipComponent implements OnInit {
+  @Input("title") title?: string;
+  @Input("background") background?: string;
+
   @Input('project') project?: PortfolioProject;
   environment = environment;
   style: string = "background-image: url('#URL'); align-items: cover;";
@@ -16,6 +19,7 @@ export class CardFlipComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    console.log(this.project)
     if (
       (!Utils.isNullOrEmpty(this.project) &&
         !Utils.isNullOrEmpty(this.project?.image) &&
