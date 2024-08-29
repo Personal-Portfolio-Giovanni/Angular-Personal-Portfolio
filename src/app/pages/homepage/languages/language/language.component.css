@@ -13,6 +13,7 @@
 
 .progress {
   border-radius: 10px;
+  height: 10px;
 }
 
 .row {
@@ -53,12 +54,4 @@ p,
 a {
   color: aliceblue;
   text-align: left;
-}
-
-@media screen and (max-width: 500px) {
-  .col {
-    width: 100% !important;
-    margin-left: -10px;
-    margin-right: 150px;
-  }
 }

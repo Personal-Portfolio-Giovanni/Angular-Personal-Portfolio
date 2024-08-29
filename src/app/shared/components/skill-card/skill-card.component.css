@@ -349,66 +349,61 @@ Effetto Nuovletta
 
 
 /** Mobile Version */
-@media screen and (max-width: 767.5px) {
-  /* Aggiunge spazio tra gli elementi, ma non all'ultima riga */
-  .slider-nav-item:not(:nth-last-child(-n+7)) {
-    margin-bottom: 10px !important;
-  }
-
-  .slider-nav-item:nth-child(7n)::after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 584px) {
-  /* Aggiunge spazio tra gli elementi, ma non all'ultima riga */
-  .slider-nav-item:not(:nth-last-child(-n+6)) {
-    margin-bottom: 10px !important;
-  }
-
-  .slider-nav-item:nth-child(6n)::after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 504px) {
-  /* Aggiunge spazio tra gli elementi, ma non all'ultima riga */
-  .slider-nav-item:not(:nth-last-child(-n+5)) {
-    margin-bottom: 10px !important;
-  }
-
-  .slider-nav-item:nth-child(5n)::after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 434px) {
-  /* Aggiunge spazio tra gli elementi, ma non all'ultima riga */
-  .slider-nav-item:not(:nth-last-child(-n+4)) {
-    margin-bottom: 10px !important;
-  }
-
-  .slider-nav-item:nth-child(4n)::after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 364px) {
-  /* Aggiunge spazio tra gli elementi, ma non all'ultima riga */
-  .slider-nav-item:not(:nth-last-child(-n+3)) {
-    margin-bottom: 10px !important;
-  }
-
-  .slider-nav-item:nth-child(3n)::after {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 300px) {
   .process-scetion .slider-nav-item {
     height: 30px;
     width: 30px;
     margin: 15px 10px;
     line-height: 28px;
+  }
+}
+
+/* Schermi da 0 a 364px */
+@media screen and (max-width: 364px) {
+  .slider-nav-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 10px !important;
+  }
+  .slider-nav-item:nth-child(3n)::after {
+    display: none;
+  }
+}
+
+/* Schermi da 365px a 434px */
+@media screen and (min-width: 365px) and (max-width: 434px) {
+  .slider-nav-item:not(:nth-last-child(-n+4)) {
+    margin-bottom: 10px !important;
+  }
+  .slider-nav-item:nth-child(4n)::after {
+    display: none;
+  }
+}
+
+/* Schermi da 435px a 504px */
+@media screen and (min-width: 435px) and (max-width: 504px) {
+  .slider-nav-item:not(:nth-last-child(-n+5)) {
+    margin-bottom: 10px !important;
+  }
+  .slider-nav-item:nth-child(5n)::after {
+    display: none;
+  }
+}
+
+/* Schermi da 505px a 584px */
+@media screen and (min-width: 505px) and (max-width: 584px) {
+  .slider-nav-item:not(:nth-last-child(-n+6)) {
+    margin-bottom: 10px !important;
+  }
+  .slider-nav-item:nth-child(6n)::after {
+    display: none;
+  }
+}
+
+/* Schermi da 585px a 767.5px */
+@media screen and (min-width: 585px) and (max-width: 767.5px) {
+  .slider-nav-item:not(:nth-last-child(-n+7)) {
+    margin-bottom: 10px !important;
+  }
+  .slider-nav-item:nth-child(7n)::after {
+    display: none;
   }
 }

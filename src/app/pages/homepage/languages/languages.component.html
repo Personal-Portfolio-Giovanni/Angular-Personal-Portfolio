@@ -5,23 +5,24 @@
   >
   </app-title-section>
   <!-- My Skills -->
-  <div class="row">
-    <!--@for (language of 'languages.data' | translate; track $index) {
+  <!--<div class="row">
+    @for (language of 'languages.data' | translate; track $index) {
     <div class="col-md-4">
       <app-card-flip
-        [title]="language.name"
+        [title]="language.name.toUpperCase()"
         [background]="language.image"
+        [flags]="language.flags"
+        [description]="language.description"
+        [language]="language"
       ></app-card-flip>
     </div>
-  }-->
-  </div>
+  }
+  </div>-->
   <div class="row container-language">
-    <div class="inline boxer">
-      <app-language
-        [language]="language"
-        *ngFor="let language of 'languages.data' | translate"
-      >
-      </app-language>
+    @for (language of 'languages.data' | translate; track $index) {
+    <div class="col-md-4">
+      <app-language [language]="language"> </app-language>
     </div>
+    }
   </div>
 </div>

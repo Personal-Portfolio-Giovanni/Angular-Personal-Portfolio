@@ -1,28 +1,30 @@
 <section class="project-section">
-  <div align="center">
-    <a class="clickable project-logo" (click)="scrollTo('homepage')"
-      ><img
-        src="../../../assets/icons/svg/rounded_white.svg"
-        class="img-fluid"
-        width="100"
-        alt="logo"
-    /></a>
-  </div>
-  <app-title-section
-    [title]="'project-section.title' | translate"
-    [sub_title]="'Developing'"
-  ></app-title-section>
-
-  <div class="row">
-    <!--<app-card-flip [project]="project" *ngFor="let project of 'project-section.projects' | translate">
-        </app-card-flip>-->
+  <div class="project-center">
     <div align="center">
-      <a
-        routerLink="Project"
-        class="btn btn-primary rounded-pill"
-        style="width: 180px; height: 50px; padding-top: 12px"
-        >{{ "project-section.btn_project" | translate }}</a
-      >
+      <a class="clickable" (click)="scrollTo('homepage')"
+        ><img
+          src="../../../assets/icons/svg/rounded_white.svg"
+          class="img-fluid"
+          width="100"
+          alt="logo"
+      /></a>
+    </div>
+    <app-title-section
+      [title]="'project-section.title' | translate"
+      [sub_title]="'Developing'"
+    ></app-title-section>
+
+    <div class="row">
+      <!--<app-card-flip [project]="project" *ngFor="let project of 'project-section.projects' | translate">
+        </app-card-flip>-->
+      <div align="center">
+        <a
+          routerLink="Project"
+          class="btn btn-primary rounded-pill"
+          style="width: 180px; height: 50px; padding-top: 12px"
+          >{{ "project-section.btn_project" | translate }}</a
+        >
+      </div>
     </div>
   </div>
 </section>

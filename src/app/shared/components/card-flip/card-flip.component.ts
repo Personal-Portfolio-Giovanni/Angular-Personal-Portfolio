@@ -10,7 +10,11 @@ import { Utils } from '../../services/config/utils.service';
 })
 export class CardFlipComponent implements OnInit {
   @Input("title") title?: string;
+  @Input("subtitle") subtitle?: string;
   @Input("background") background?: string;
+  @Input("description") description?: string;
+  @Input("flags") flags?: string;
+  @Input("language") language: any;
 
   @Input('project') project?: PortfolioProject;
   environment = environment;

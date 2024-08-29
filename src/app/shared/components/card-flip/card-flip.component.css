@@ -81,3 +81,37 @@
         margin-right: -50px;
     }
 }
+
+/** Flags */
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 25px;
+    height: 25px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+    vertical-align: -2px;
+  }
+  
+  .flag-it {
+    background: url("../../../../assets/img/languages/Italy.webp");
+    background-size: cover;
+    background-position: center center;
+  }
+  .flag-en {
+    background: url("../../../../assets/img/languages/English.webp");
+    background-size: cover;
+    background-position: center center;
+  }
+  .flag-es {
+    background: url("../../../../assets/img/languages/spagna.webp");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .progress {
+    border-radius: 10px;
+  }
