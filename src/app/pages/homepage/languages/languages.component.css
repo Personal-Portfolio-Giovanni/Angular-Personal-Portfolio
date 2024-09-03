@@ -41,6 +41,7 @@ a {
   position: relative;
   justify-content: center !important;
   max-width: 1500px !important;
+  align-content: center;
 }
 
 @media screen and (max-width: 780px) {
@@ -75,6 +76,7 @@ a {
 @media screen and (min-width: 1700px) {
   .container-language {
     max-width: 1500px;
-    margin-left: calc(50% - (1500px / 2));
+    /*margin-left: calc(50% - (1500px / 2));*/
+    margin-top: 100px;
   }
 }

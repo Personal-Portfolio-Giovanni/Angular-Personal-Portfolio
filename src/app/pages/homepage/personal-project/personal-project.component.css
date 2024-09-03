@@ -13,14 +13,15 @@
   justify-content: center;
 }
 
-.img-fluid{
+.img-fluid {
   margin-bottom: 10px;
 }
 
+.project-center {
+  align-content: center;
+}
+
 @media screen and (max-width: 780px) {
-  .project-center{
-    margin-top: 50%;
-  }
   .project-section {
     /*padding: 80px 100px;*/
     padding: 0px;

@@ -42,11 +42,11 @@ export class CacheService {
       );
       let today = new Date();
 
-      // Timer di 24 Ore
+      // Timer di 24 ore 86400000
+      let lastUpdateDate = new Date(lastUpdate);
       let isUpdate =
-        new Date(lastUpdate) != undefined
-          ? new Date(lastUpdate)?.getMilliseconds()! + 86400000 >
-            today.getMilliseconds()
+        lastUpdateDate != undefined
+          ? lastUpdateDate.getTime() + this.cacheTimeout > today.getTime()
           : false;
 
       if (isUpdate) {
@@ -61,6 +61,8 @@ export class CacheService {
         return response;
       }
     }
+
+    if (Utils.isNullOrEmpty(data)) return null;
 
     const response = {
       data: data,
