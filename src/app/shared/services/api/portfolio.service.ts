@@ -18,7 +18,6 @@ export class PortfolioService {
   constructor(private http: HttpClient, public cache: CacheService) {}
 
   getPortfolioData(locale: string): Observable<any> {
-    console.log(this.cache.getPortfolioDataCache(locale));
     if (!Utils.isNullOrEmpty(this.cache.getPortfolioDataCache(locale)))
       return of(this.cache.getPortfolioDataCache(locale));
 
