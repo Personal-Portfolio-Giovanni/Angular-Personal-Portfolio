@@ -1,19 +1,18 @@
 <div class="accordion-item accordion_color">
-  <h2 class="accordion-header" id="{{ aria_label }}">
+  <h2 class="accordion-header" id="{{ aria_label }}" #accordionHeader>
     <button
       class="accordion-button collapsed title"
       type="button"
       data-bs-toggle="collapse"
-      (click)="startStopAnimation()"
       [attr.data-bs-target]="'#' + aria_control"
       aria-expanded="false"
       [attr.aria-controls]="aria_control"
     >
       {{ content?.title }}
-      <span class="from hidden_mobile"
-        >{{ content?.from }}<br />
-        {{ content?.to }}</span
-      >
+      <span class="from hidden_mobile">
+        {{ content?.from }}<br />
+        {{ content?.to }}
+      </span>
     </button>
   </h2>
   <div
@@ -27,10 +26,10 @@
       style="background-color: #111 !important; color: aliceblue"
     >
       <h3>{{ content?.role }}</h3>
-      <span class="hidden_desktop"
-        >{{ content.from }}<br />
-        {{ content.to }}</span
-      >
+      <span class="hidden_desktop">
+        {{ content.from }}<br />
+        {{ content.to }}
+      </span>
       <hr />
       <h5>{{ content.where }}</h5>
       <div [innerHTML]="content.description"></div>

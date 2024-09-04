@@ -11,7 +11,7 @@ export const environment = {
   profileImageUrl: baseUrlApp + 'assets/img/Profile.webp',
   CEHCertificateUrl: 'https://www.udemy.com/certificate/UC-117Y7TRV/',
   downloadResumeUrl:
-    'https://drive.google.com/file/d/1m77_ACz4PVWFuFkbw69b1mijjL2HlgP_/view?usp=sharing',
+    'https://drive.google.com/file/d/1NKfIBacs2FpracCTwIBjRrVQnLxI1tO8/view?usp=sharing',
 
   /* Email Sender */
   emailSenderUrl: 'https://formspree.io/f/xqknjvyg',

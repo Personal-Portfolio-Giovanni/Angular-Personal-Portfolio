@@ -43,3 +43,11 @@ a {
   /* If you do not want any color, just delete */
   box-shadow: 0 0 0 0.25rem rgba(105, 105, 105, 0.1);
 }
+
+.accordion-button.collapsed {
+  z-index: 0; /* Imposta un z-index basso quando l'accordion è chiuso */
+}
+
+.accordion-button:not(.collapsed) {
+  z-index: 0; /* Imposta un z-index leggermente più alto quando l'accordion è aperto, ma inferiore a quello dell'header */
+}
