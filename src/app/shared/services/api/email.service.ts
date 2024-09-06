@@ -1,4 +1,8 @@
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -17,7 +21,7 @@ export class EmailSenderService {
   environment = environment;
   public isSent: boolean = false;
   public emailResponse: EmailResponseModel = new EmailResponseModel();
-  public emailTemplate: EmailTemplateModel = new EmailTemplateModel();
+  public emailTemplates: any;
   private PARAMS: string = '?htmlText=true';
   public errorResponse: ErrorResponse = new ErrorResponse();
 
@@ -48,11 +52,30 @@ export class EmailSenderService {
     );
   }
 
-  getEmailTemplate(): EmailTemplateModel {
+  /* Non completo, manca implementazione lato server */
+  serverSendEmailWithTemplateID(
+    emailSenderModel: EmailSenderModel,
+    templateId: string
+  ): Observable<EmailResponseModel | ErrorResponse> {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Access-Control-Allow-Headers', 'X-Requested-With');
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post(
+      environment.serverEmailSenderUrl + '/' + templateId + this.PARAMS,
+      emailSenderModel,
+      {
+        headers: headers,
+      }
+    );
+  }
+
+  getEmailTemplate(): Array<EmailTemplateModel> {
     this.http.get(environment.templatePath).subscribe((data) => {
-      this.emailTemplate = data;
+      this.emailTemplates = data;
     });
-    return this.emailTemplate!;
+    return this.emailTemplates!;
   }
 
   private handleError(error: HttpErrorResponse) {

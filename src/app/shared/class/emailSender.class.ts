@@ -7,6 +7,7 @@ export class EmailSenderModel {
   subject?: string;
   text?: string;
   to?: string;
+  params?: Map<string, string>;
 }
 
 export class EmailResponseModel {
@@ -16,15 +17,14 @@ export class EmailResponseModel {
 
 export class EmailTemplateModel {
   identification?: string;
+  subject?: string;
   metadata?: Array<string>;
+  locale?: string;
   content?: string;
 }
 
 export enum TemplateConstant {
-  NAME = '$NAME$',
-  TITLE = '$TITLE$',
-  SUBTITLE = '$SUBTITLE$',
-  EMAIL_TEXT = '$EMAIL_TEXT$',
-  IMPORTANT_TEXT = '$IMPORTANT_TEXT$',
-  THANKS = '$THANKS$',
+  EMAIL_NAME = '{{NAME}}',
+  EMAIL_COPY = '{{EMAIL_COPY}}',
+  SITE_SHORT = '{{SITE_SHORT}}',
 }

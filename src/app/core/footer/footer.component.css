@@ -363,3 +363,12 @@ a {
 .social-icons .fa-youtube-square {
   background-color: #c52f30;
 }
+
+.version {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  bottom: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}

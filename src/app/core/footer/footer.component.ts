@@ -23,6 +23,11 @@ export class FooterComponent implements OnInit {
 
   year: number = new Date().getFullYear();
 
+  // Used for version
+  private clickCount = 0;
+  // Variabile per mostrare/nascondere la versione
+  public showVersion = false;
+
   constructor(private animationService: AnimationsService) {}
 
   ngOnInit(): void {
@@ -68,5 +73,15 @@ export class FooterComponent implements OnInit {
     );
 
     return yearsElapsed;
+  }
+
+  // Metodo che incrementa il contatore e mostra la versione al terzo click
+  develop() {
+    this.clickCount++;
+
+    // Se il contatore arriva a 3, mostra la versione
+    if (this.clickCount === 3) {
+      this.showVersion = true;
+    }
   }
 }

@@ -90,22 +90,16 @@ export class ContactComponent implements OnInit {
   }
 
   serverSendEmail(): any {
+    let locale = localStorage.getItem('profile_language');
     //let email = this.sender.getEmailTemplate();
-    this.emailTemplate = this.sender.emailTemplate;
+    this.emailTemplate = this.sender.emailTemplates.find(
+      (e: any) => e.locale === locale
+    );
 
-    let title: string = this.translate.instant('email_content.title');
-    let sub_title: string = this.translate.instant('email_content.sub-title');
-    let important: string = this.translate.instant('email_content.important');
-    let thanks: string = this.translate.instant('email_content.thanks');
     let content = this.emailTemplate?.content
-      ?.replace(
-        TemplateConstant.TITLE,
-        title.replace(TemplateConstant.NAME, this.name)
-      )
-      .replace(TemplateConstant.SUBTITLE, sub_title)
-      .replace(TemplateConstant.EMAIL_TEXT, this.message)
-      .replace(TemplateConstant.IMPORTANT_TEXT, important)
-      .replace(TemplateConstant.THANKS, thanks);
+      ?.replace(TemplateConstant.EMAIL_NAME, this.name)
+      .replace(TemplateConstant.EMAIL_COPY, this.message)
+      .replace(TemplateConstant.SITE_SHORT, 'giovannilamarmora.github.io');
     LOG.info('Building content for email sender', 'ContactComponent');
 
     let emailSender: EmailSenderModel = new EmailSenderModel();
@@ -113,7 +107,7 @@ export class ContactComponent implements OnInit {
     emailSender.bbc = 'giovannilamarmora.working@gmail.com';
     emailSender.replyTo = 'giovannilamarmora.working@gmail.com';
     emailSender.sentDate = new Date();
-    emailSender.subject = 'Contact Me [giovannilamarmora]';
+    emailSender.subject = this.emailTemplate?.subject;
     emailSender.text = content;
 
     LOG.info(content!, 'ContactComponent');
