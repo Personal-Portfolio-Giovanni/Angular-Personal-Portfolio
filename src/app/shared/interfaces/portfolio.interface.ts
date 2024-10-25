@@ -2,6 +2,7 @@ export interface PortfolioDataInterface {
   curriculum_url: string;
   profilePhoto_url: string;
   biography: string;
+  cookie_policy: string;
   work_projects: number;
   personal_projects: number;
   number_courses: number;

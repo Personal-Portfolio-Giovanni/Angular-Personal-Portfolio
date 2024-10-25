@@ -1,0 +1,78 @@
+.cookie {
+  color: #777;
+  text-align: center;
+  padding: 80px 100px;
+  text-align: justify;
+  width: 100% !important;
+  height: max-content !important;
+  /*background-image: url("../../../assets/img/project/project-wallpaper.webp") !important;*/
+  background-color: #111;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 780px) {
+  .hidden_mobile {
+    display: none;
+  }
+  .hidden_desktop {
+    display: block;
+  }
+
+  .cookie {
+    padding: 80px 20px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .cookie {
+    height: max-content !important;
+  }
+}
+
+app-header {
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  z-index: 1;
+  /*[data-inviewport="slide-left"] {
+    visibility: visible !important;
+  }
+
+  [data-inviewport="slide-right"] {
+    visibility: visible !important;
+  }*/
+}
+
+li {
+  color: #111;
+}
+
+.link {
+  position: relative;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 100px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Change Design For Responsive Mobile Content */
+@media screen and (max-width: 780px) {
+  .link {
+    letter-spacing: 1px;
+    left: 10px;
+  }
+}

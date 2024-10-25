@@ -5,6 +5,7 @@ import {
   PortfolioProject,
 } from 'src/app/shared/class/portfolio.class';
 import { PortfolioService } from 'src/app/shared/services/api/portfolio.service';
+import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 
 @Component({
   selector: 'app-project',
@@ -16,16 +17,18 @@ export class ProjectComponent implements OnInit {
 
   constructor(
     private titleService: Title,
-    private portfolioService: PortfolioService
+    private portfolioService: PortfolioService,
+    private animationService: AnimationsService
   ) {
     this.titleService.setTitle('Giovanni Lamarmora - Project');
   }
 
   ngOnInit(): void {
-    document.querySelectorAll('[data-inviewport]').forEach(element => {
-      element.removeAttribute('data-inviewport');
-    });
-    this.portfolioProjects = this.portfolioService.portfolioProjects;
+    //document.querySelectorAll('[data-inviewport]').forEach(element => {
+    //  element.removeAttribute('data-inviewport');
+    //});
+    this.animationService.initAnimations();
+    this.portfolioProjects = this.portfolioService.portfolio?.projects!;
   }
 
   changeLanguages(portfolio: PortfolioData) {

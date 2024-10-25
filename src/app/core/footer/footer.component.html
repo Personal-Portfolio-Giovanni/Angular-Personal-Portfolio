@@ -5,7 +5,7 @@
         <div class="col-6 col-md-3 mb-30 text-center">
           <div class="single-cta">
             <div class="cta-text text-center">
-              <h4>{{ yearExperience }}+</h4>
+              <h4 class="text-center">{{ yearExperience }}+</h4>
               <span>{{ "contact.experience_title" | translate }}</span>
             </div>
           </div>
@@ -13,7 +13,7 @@
         <div class="separator col-6 col-md-3 mb-30 text-center">
           <div class="single-cta">
             <div class="cta-text text-center">
-              <h4>
+              <h4 class="text-center">
                 {{
                   portfolio?.work_projects != undefined
                     ? portfolio?.work_projects
@@ -29,7 +29,7 @@
         <div class="separator separator-h col-6 col-md-3 mb-30 text-center">
           <div class="single-cta">
             <div class="cta-text text-center">
-              <h4>
+              <h4 class="text-center">
                 {{
                   portfolio?.personal_projects != undefined
                     ? portfolio?.personal_projects
@@ -44,7 +44,7 @@
         <div class="separator col-6 col-md-3 mb-30 text-center">
           <div class="single-cta">
             <div class="cta-text text-center">
-              <h4>
+              <h4 class="text-center">
                 {{
                   portfolio?.number_courses != undefined
                     ? portfolio?.number_courses
@@ -87,7 +87,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
           <div class="footer-widget">
             <div class="footer-widget-heading text-center">
-              <h3>{{ "footer.link" | translate }}</h3>
+              <h3 class="text-center">{{ "footer.link" | translate }}</h3>
             </div>
             <ul class="text-center">
               <li>
@@ -118,6 +118,11 @@
               <li>
                 <a class="clickable" (click)="scrollTo('contact')">{{
                   "footer.contact" | translate
+                }}</a>
+              </li>
+              <li>
+                <a class="clickable" routerLink="cookie-policy">{{
+                  "footer.cookie" | translate
                 }}</a>
               </li>
             </ul>

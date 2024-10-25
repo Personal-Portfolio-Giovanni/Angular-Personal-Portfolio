@@ -9,6 +9,7 @@ export class PortfolioData implements PortfolioDataInterface {
   curriculum_url: string;
   profilePhoto_url: string;
   biography: string;
+  cookie_policy: string;
   work_projects: number;
   personal_projects: number;
   number_courses: number;
@@ -21,6 +22,7 @@ export class PortfolioData implements PortfolioDataInterface {
     curriculum_url: string,
     profilePhoto_url: string,
     biography: string,
+    cookie_policy: string,
     work_projects: number,
     personal_projects: number,
     number_courses: number,
@@ -31,6 +33,7 @@ export class PortfolioData implements PortfolioDataInterface {
     this.curriculum_url = curriculum_url;
     this.profilePhoto_url = profilePhoto_url;
     this.biography = biography;
+    this.cookie_policy = cookie_policy;
     this.work_projects = work_projects;
     this.personal_projects = personal_projects;
     this.number_courses = number_courses;

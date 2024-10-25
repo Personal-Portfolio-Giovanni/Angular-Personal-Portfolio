@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CacheService } from '../config/cache.service';
-import { PortfolioProject } from '../../class/portfolio.class';
+import { PortfolioData, PortfolioProject } from '../../class/portfolio.class';
 import { Utils } from '../config/utils.service';
 
 @Injectable({
@@ -14,6 +14,7 @@ export class PortfolioService {
   // Ho bisogno del passaggio dati dei progetti dopo la chiamata a getPortfolioDataCache
   public static portfolioProjects: Array<PortfolioProject> = [];
   public portfolioProjects: Array<PortfolioProject> = [];
+  public portfolio?: PortfolioData;
 
   constructor(private http: HttpClient, public cache: CacheService) {}
 

@@ -29,12 +29,6 @@ a {
   background-color: #282e34 !important;
 }
 
-.logo-develop {
-  height: 100px;
-  margin-left: 20px;
-  border-radius: 30px;
-}
-
 .accordion-button:focus {
   z-index: 3;
   border-color: transparent !important;

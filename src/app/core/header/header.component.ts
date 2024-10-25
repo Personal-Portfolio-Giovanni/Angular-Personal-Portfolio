@@ -44,6 +44,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Output('changeLanguages') changeLanguages =
     new EventEmitter<PortfolioData>();
 
+  @Output('languages') languages = new EventEmitter<string>();
+
   environment = environment;
   downloadCV: boolean = false;
   firstname: string = 'Giovanni';
@@ -78,10 +80,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
       languageIT.classList.remove('active');
       languageEN.classList.add('active');
       this.checkAndGetPortfolioData(Locale.ENGLISH);
+      this.languages.emit(Locale.ENGLISH);
     } else {
       languageEN.classList.remove('active');
       languageIT.classList.add('active');
       this.checkAndGetPortfolioData(Locale.ITALIAN);
+      this.languages.emit(Locale.ITALIAN);
     }
   }
 
@@ -101,7 +105,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((res) => {
         this.portfolioService.cache.cachePortfolioData(res.data, locale);
         PortfolioService.portfolioProjects = res.data.projects;
-        this.portfolioService.portfolioProjects = res.data.projects;
+        this.portfolioService.portfolio = res.data;
         LOG.info(res.message!, 'HeaderComponent');
         this.portfolioData = res.data;
         this.changeLanguages.emit(res.data);

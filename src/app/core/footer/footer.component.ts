@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PortfolioData } from 'src/app/shared/class/portfolio.class';
 import { AnimationsService } from 'src/app/shared/services/config/animation.service';
 import { LOG } from 'src/app/shared/services/config/logger.service';
@@ -28,7 +29,10 @@ export class FooterComponent implements OnInit {
   // Variabile per mostrare/nascondere la versione
   public showVersion = false;
 
-  constructor(private animationService: AnimationsService) {}
+  constructor(
+    private animationService: AnimationsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     LOG.info(navigator.userAgent, 'Current Device');
@@ -50,7 +54,21 @@ export class FooterComponent implements OnInit {
   environment = environment;
 
   scrollTo(id: string) {
-    Utils.scrollTo(id);
+    try {
+      Utils.scrollTo(id);
+    } catch (e) {
+      // Naviga alla homepage senza ricaricare l'intera pagina
+      this.router.navigate(['/']).then(() => {
+        // Ritenta lo scroll dopo la navigazione
+        setTimeout(() => {
+          try {
+            Utils.scrollTo(id);
+          } catch (retryError) {
+            console.error(`Retry failed: ${retryError}`);
+          }
+        }, 500); // Ritardo per garantire il completamento della navigazione
+      });
+    }
   }
 
   calculateYearsElapsed(): number {

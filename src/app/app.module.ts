@@ -6,7 +6,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ProfileComponent } from './pages/homepage/profiles/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DescriptionComponent } from './pages/homepage/description/description.component';
@@ -31,56 +36,64 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { CardFlipElegantComponent } from './shared/components/card-flip-elegant/card-flip-elegant.component';
 import { SkillCardComponent } from './shared/components/skill-card/skill-card.component';
 import { ProfileMinimalComponent } from './pages/homepage/profiles/profile-minimal/profile-minimal.component';
+import { CookiePolicyComponent } from './pages/cookie-policy/cookie-policy.component';
 
-@NgModule({ declarations: [
-        AppComponent,
-        ProfileComponent,
-        DescriptionComponent,
-        HeaderComponent,
-        WorkSectionComponent,
-        FooterComponent,
-        LanguagesComponent,
-        LanguageComponent,
-        CourseSectionComponent,
-        TitleSectionComponent,
-        AccordionContentComponent,
-        InfoSectionComponent,
-        PersonalProjectComponent,
-        CardFlipComponent,
-        ContactComponent,
-        LoadingComponent,
-        ProjectComponent,
-        HomepageComponent,
-        CardFlipElegantComponent,
-        SkillCardComponent,
-        ProfileMinimalComponent,
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        AppRoutingModule,
-        ServiceWorkerModule.register('ngsw-worker.js', {
-            enabled: environment.production,
-            // Register the ServiceWorker as soon as the app is stable
-            // or after 30 seconds (whichever comes first).
-            registrationStrategy: 'registerWhenStable:10000',
-        }),
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient],
-            },
-        })], providers: [
-        LoadingComponent,
-        TitleSectionComponent,
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: LoaderInterceptor,
-            multi: true,
-        },
-        provideHttpClient(withInterceptorsFromDi()),
-    ] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+    DescriptionComponent,
+    HeaderComponent,
+    WorkSectionComponent,
+    FooterComponent,
+    LanguagesComponent,
+    LanguageComponent,
+    CourseSectionComponent,
+    TitleSectionComponent,
+    AccordionContentComponent,
+    InfoSectionComponent,
+    PersonalProjectComponent,
+    CardFlipComponent,
+    ContactComponent,
+    LoadingComponent,
+    ProjectComponent,
+    HomepageComponent,
+    CardFlipElegantComponent,
+    SkillCardComponent,
+    ProfileMinimalComponent,
+    CookiePolicyComponent,
+  ],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:10000',
+    }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
+  providers: [
+    LoadingComponent,
+    TitleSectionComponent,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+})
 export class AppModule {}
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
