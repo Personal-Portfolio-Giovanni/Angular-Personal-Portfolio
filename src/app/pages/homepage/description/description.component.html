@@ -32,9 +32,11 @@
         style="text-align: justify !important"
         class="mx-auto text-center revealUp"
         [innerHTML]="
-          portfolio?.biography != undefined
-            ? portfolio?.biography
-            : ('biography.text' | translate)
+          transform(
+            portfolio?.biography != undefined
+              ? portfolio?.biography
+              : ('biography.text' | translate)
+          )
         "
       ></div>
     </div>

@@ -9,6 +9,10 @@
   min-height: calc(100%);
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /*.boxer-bio {
   color: #777;
   background-color: #282e34;

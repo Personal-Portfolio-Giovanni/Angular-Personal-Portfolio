@@ -103,3 +103,28 @@ a {
     width: fit-content;
   }
 }
+
+.no-select {
+  -webkit-user-select: none; /* Safari, Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard */
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.fade-in-op {
+  opacity: 0.1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}

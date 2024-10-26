@@ -51,6 +51,7 @@ export class ContactComponent implements OnInit {
       .then(async (result: any) => {
         if (result.isConfirmed) {
           this.serverSendEmail();
+          this.resetForm();
         } else if (result.isDenied) {
           this.swalService.simpleDialog(
             SwalIcon.INFO,
@@ -58,7 +59,6 @@ export class ContactComponent implements OnInit {
             ''
           );
         }
-        this.resetForm();
       });
   }
 

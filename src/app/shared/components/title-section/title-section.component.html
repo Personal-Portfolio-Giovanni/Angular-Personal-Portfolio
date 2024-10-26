@@ -1,13 +1,36 @@
-<!-- Heading end-->
+<!-- Heading end
 <div class="mb-5" id="title_section" data-inviewport="slide-up">
   <div class="text-center contenitore">
     <h2
-      class="text-24 text-muted opacity-1 fw-600 text-uppercase text-center element1"
+      class="text-24 text-muted opacity-1 fw-600 text-uppercase text-center element1 no-select"
     >
       {{ sub_title }}
     </h2>
     <p
-      class="text-9 text-center fw-600 element2"
+      (click)="switchText()"
+      class="text-9 text-center fw-600 element2 no-select"
+      style="text-transform: uppercase"
+    >
+      {{ title }}
+      <span
+        class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"
+      ></span>
+    </p>
+  </div>
+</div>
+-->
+<div class="mb-5" id="title_section" data-inviewport="slide-up">
+  <div class="text-center contenitore">
+    <h2
+      id="{{ sub_title }}_sub"
+      class="text-24 text-muted opacity-1 fw-600 text-uppercase text-center element1 no-select"
+    >
+      {{ sub_title }}
+    </h2>
+    <p
+      id="{{ title }}"
+      (click)="switchText()"
+      class="text-9 text-center fw-600 element2 no-select"
       style="text-transform: uppercase"
     >
       {{ title }}

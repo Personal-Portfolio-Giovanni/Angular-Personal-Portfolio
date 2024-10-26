@@ -55,3 +55,8 @@ a {
   color: aliceblue;
   text-align: left;
 }
+
+.reverse-progress-bar .progress-bar {
+  animation-direction: reverse; /* Inverte l'animazione di Bootstrap */
+  transform-origin: right; /* Imposta l'origine della barra sulla destra */
+}
