@@ -131,7 +131,7 @@
           </div>
           <p class="text-center mt-4 mb-0">
             <button
-              [disabled]="f.invalid"
+              [disabled]="f.invalid || !validateEmailFormat(email)"
               id="submit-btn"
               (click)="confirmSend()"
               class="btn btn-primary rounded-pill d-inline-flex"

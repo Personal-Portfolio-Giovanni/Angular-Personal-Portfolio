@@ -38,6 +38,11 @@ export class ContactComponent implements OnInit {
     private swalService: SwalService
   ) {}
 
+  validateEmailFormat(email: string): boolean {
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return emailRegex.test(email);
+  }
+
   confirmSend() {
     this.swalService
       .confirmDialog(
