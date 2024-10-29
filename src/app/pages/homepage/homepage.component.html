@@ -3,10 +3,14 @@
   [portfolio]="portfolio"
 ></app-profile>-->
 <app-profile-minimal
-  (changeLanguagesSection)="changeLanguages($event)"
+  (changeLanguagesSection)="changeDataLanguages($event)"
+  (languages)="changeLanguage($event)"
   [portfolio]="portfolio"
 ></app-profile-minimal>
-<app-description [portfolio]="portfolio"></app-description>
+<app-description
+  [language]="language"
+  [portfolio]="portfolio"
+></app-description>
 <app-works-section [portfolioWorks]="portfolio?.works"></app-works-section>
 <app-languages></app-languages>
 <app-course-section

@@ -13,6 +13,8 @@ export class ProfileMinimalComponent implements OnInit {
   @Output('changeLanguagesSection') changeLanguagesSection =
     new EventEmitter<PortfolioData>();
 
+  @Output('languages') languages = new EventEmitter<string>();
+
   @Input('portfolio') portfolio?: PortfolioData;
   environment = environment;
 
@@ -34,7 +36,11 @@ export class ProfileMinimalComponent implements OnInit {
     Utils.scrollTo(id);
   }
 
-  changeLanguages(portfolio: PortfolioData) {
+  changeLanguage(lang: string) {
+    this.languages.emit(lang);
+  }
+
+  changeDataLanguages(portfolio: PortfolioData) {
     this.changeLanguagesSection.emit(portfolio);
     this.title =
       localStorage.getItem(this.ATTR_LANGUAGE) == 'it-IT'

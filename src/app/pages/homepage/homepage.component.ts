@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
@@ -16,6 +16,8 @@ declare let gtag: Function;
 export class HomepageComponent {
   @Output('portfolio') portfolio?: PortfolioData;
 
+  @Output('language') language: string = '';
+
   constructor(
     private router: Router,
     private animationService: AnimationsService,
@@ -30,8 +32,12 @@ export class HomepageComponent {
     this.animationService.initAnimations();
   }
 
-  changeLanguages(portfolio: PortfolioData) {
+  changeDataLanguages(portfolio: PortfolioData) {
     this.portfolio = portfolio;
+  }
+
+  changeLanguage(lang: string) {
+    this.language = lang;
   }
 
   setUpAnalytics() {

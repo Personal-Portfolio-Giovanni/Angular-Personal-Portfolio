@@ -1,4 +1,7 @@
-<app-header (changeLanguages)="changeLanguages($event)"></app-header>
+<app-header
+  (changeLanguages)="changeDataLanguages($event)"
+  (languages)="changeLanguage($event)"
+></app-header>
 <section id="homepage" class="profile-minimal">
   <div class="container" data-inviewport="slide-up">
     <div class="title">{{ fullName }}</div>
