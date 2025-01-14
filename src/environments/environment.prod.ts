@@ -32,6 +32,7 @@ export const environment = {
     'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
 
   senderEmail: process.env['SENDER_EMAIL'] || 'info@giovannilamarmora.com',
+  bbcEmail: process.env['BBC_EMAIL'] || 'giovannilamarmora.working@gmail.com',
 
   // Cache
   cacheEnable: process.env['CACHE_ENABLE'] || false,

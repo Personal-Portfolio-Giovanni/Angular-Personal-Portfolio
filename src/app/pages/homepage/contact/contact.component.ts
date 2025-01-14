@@ -109,7 +109,7 @@ export class ContactComponent implements OnInit {
 
     let emailSender: EmailSenderModel = new EmailSenderModel();
     emailSender.to = this.email;
-    emailSender.bbc = environment.senderEmail;
+    emailSender.bbc = environment.bbcEmail;
     emailSender.replyTo = environment.senderEmail;
     emailSender.sentDate = new Date();
     emailSender.subject = this.emailTemplate?.subject;

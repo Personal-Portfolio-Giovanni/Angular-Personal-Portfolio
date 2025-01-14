@@ -32,6 +32,7 @@ export const environment = {
   portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
 
   senderEmail: 'info@giovannilamarmora.com',
+  bbcEmail: 'giovannilamarmora.working@gmail.com',
 
   // Cache
   cacheEnable: false,
