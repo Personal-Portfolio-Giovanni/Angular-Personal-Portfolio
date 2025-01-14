@@ -31,6 +31,8 @@ export const environment = {
     process.env['PORTFOLIO_DATA_URL'] ||
     'https://portfolio.service.giovannilamarmora.com/v1/app/portfolio/data',
 
+  senderEmail: process.env['SENDER_EMAIL'] || 'info@giovannilamarmora.com',
+
   // Cache
   cacheEnable: process.env['CACHE_ENABLE'] || false,
   cacheTimeout: 3600000 /** Un'Ora */,

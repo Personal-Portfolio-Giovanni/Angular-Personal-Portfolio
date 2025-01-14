@@ -1,7 +1,7 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 
-import { version } from "os";
+import { version } from 'os';
 
 // The list of file replacements can be found in `angular.json`.
 const baseUrlApp: string = '../../';
@@ -30,6 +30,8 @@ export const environment = {
 
   /* Portfolio */
   portfolioData: 'http://localhost:8080/v1/app/portfolio/data',
+
+  senderEmail: 'info@giovannilamarmora.com',
 
   // Cache
   cacheEnable: false,

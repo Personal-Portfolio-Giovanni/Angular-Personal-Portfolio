@@ -109,8 +109,8 @@ export class ContactComponent implements OnInit {
 
     let emailSender: EmailSenderModel = new EmailSenderModel();
     emailSender.to = this.email;
-    emailSender.bbc = 'giovannilamarmora.working@gmail.com';
-    emailSender.replyTo = 'giovannilamarmora.working@gmail.com';
+    emailSender.bbc = environment.senderEmail;
+    emailSender.replyTo = environment.senderEmail;
     emailSender.sentDate = new Date();
     emailSender.subject = this.emailTemplate?.subject;
     emailSender.text = content;
